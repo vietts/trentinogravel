@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing artifacts
+.playwright-mcp/
+tg-*.jpeg
+/*.jpeg
+/*.png.backup
+
+# Node / build
+node_modules/
+dist/
+.cache/
+
+# Large binary assets that don't belong in git
+*.pdf
+
+# Logs / env
+*.log
+.env
+.env.local
+
+# Raw PDF extraction dump (not shipped) — only keep referenced logos
+extracted/*.tif
+extracted/img-*.png
+extracted/page*.svg
+extracted/logo-icon.svg
+extracted/logo-illustration-only.svg
+extracted/logo-png-extracted.png
+extracted/logo-trentino-gravel.svg
+extracted/brand-*.png

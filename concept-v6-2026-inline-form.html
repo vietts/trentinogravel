@@ -1,0 +1,3999 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trentino Gravel — Pioneer Edition · 26 Settembre 2026</title>
+  <meta name="description" content="Trentino Gravel — Pioneer Edition. Un'avventura gravel e bikepacking attraverso le Dolomiti. 26 settembre 2026, partenza da Rovereto. Due percorsi, 400km e 220km, 70% sterrato. Posti limitati — iscriviti alla waiting list.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trentino Gravel — Pioneer Edition">
+  <meta property="og:description" content="Un'avventura gravel di 400km attraverso le Dolomiti. 26 settembre 2026 · Rovereto · Trentino. Organizzato dal team di Tuscany Trail.">
+  <meta property="og:url" content="https://trentinogravel.it/">
+  <meta property="og:image" content="extracted/og-image.jpg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trentino Gravel — Pioneer Edition">
+  <meta name="twitter:description" content="Un'avventura gravel di 400km attraverso le Dolomiti. 26 settembre 2026.">
+  <meta name="twitter:image" content="extracted/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="extracted/logo-real.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Trentino Gravel — Pioneer Edition",
+    "description": "Un'avventura gravel e bikepacking attraverso le Dolomiti, con due percorsi (400km e 220km) e il 70% su strade sterrate.",
+    "startDate": "2026-09-26",
+    "endDate": "2026-09-28",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Rovereto",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rovereto",
+        "addressRegion": "Trentino",
+        "addressCountry": "IT"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Tuscany Trail / Bike Adventure Series",
+      "url": "https://tuscanytrail.it"
+    },
+    "image": ["extracted/og-image.jpg"],
+    "url": "https://trentinogravel.it/"
+  }
+  </script>
+  <style>
+    /* ━━━━━━━━━━━━ TOKENS ━━━━━━━━━━━━ */
+    :root {
+      --blue:       #3B50C8;
+      --blue-deep:  #2B3DA0;
+      --blue-light: #4E62D8;
+      --orange:     #E85520;
+      --orange-lt:  #F06030;
+      --cream:      #F2EEAE;
+      --cream-dk:   #E8E49A;
+      --offwhite:   #F5EDE0;
+      --ink:        #0C0E1A;
+      --ink-mid:    #1A1F3A;
+      --white:      #FFFFFF;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--offwhite);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ━━━━━━━━━━━━ NAV ━━━━━━━━━━━━ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 64px;
+      background: var(--blue);
+      border-bottom: 2px solid var(--blue-deep);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+
+    .nav-mark {
+      height: 42px;
+      width: auto;
+    }
+
+    .nav-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      line-height: 1.15;
+    }
+
+    .nav-wordmark small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: rgba(242,238,174,0.55);
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.7);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--cream); }
+
+    .nav-cta {
+      background: var(--orange) !important;
+      color: var(--white) !important;
+      padding: 0.45rem 1.3rem;
+      opacity: 1 !important;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--orange-lt) !important; }
+
+    /* ━━━━━━━━━━━━ HERO ━━━━━━━━━━━━ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-top: 64px;
+    }
+
+    /* ── Background image layer ── */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Real photo — swap src when available */
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    /* Placeholder rendered when image is absent/pending */
+    .hero-img-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #1c2c7e 0%, #263899 30%, #192060 60%, #0a1030 100%);
+      overflow: hidden;
+    }
+
+    /* Mountain silhouette in placeholder */
+    .hero-img-placeholder::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50%;
+      background: rgba(0,5,25,0.55);
+      clip-path: polygon(
+        0 100%, 0 85%,
+        6% 72%, 12% 80%, 18% 62%, 25% 74%, 32% 48%, 40% 63%,
+        47% 36%, 54% 50%, 61% 28%, 68% 44%, 76% 20%, 84% 38%,
+        91% 15%, 97% 30%, 100% 22%, 100% 100%
+      );
+    }
+
+    /* Subtle grid in placeholder */
+    .hero-img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .placeholder-badge {
+      position: absolute;
+      top: auto;
+      bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px dashed rgba(255,255,255,0.12);
+      padding: 0.5rem 1.3rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+      z-index: 2;
+      opacity: 0.55;
+    }
+
+    .placeholder-badge span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      white-space: nowrap;
+    }
+
+    /* Gradient overlay for readability */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom,
+          rgba(8,12,40,0.42) 0%,
+          rgba(8,12,40,0.18) 35%,
+          rgba(8,12,40,0.22) 55%,
+          rgba(8,12,40,0.72) 100%
+        );
+    }
+
+    /* ── Content ── */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem 6rem;
+      width: 100%;
+    }
+
+    /* Transparent logo — cream bg removed, mountain illustration floats over photo */
+    .hero-logo-svg {
+      width: clamp(130px, 18vw, 220px);
+      height: auto;
+      filter: drop-shadow(0 6px 28px rgba(0,0,0,0.55));
+      margin-bottom: 2rem;
+    }
+
+    /* Event info bar — date + location */
+    .hero-event-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid rgba(242,238,174,0.3);
+      background: rgba(12,14,26,0.45);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 0.65rem 2rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-date-txt,
+    .hero-location-txt {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+      color: var(--cream);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .hero-event-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--orange);
+      border-radius: 50%;
+      margin: 0 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* Edition label */
+    .hero-edition {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-edition::before,
+    .hero-edition::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--orange);
+      opacity: 0.55;
+    }
+
+    /* Stats row */
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2.8rem;
+      border: 1px solid rgba(242,238,174,0.18);
+    }
+
+    .hstat {
+      padding: 0.9rem 2.2rem;
+      border-right: 1px solid rgba(242,238,174,0.18);
+      text-align: center;
+    }
+
+    .hstat:last-child { border-right: none; }
+
+    .hstat-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.85rem;
+      color: var(--cream);
+      line-height: 1;
+    }
+
+    .hstat-lbl {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.53rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.42);
+      margin-top: 0.25rem;
+    }
+
+    /* Actions */
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      padding: 0.85rem 2rem;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      display: inline-block;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-lt);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      padding: 0.85rem 1.8rem;
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(242,238,174,0.4);
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cream);
+      color: var(--cream);
+    }
+
+    /* Scroll hint */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.35);
+      animation: scrollBounce 2.4s ease-in-out infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* Bottom cut */
+    .hero-cut {
+      position: absolute;
+      bottom: -2px;
+      left: 0; right: 0;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    /* ━━━━━━━━━━━━ TAGLINE STRIP ━━━━━━━━━━━━ */
+    .tagline-strip {
+      background: var(--orange);
+      padding: 2rem 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      overflow: hidden;
+    }
+
+    .tagline-word {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      color: var(--white);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .tagline-sep {
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━━━ NUMBERS ━━━━━━━━━━━━ */
+    .numbers {
+      background: var(--cream);
+      padding: 6rem 3.5rem;
+    }
+
+    .numbers-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .num-item {
+      padding: 2rem 3rem;
+      border-right: 1.5px solid rgba(59,80,200,0.12);
+      text-align: center;
+    }
+
+    .num-item:last-child { border-right: none; }
+
+    .num-label-top {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .num-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 7vw, 7rem);
+      color: var(--blue);
+      line-height: 0.9;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .num-value .unit {
+      font-size: 0.55em;
+      color: var(--orange);
+    }
+
+    .num-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--blue);
+      opacity: 0.55;
+      letter-spacing: 0.02em;
+    }
+
+    /* ━━━━━━━━━━━━ ROUTES ━━━━━━━━━━━━ */
+    .routes {
+      background: var(--blue);
+      padding: 7rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background mountain watermark */
+    .routes::after {
+      content: '';
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 550px;
+      height: 550px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 580'%3E%3Ccircle cx='355' cy='148' r='65' fill='%23E85520'/%3E%3Cpath d='M 0,350 L 0,252 L 18,235 L 26,248 L 34,212 L 44,226 L 52,188 L 62,204 L 70,160 L 80,175 L 88,138 L 100,155 L 108,126 L 124,148 L 118,168 L 132,160 L 140,180 L 126,198 L 136,215 L 122,232 L 134,252 L 128,272 L 140,350 Z' fill='%233B50C8'/%3E%3Cpath d='M 158,350 L 155,302 L 168,274 L 192,292 L 212,252 L 245,272 L 272,232 L 302,252 L 328,218 L 368,242 L 398,208 L 435,232 L 462,202 L 502,226 L 532,200 L 560,212 L 560,350 Z' fill='%233B50C8'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .routes-head {
+      max-width: 1160px;
+      margin: 0 auto 4rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      line-height: 0.92;
+    }
+
+    .section-h2 .dim { color: rgba(242,238,174,0.35); }
+
+    .routes-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.6);
+      text-decoration: none;
+      border-bottom: 1.5px solid rgba(242,238,174,0.25);
+      padding-bottom: 1px;
+      transition: color .2s, border-color .2s;
+      margin-bottom: 0.3rem;
+      white-space: nowrap;
+    }
+
+    .routes-link:hover { color: var(--cream); border-color: var(--cream); }
+
+    .routes-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .route-card {
+      background: var(--offwhite);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform .3s cubic-bezier(.2,.8,.3,1);
+      position: relative;
+    }
+
+    .route-card:hover {
+      transform: translateY(-6px);
+      z-index: 2;
+    }
+
+    .route-card.featured {
+      background: var(--ink);
+    }
+
+    .route-card-photo {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .route-card-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(12,14,26,0.5) 100%);
+    }
+
+    .route-card.featured .route-card-photo::after {
+      background: linear-gradient(to bottom, transparent 40%, rgba(12,14,26,0.7) 100%);
+    }
+
+    .route-difficulty {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.6rem;
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .route-card-body {
+      padding: 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .route-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+    }
+
+    .route-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      line-height: 0.95;
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .featured .route-name { color: var(--cream); }
+
+    .route-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink);
+      opacity: 0.55;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .featured .route-tagline { color: rgba(242,238,174,0.5); opacity: 1; }
+
+    .route-stats {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .rstat-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--blue);
+      letter-spacing: -0.01em;
+    }
+
+    .featured .rstat-val { color: var(--cream); }
+
+    .rstat-lbl {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0.4;
+    }
+
+    .featured .rstat-lbl { color: rgba(242,238,174,0.4); opacity: 1; }
+
+    .route-cta {
+      margin-top: auto;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.76rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1.5px solid var(--blue);
+      padding-bottom: 1px;
+      align-self: flex-start;
+      transition: gap .2s, color .2s, border-color .2s;
+    }
+
+    .featured .route-cta { color: var(--orange); border-color: var(--orange); }
+    .route-cta:hover { gap: 0.7rem; }
+
+    /* ━━━━━━━━━━━━ PHOTO STRIP ━━━━━━━━━━━━ */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      height: 380px;
+      gap: 1.5px;
+      background: var(--blue-deep);
+    }
+
+    .strip-panel {
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      transition: flex .4s;
+    }
+
+    .strip-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(59,80,200,0.55) 0%, transparent 60%);
+    }
+
+    .strip-panel-label {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      z-index: 2;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      opacity: 0.85;
+    }
+
+    .strip-quote {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+      background: var(--blue);
+      gap: 1rem;
+    }
+
+    .strip-quote p {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(242,238,174,0.65);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .strip-quote a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--orange);
+      padding-bottom: 1px;
+    }
+
+    /* ━━━━━━━━━━━━ CTA SPLIT ━━━━━━━━━━━━ */
+    .cta-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+
+    .cta-left {
+      background: var(--orange);
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Geometric circle decoration */
+    .cta-left::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .cta-left::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .cta-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+      color: var(--white);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 340px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-white {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.5rem;
+      background: var(--white);
+      color: var(--orange);
+      text-decoration: none;
+      transition: background .2s, color .2s, transform .15s;
+      position: relative;
+      z-index: 1;
+      align-self: flex-start;
+    }
+
+    .btn-white:hover {
+      background: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    .cta-right {
+      background: var(--blue-deep);
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* SVG logo watermark in cta-right */
+    .cta-right::before {
+      content: '';
+      position: absolute;
+      right: -60px;
+      bottom: -40px;
+      width: 420px;
+      height: 420px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 580'%3E%3Crect width='560' height='580' fill='none'/%3E%3Ccircle cx='355' cy='148' r='65' fill='%23E85520'/%3E%3Cpath d='M 0,350 L 0,252 L 18,235 L 26,248 L 34,212 L 44,226 L 52,188 L 62,204 L 70,160 L 80,175 L 88,138 L 100,155 L 108,126 L 124,148 L 118,168 L 132,160 L 140,180 L 126,198 L 136,215 L 122,232 L 134,252 L 128,272 L 140,350 Z' fill='%23F2EEAE'/%3E%3Cpath d='M 158,350 L 155,302 L 168,274 L 192,292 L 212,252 L 245,272 L 272,232 L 302,252 L 328,218 L 368,242 L 398,208 L 435,232 L 462,202 L 502,226 L 532,200 L 560,212 L 560,350 Z' fill='%23F2EEAE'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .cta-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-item {}
+
+    .info-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(242,238,174,0.45);
+      line-height: 1.4;
+    }
+
+    /* ━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━ */
+    footer {
+      background: var(--ink);
+      padding: 3rem 3.5rem;
+    }
+
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .footer-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+    }
+
+    .footer-wordmark small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: rgba(242,238,174,0.35);
+    }
+
+    .footer-mono {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .footer-mono .footer-divider { color: rgba(242,238,174,0.2); }
+    .footer-bas {
+      display: inline-block;
+      line-height: 0;
+      opacity: 0.75;
+      transition: opacity .2s;
+    }
+    .footer-bas:hover { opacity: 1; }
+    .footer-bas img {
+      height: 18px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.3);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover { color: var(--orange); }
+
+    /* ━━━━━━━━━━━━ SCROLL REVEAL ━━━━━━━━━━━━ */
+    .sr {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .sr.d1 { transition-delay: .08s; }
+    .sr.d2 { transition-delay: .16s; }
+    .sr.d3 { transition-delay: .26s; }
+    .sr.d4 { transition-delay: .36s; }
+    .sr.d5 { transition-delay: .46s; }
+
+    .sr.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Hero items animate on load */
+    .hero-animate {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .hero-animate.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ━━━━━━━━━━━━ ABOUT ━━━━━━━━━━━━ */
+    .about {
+      background: var(--offwhite);
+      padding: 7rem 3.5rem;
+    }
+
+    .about-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-highlight {
+      font-weight: 400 !important;
+      color: var(--cream) !important;
+      padding: 1.3rem 1.5rem;
+      background: var(--blue) !important;
+      border-left: 3px solid var(--orange);
+      font-size: 1rem !important;
+      line-height: 1.55 !important;
+      margin-top: 0.5rem;
+    }
+    .about-highlight strong {
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0.005em;
+    }
+
+    .standard-badge {
+      background: var(--blue);
+      padding: 3rem 2.5rem;
+      text-align: center;
+    }
+
+    .standard-pct {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 6rem;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .standard-pct span {
+      font-size: 3rem;
+      color: var(--orange);
+    }
+
+    .standard-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(242,238,174,0.65);
+      line-height: 1.6;
+    }
+
+    /* ━━━━━━━━━━━━ ROUTES 2-COL ━━━━━━━━━━━━ */
+    .routes-grid-2 {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    .routes-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: rgba(242,238,174,0.55);
+      max-width: 260px;
+      line-height: 1.5;
+      text-align: right;
+    }
+
+    /* ━━━━━━━━━━━━ PLACES ━━━━━━━━━━━━ */
+    .places {
+      background: var(--cream);
+      padding: 6rem 3.5rem;
+    }
+
+    .places-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .places-head {
+      margin-bottom: 3rem;
+    }
+
+    .places-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      color: var(--blue);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+    }
+
+    .places-title em {
+      font-style: italic;
+      color: var(--orange);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.65em;
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+
+    .places-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .place-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.2rem;
+      background: var(--blue);
+      color: var(--cream);
+      cursor: default;
+      transition: background .2s, color .2s;
+    }
+
+    .place-item:hover {
+      background: var(--orange);
+    }
+
+    /* ━━━━━━━━━━━━ WAITLIST ━━━━━━━━━━━━ */
+    .waitlist {
+      background: var(--blue-deep);
+      padding: 7rem 3.5rem;
+    }
+
+    .waitlist-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .waitlist-left .cta-kicker {
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .waitlist-left .cta-h2 {
+      font-size: clamp(3rem, 5vw, 5.5rem);
+    }
+
+    .waitlist-left .cta-p {
+      margin-bottom: 2rem;
+    }
+
+    .waitlist-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .waitlist-perks li {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(242,238,174,0.6);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .waitlist-perks li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+
+    .waitlist-event-info {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(242,238,174,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .wevent-row {
+      display: flex;
+      padding: 0.85rem 1.2rem;
+      border-bottom: 1px solid rgba(242,238,174,0.06);
+      gap: 1.5rem;
+    }
+
+    .wevent-row:last-child { border-bottom: none; }
+
+    .wevent-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      width: 80px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .wevent-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .waitlist-form {}
+
+    .form-label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.5);
+      margin-bottom: 0.75rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .form-input {
+      flex: 1;
+      padding: 1rem 1.2rem;
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(242,238,174,0.2);
+      border-right: none;
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+
+    .form-input::placeholder { color: rgba(242,238,174,0.3); }
+    .form-input:focus {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--orange);
+    }
+
+    .form-btn {
+      padding: 1rem 1.8rem;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+
+    .form-btn:hover { background: var(--orange-lt); }
+
+    .form-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: rgba(242,238,174,0.3);
+    }
+
+    .form-success {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.85rem 1.2rem;
+      background: rgba(100,200,100,0.12);
+      border: 1px solid rgba(100,200,100,0.3);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #8fca8f;
+    }
+
+    /* ── Expanded waitlist form (nome, email, ex-TT, route) ── */
+    .wf-field { margin-bottom: 1.2rem; }
+    .wf-field:last-of-type { margin-bottom: 1.5rem; }
+    .form-input-full {
+      width: 100%;
+      border-right: 1.5px solid rgba(242,238,174,0.2);
+    }
+    .wf-radio-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .wf-radio {
+      flex: 1;
+      position: relative;
+      cursor: pointer;
+    }
+    .wf-radio input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .wf-radio-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(242,238,174,0.2);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.7);
+      text-align: center;
+      transition: border-color .2s, background .2s, color .2s;
+    }
+    .wf-radio:hover .wf-radio-label {
+      border-color: rgba(242,238,174,0.4);
+      color: var(--cream);
+    }
+    .wf-radio input:checked + .wf-radio-label {
+      border-color: var(--orange);
+      background: rgba(232,85,32,0.15);
+      color: var(--cream);
+    }
+    .wf-radio input:focus-visible + .wf-radio-label {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+    .form-btn-full {
+      display: block;
+      width: 100%;
+      padding: 1.05rem 1.4rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+    }
+    .form-error {
+      display: none;
+      margin-top: 0.8rem;
+      padding: 0.65rem 0.9rem;
+      background: rgba(220,80,80,0.12);
+      border-left: 3px solid #d45858;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: #f0a0a0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE ADDITIONS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about { padding: 5rem 1.5rem; }
+      .places { padding: 4rem 1.5rem; }
+      .waitlist { padding: 5rem 1.5rem; }
+      .waitlist-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .routes-grid-2 { grid-template-columns: 1fr 1fr !important; }
+    }
+
+    @media (max-width: 640px) {
+      .about { padding: 3.5rem 1.2rem; }
+      .about-text p { font-size: 0.95rem; }
+      .standard-badge { padding: 2rem 1.5rem; }
+      .standard-pct { font-size: 4.5rem; }
+      .places { padding: 3rem 1.2rem; }
+      .place-item { font-size: 0.88rem; padding: 0.5rem 0.9rem; }
+      .waitlist { padding: 4rem 1.2rem; }
+      .waitlist-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .routes-grid-2 { grid-template-columns: 1fr !important; }
+      .routes-desc { text-align: left; max-width: 100%; }
+      .form-row { flex-direction: column; }
+      .form-input { border-right: 1.5px solid rgba(242,238,174,0.2); border-bottom: none; }
+      .form-input:focus { border-color: var(--orange); }
+      .form-btn { padding: 0.9rem; }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       MOBILE MENU
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--cream);
+      transition: transform .3s, opacity .3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--blue-deep);
+      z-index: 800;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+      text-decoration: none;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(242,238,174,0.08);
+      width: 100%;
+      text-align: center;
+      transition: color .2s;
+    }
+
+    .mobile-menu a:hover { color: var(--orange); }
+
+    .mobile-menu a.mobile-cta {
+      margin-top: 2rem;
+      background: var(--orange);
+      color: var(--white);
+      padding: 1rem 3rem;
+      border: none;
+      font-size: 2rem;
+      width: auto;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE — TABLET  ≤ 1024px
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      nav { padding: 0 1.5rem; }
+
+      .hero-logo-svg { width: clamp(120px, 26vw, 180px); }
+      .hero-event-bar { padding: 0.55rem 1.4rem; }
+
+      .numbers { padding: 4rem 1.5rem; }
+      .numbers-inner { grid-template-columns: repeat(3,1fr); }
+      .num-item { padding: 1.5rem 1rem; }
+
+      .routes { padding: 5rem 1.5rem; }
+      .routes-grid { grid-template-columns: 1fr 1fr; }
+
+      .photo-strip { grid-template-columns: 1fr 1fr; height: auto; }
+      .strip-panel { height: 240px; }
+      .strip-quote { grid-column: 1 / -1; height: auto; padding: 2rem; }
+
+      .cta-split { grid-template-columns: 1fr; }
+      .cta-right { padding: 4rem 1.5rem; }
+      .cta-left { padding: 5rem 1.5rem; }
+
+      footer { padding: 2rem 1.5rem; }
+      .footer-inner { flex-wrap: wrap; gap: 1.5rem; }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: LANG TOGGLE (nav)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(242,238,174,0.25);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+      user-select: none;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      cursor: pointer;
+      padding: 0 0.15rem;
+      transition: color .2s;
+    }
+    .lang-toggle button.active { color: var(--cream); }
+    .lang-toggle button:hover { color: var(--cream); }
+    .lang-toggle .lang-sep {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: GENERIC PHOTO PLACEHOLDER
+       Reuses .hero-img-placeholder visual language
+       for every new photo slot across the site.
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .photo-slot {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, #1c2c7e 0%, #263899 30%, #192060 60%, #0a1030 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-slot.cream-bg {
+      background: linear-gradient(160deg, #f2eeae 0%, #e8e49a 60%, #d8d488 100%);
+    }
+    .photo-slot.ink-bg {
+      background: linear-gradient(160deg, #1a1f3a 0%, #0c0e1a 100%);
+    }
+    .photo-slot::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 46%;
+      background: rgba(0,5,25,0.45);
+      clip-path: polygon(
+        0 100%, 0 80%,
+        8% 66%, 16% 74%, 22% 55%, 30% 68%, 38% 42%, 46% 58%,
+        54% 32%, 62% 48%, 70% 24%, 78% 40%, 86% 18%, 94% 32%, 100% 22%, 100% 100%
+      );
+    }
+    .photo-slot.cream-bg::before {
+      background: rgba(59,80,200,0.22);
+    }
+    .photo-slot::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+    .photo-slot.cream-bg::after {
+      background-image:
+        linear-gradient(rgba(59,80,200,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,80,200,0.04) 1px, transparent 1px);
+    }
+    .photo-slot .slot-badge {
+      position: relative;
+      z-index: 2;
+      border: 1px dashed rgba(255,255,255,0.18);
+      padding: 0.55rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      text-align: center;
+      max-width: 85%;
+    }
+    .photo-slot.cream-bg .slot-badge {
+      border-color: rgba(59,80,200,0.25);
+    }
+    .photo-slot .slot-badge span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .photo-slot.cream-bg .slot-badge span {
+      color: rgba(59,80,200,0.45);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: FILM / VIDEO TEASER SECTION
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .film {
+      background: var(--ink);
+      padding: 6rem 3.5rem;
+      position: relative;
+    }
+    .film-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .film-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.8rem;
+    }
+    .film-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      line-height: 0.95;
+      margin-bottom: 2.5rem;
+    }
+    .film-title em {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.55em;
+      color: var(--orange);
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+    .film-player {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: 1px solid rgba(242,238,174,0.15);
+      cursor: pointer;
+      transition: border-color .3s;
+    }
+    .film-player:hover { border-color: var(--orange); }
+    .film-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(232,85,32,0.35);
+      transition: transform .2s;
+    }
+    .film-player:hover .film-play { transform: translate(-50%, -50%) scale(1.08); }
+    .film-play::before {
+      content: '';
+      display: block;
+      width: 0; height: 0;
+      border-left: 22px solid var(--white);
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      margin-left: 5px;
+    }
+    .film-caption {
+      margin-top: 1.4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.35);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       UPDATE: ABOUT 2-COL WITH SIGNUP FORM (ex-photo)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .about-inner.about-2col {
+      grid-template-columns: 6fr 5fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+    .about-signup {
+      background: var(--blue-deep);
+      padding: 2.4rem 2.2rem 2.6rem;
+      border-top: 3px solid var(--orange);
+      position: relative;
+      box-shadow: 0 20px 60px rgba(12,14,26,0.12);
+    }
+    .about-signup-head { margin-bottom: 1.8rem; }
+    .about-signup-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.8rem;
+    }
+    .about-signup-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      font-weight: 400;
+    }
+    /* Form fields inside .about-signup inherit the same look as the
+       final waitlist form (.wf-field, .wf-radio, .form-*). */
+    .about-form .form-label { color: rgba(242,238,174,0.55); }
+    .about-form .form-input {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(242,238,174,0.2);
+    }
+    .about-form .form-input:focus {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--orange);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: EXPERIENCE GRID (beyond the ride)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .experience {
+      background: var(--cream);
+      padding: 7rem 3.5rem;
+      position: relative;
+    }
+    .experience-head {
+      max-width: 1160px;
+      margin: 0 auto 3.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .experience-head .section-label { color: var(--orange); }
+    .experience-head h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+    }
+    .experience-head h2 em {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.55em;
+      color: var(--orange);
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+    .experience-intro {
+      max-width: 300px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: rgba(12,14,26,0.6);
+      line-height: 1.55;
+      text-align: right;
+    }
+    .experience-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5px;
+      background: rgba(59,80,200,0.12);
+      padding: 1.5px;
+    }
+    .exp-card {
+      background: var(--offwhite);
+      display: flex;
+      flex-direction: column;
+      min-height: 460px;
+    }
+    .exp-card-photo {
+      flex: 1;
+      min-height: 240px;
+      position: relative;
+    }
+    .exp-card-body {
+      padding: 1.5rem 1.4rem 1.8rem;
+    }
+    .exp-card-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+    .exp-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.7rem;
+      color: var(--blue);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .exp-card-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(12,14,26,0.6);
+      line-height: 1.55;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       UPDATE: ROUTE CARDS — bigger photo + elevation
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .route-card-photo.route-photo-tall {
+      height: 320px;
+    }
+    .route-elevation {
+      display: block;
+      width: 100%;
+      height: 58px;
+      margin: 0.4rem 0 1.2rem;
+    }
+    .route-elevation-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    .featured .route-elevation-label { color: rgba(232,85,32,0.85); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       UPDATE: PLACES — BENTO MOSAIC
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .places {
+      background: var(--cream);
+      padding: 7rem 3.5rem;
+    }
+    .places-mosaic {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 150px;
+      gap: 1.5px;
+      background: rgba(59,80,200,0.15);
+      padding: 1.5px;
+    }
+    .place-tile {
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      background: linear-gradient(160deg, #1c2c7e 0%, #263899 30%, #192060 60%, #0a1030 100%);
+      transition: transform .35s cubic-bezier(.2,.8,.3,1);
+    }
+    .place-tile:hover { transform: scale(1.015); z-index: 2; }
+    .place-tile::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 56%;
+      background: rgba(0,5,25,0.45);
+      clip-path: polygon(
+        0 100%, 0 78%,
+        10% 60%, 18% 70%, 26% 50%, 34% 62%, 42% 38%, 50% 54%,
+        58% 28%, 66% 44%, 74% 22%, 82% 36%, 90% 15%, 100% 28%, 100% 100%
+      );
+      z-index: 1;
+    }
+    .place-tile::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(12,14,26,0.7) 0%, rgba(12,14,26,0.15) 50%, transparent 100%),
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: auto, 50px 50px, 50px 50px;
+      z-index: 2;
+    }
+    .place-tile .place-name {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.1rem;
+      right: 1.1rem;
+      z-index: 3;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+      color: var(--cream);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .place-tile .place-tag {
+      position: absolute;
+      top: 0.9rem;
+      left: 1.1rem;
+      z-index: 3;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      padding: 0.2rem 0.5rem;
+      background: rgba(12,14,26,0.6);
+      border: 1px solid rgba(232,85,32,0.4);
+    }
+    /* Bento spans (8 tiles) — 6 col grid, 4 rows */
+    .place-tile.p-1 { grid-column: span 3; grid-row: span 2; } /* BIG feature */
+    .place-tile.p-2 { grid-column: span 3; grid-row: span 1; }
+    .place-tile.p-3 { grid-column: span 3; grid-row: span 1; }
+    .place-tile.p-4 { grid-column: span 2; grid-row: span 2; } /* MID feature */
+    .place-tile.p-5 { grid-column: span 2; grid-row: span 1; }
+    .place-tile.p-6 { grid-column: span 2; grid-row: span 1; }
+    .place-tile.p-7 { grid-column: span 2; grid-row: span 1; }
+    .place-tile.p-8 { grid-column: span 2; grid-row: span 1; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: ORGANIZED BY (trust section)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .organized {
+      background: var(--offwhite);
+      padding: 6rem 3.5rem;
+      position: relative;
+      border-top: 1px solid rgba(59,80,200,0.08);
+      border-bottom: 1px solid rgba(59,80,200,0.08);
+    }
+    .organized-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .organized-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+    .organized-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .organized-logo {
+      width: 220px;
+      height: 90px;
+      position: relative;
+      border: 1px dashed rgba(59,80,200,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .organized-logo span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(59,80,200,0.4);
+    }
+    .organized-bas-logo {
+      display: inline-block;
+      max-width: 280px;
+      line-height: 0;
+      transition: opacity .2s;
+    }
+    .organized-bas-logo:hover { opacity: 0.75; }
+    .organized-bas-logo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .organized-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      max-width: 680px;
+    }
+    .organized-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(12,14,26,0.6);
+      line-height: 1.6;
+      max-width: 560px;
+    }
+    .organized-partners {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 920px;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(59,80,200,0.12);
+    }
+    .partner-slot {
+      height: 64px;
+      border: 1px dashed rgba(59,80,200,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.8rem;
+      transition: border-color .2s;
+    }
+    .partner-slot:hover { border-color: var(--orange); }
+    .partner-slot span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(59,80,200,0.5);
+      text-align: center;
+      line-height: 1.3;
+    }
+    .organized-label-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(59,80,200,0.4);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       UPDATE: GALLERY (ex photo strip)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .gallery {
+      background: var(--blue-deep);
+      padding: 6rem 0 5rem;
+      position: relative;
+    }
+    .gallery-head {
+      max-width: 1160px;
+      margin: 0 auto 3rem;
+      padding: 0 3.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .gallery-head .section-label { color: var(--orange); }
+    .gallery-head h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+    }
+    .gallery-quote {
+      max-width: 320px;
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: rgba(242,238,174,0.6);
+      line-height: 1.55;
+      text-align: right;
+    }
+    .gallery-scroll {
+      display: flex;
+      gap: 1.5px;
+      padding: 0 3.5rem 0.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      background: var(--blue-deep);
+    }
+    .gallery-scroll::-webkit-scrollbar { height: 6px; }
+    .gallery-scroll::-webkit-scrollbar-track { background: rgba(242,238,174,0.05); }
+    .gallery-scroll::-webkit-scrollbar-thumb { background: var(--orange); }
+    .gallery-tile {
+      flex: 0 0 auto;
+      width: clamp(260px, 36vw, 420px);
+      aspect-ratio: 4/5;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, #1c2c7e 0%, #263899 30%, #192060 60%, #0a1030 100%);
+      transition: transform .35s cubic-bezier(.2,.8,.3,1);
+    }
+    .gallery-tile:hover { transform: scale(1.02); }
+    .gallery-tile::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50%;
+      background: rgba(0,5,25,0.5);
+      clip-path: polygon(
+        0 100%, 0 75%,
+        10% 58%, 18% 68%, 26% 48%, 34% 60%, 42% 36%, 50% 52%,
+        58% 26%, 66% 42%, 74% 20%, 82% 34%, 90% 14%, 100% 26%, 100% 100%
+      );
+      z-index: 1;
+    }
+    .gallery-tile::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(12,14,26,0.75) 0%, rgba(12,14,26,0.1) 40%, transparent 80%),
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: auto, 50px 50px, 50px 50px;
+      z-index: 2;
+    }
+    .gallery-tile .gal-label {
+      position: absolute;
+      bottom: 1.1rem;
+      left: 1.2rem;
+      z-index: 3;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .gallery-tile .gal-meta {
+      position: absolute;
+      top: 1.1rem;
+      left: 1.2rem;
+      z-index: 3;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: FAQ SECTION
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .faq {
+      background: var(--offwhite);
+      padding: 7rem 3.5rem;
+    }
+    .faq-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .faq-left .section-label { color: var(--orange); }
+    .faq-left h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+      margin-bottom: 2.5rem;
+    }
+    .faq-list {
+      border-top: 1px solid rgba(59,80,200,0.15);
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(59,80,200,0.15);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.4rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--blue);
+      transition: color .2s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: var(--orange); }
+    .faq-item summary::after {
+      content: '+';
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--orange);
+      line-height: 1;
+      transition: transform .2s;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item-body {
+      padding: 0 0 1.4rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(12,14,26,0.65);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+    .faq-photo {
+      min-height: 520px;
+      position: sticky;
+      top: 90px;
+    }
+    .faq-photo.cream-bg::before { background: rgba(59,80,200,0.22); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       UPDATE: WAITLIST 3-COL with photo + counter
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .waitlist-inner.waitlist-3col {
+      grid-template-columns: 3fr 4fr 4fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+    .waitlist-photo {
+      min-height: 580px;
+      position: relative;
+    }
+    .waitlist-counter {
+      margin-top: 1.8rem;
+      padding: 1.2rem 1.4rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(242,238,174,0.15);
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .wcount-block {
+      flex: 1;
+    }
+    .wcount-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem;
+      color: var(--cream);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+    }
+    .wcount-num .orange { color: var(--orange); }
+    .wcount-lbl {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.4);
+      margin-top: 0.2rem;
+    }
+    .wcount-divider {
+      width: 1px;
+      align-self: stretch;
+      background: rgba(242,238,174,0.15);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: FOOTER IG GRID
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .ig-strip {
+      background: var(--ink-mid);
+      padding: 3.5rem 3.5rem 2.5rem;
+      border-top: 1px solid rgba(242,238,174,0.08);
+    }
+    .ig-strip-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .ig-strip-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .ig-strip-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+    .ig-handle {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.5);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .ig-handle:hover { color: var(--cream); }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5px;
+    }
+    .ig-tile {
+      aspect-ratio: 1/1;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, #1c2c7e 0%, #192060 60%, #0a1030 100%);
+      cursor: pointer;
+      transition: transform .3s;
+    }
+    .ig-tile:hover { transform: scale(1.03); }
+    .ig-tile::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 45%;
+      background: rgba(0,5,25,0.5);
+      clip-path: polygon(
+        0 100%, 0 75%,
+        18% 55%, 32% 70%, 48% 40%, 62% 58%,
+        78% 32%, 92% 50%, 100% 38%, 100% 100%
+      );
+    }
+    .ig-tile::after {
+      content: '◼';
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 0.5rem;
+      color: rgba(242,238,174,0.3);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE — NEW SECTIONS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      .film { padding: 4.5rem 1.5rem; }
+      .experience { padding: 5rem 1.5rem; }
+      .experience-head { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .experience-intro { text-align: left; max-width: 100%; }
+      .experience-grid { grid-template-columns: repeat(2, 1fr); }
+      .exp-card { min-height: 420px; }
+
+      .about-inner.about-2col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-signup { padding: 2rem 1.5rem 2.3rem; }
+
+      .places { padding: 5rem 1.5rem; }
+      .places-mosaic {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 140px;
+      }
+      .place-tile.p-1 { grid-column: span 2; grid-row: span 2; }
+      .place-tile.p-2 { grid-column: span 2; grid-row: span 1; }
+      .place-tile.p-3 { grid-column: span 2; grid-row: span 1; }
+      .place-tile.p-4 { grid-column: span 2; grid-row: span 2; }
+      .place-tile.p-5 { grid-column: span 2; grid-row: span 1; }
+      .place-tile.p-6 { grid-column: span 2; grid-row: span 1; }
+      .place-tile.p-7 { grid-column: span 2; grid-row: span 1; }
+      .place-tile.p-8 { grid-column: span 2; grid-row: span 1; }
+
+      .organized { padding: 5rem 1.5rem; }
+      .organized-partners { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+
+      .gallery { padding: 4.5rem 0 3.5rem; }
+      .gallery-head { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 0 1.5rem; }
+      .gallery-quote { text-align: left; max-width: 100%; }
+      .gallery-scroll { padding: 0 1.5rem 0.5rem; }
+
+      .faq { padding: 5rem 1.5rem; }
+      .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .faq-photo { min-height: 320px; position: static; }
+
+      .waitlist-inner.waitlist-3col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .waitlist-photo { min-height: 340px; }
+
+      .ig-strip { padding: 2.5rem 1.5rem 2rem; }
+    }
+
+    @media (max-width: 640px) {
+      .lang-toggle { padding: 0.3rem 0.5rem; }
+      .film { padding: 3.5rem 1rem; }
+      .film-play { width: 72px; height: 72px; }
+      .film-play::before { border-left: 16px solid var(--white); border-top: 10px solid transparent; border-bottom: 10px solid transparent; }
+
+      .experience { padding: 3.5rem 1rem; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .exp-card { min-height: 380px; }
+
+      .about-signup { padding: 1.8rem 1.2rem 2.1rem; }
+      .about-signup-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+      .route-card-photo.route-photo-tall { height: 240px; }
+
+      .places { padding: 3.5rem 1rem; }
+      .places-mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 130px;
+        gap: 1px;
+      }
+      .place-tile.p-1, .place-tile.p-2, .place-tile.p-3, .place-tile.p-4,
+      .place-tile.p-5, .place-tile.p-6, .place-tile.p-7, .place-tile.p-8 {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+      .place-tile.p-1 { grid-column: span 2; }
+      .place-tile.p-8 { grid-column: span 2; }
+
+      .organized { padding: 3.5rem 1rem; }
+      .organized-partners { grid-template-columns: 1fr 1fr; }
+
+      .gallery { padding: 3rem 0 2.5rem; }
+      .gallery-head { padding: 0 1rem; }
+      .gallery-scroll { padding: 0 1rem 0.5rem; }
+      .gallery-tile { width: 78vw; }
+
+      .faq { padding: 3.5rem 1rem; }
+      .faq-item summary { font-size: 0.92rem; padding: 1.1rem 0; gap: 1rem; }
+
+      .waitlist-photo { min-height: 220px; }
+      .wcount-num { font-size: 1.8rem; }
+
+      .ig-strip { padding: 2rem 1rem 1.5rem; }
+      .ig-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: HERO WORDMARK (H1 giant display)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .hero-logo-svg {
+      /* override: più piccolo per lasciare spazio al wordmark */
+      width: clamp(78px, 12vw, 130px) !important;
+      margin-bottom: 0.6rem !important;
+    }
+    .hero-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.2rem, 13vw, 7.2rem);
+      line-height: 0.86;
+      letter-spacing: 0.015em;
+      color: var(--cream);
+      text-shadow:
+        0 4px 24px rgba(0,0,0,0.55),
+        0 2px 6px rgba(0,0,0,0.4);
+      margin: 0 0 1rem;
+      text-align: center;
+      font-weight: 400;
+    }
+    .hero-wordmark span {
+      display: block;
+    }
+
+    /* ── HERO DATE LINE (sostituisce .hero-event-bar) ── */
+    .hero-date-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.45rem 1.2rem;
+      margin-bottom: 1.3rem;
+      border-top: 1px solid rgba(242,238,174,0.25);
+      border-bottom: 1px solid rgba(242,238,174,0.25);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1rem, 2.3vw, 1.55rem);
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    }
+    .hdate-date { color: var(--cream); }
+    .hdate-loc { color: rgba(242,238,174,0.85); }
+    .hdate-dot {
+      width: 5px; height: 5px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    /* ── HERO SCARCITY BADGE (PIONEER EDITION · POSTI LIMITATI)
+       Dark background, no orange fill — orange stays reserved for the CTA.
+       ─ */
+    .hero-scarcity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      background: rgba(12,14,26,0.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(242,238,174,0.28);
+      padding: 0.65rem 1.4rem;
+      margin-bottom: 1.6rem;
+      position: relative;
+    }
+    .hero-scarcity-badge::before,
+    .hero-scarcity-badge::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 1px;
+      background: rgba(242,238,174,0.25);
+    }
+    .hero-scarcity-badge::before {
+      right: 100%;
+      margin-right: 12px;
+      transform: translateY(-50%);
+    }
+    .hero-scarcity-badge::after {
+      left: 100%;
+      margin-left: 12px;
+      transform: translateY(-50%);
+    }
+    .hsb-line {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    /* Pioneer Edition in cream (brand/status), Posti Limitati in orange (scarcity cue) */
+    .hsb-line-1 { color: var(--cream); }
+    .hsb-line-2 { color: var(--orange); }
+    .hsb-sep {
+      width: 1px;
+      height: 16px;
+      background: rgba(242,238,174,0.3);
+    }
+
+    /* ── HERO TRUST LINE (Organizzato da Tuscany Trail) ── */
+    .hero-trust-line {
+      margin-top: 1rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-trust-line strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .htl-dot {
+      width: 3px; height: 3px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: HERO FORM (inline email capture)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .hero-form {
+      display: flex;
+      gap: 0;
+      width: min(480px, 92vw);
+      margin-top: 0.5rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+    .hero-form-input {
+      flex: 1;
+      padding: 1.05rem 1.3rem;
+      background: rgba(12,14,26,0.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(242,238,174,0.35);
+      border-right: none;
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+    .hero-form-input::placeholder { color: rgba(242,238,174,0.45); }
+    .hero-form-input:focus {
+      background: rgba(12,14,26,0.75);
+      border-color: var(--orange);
+    }
+    .hero-form-btn {
+      padding: 1.05rem 1.8rem;
+      font-size: 0.92rem;
+      letter-spacing: 0.18em;
+      white-space: nowrap;
+    }
+    .hero-form-note {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 1rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.5);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-form-link {
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .hero-form-link:hover { color: var(--orange-lt); }
+    .form-success-hero {
+      margin-top: 1rem;
+      padding: 0.75rem 1.1rem;
+      background: rgba(100,200,100,0.15);
+      border: 1px solid rgba(100,200,100,0.35);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #a8dba8;
+    }
+    /* Primary hero CTA button (replaces inline form) */
+    .hero-cta-btn {
+      padding: 1.15rem 2.4rem;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      box-shadow: 0 12px 32px rgba(232,85,32,0.38);
+    }
+    .hero-cta-btn:hover {
+      box-shadow: 0 16px 40px rgba(232,85,32,0.5);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: TRUST BAR (right under hero)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .trust-bar {
+      background: var(--ink);
+      padding: 1.4rem 3.5rem;
+      border-bottom: 1px solid rgba(242,238,174,0.08);
+    }
+    .trust-bar-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .trust-item strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .trust-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .trust-item.no-bullet::before { display: none; }
+    .trust-sep {
+      width: 1px;
+      height: 22px;
+      background: rgba(242,238,174,0.15);
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: UNIVERSAL PHOTO BACKGROUND
+       Apply .has-photo + <img class="bg-photo"> to any
+       placeholder container to replace geometric mock
+       with a real image.
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .bg-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      display: block;
+    }
+    .has-photo::before,
+    .has-photo::after {
+      display: none !important;
+    }
+    .has-photo .slot-badge,
+    .has-photo .placeholder-badge {
+      display: none !important;
+    }
+    /* Keep overlays above the photo */
+    .place-tile.has-photo .place-name,
+    .place-tile.has-photo .place-tag,
+    .gallery-tile.has-photo .gal-label,
+    .gallery-tile.has-photo .gal-meta,
+    .route-card-photo.has-photo .route-difficulty {
+      z-index: 3;
+    }
+    /* Gradient overlays for readability on photo */
+    .place-tile.has-photo,
+    .gallery-tile.has-photo {
+      background: var(--ink);
+    }
+    .place-tile.has-photo::after,
+    .gallery-tile.has-photo::after {
+      display: block !important;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,14,26,0.78) 0%, rgba(12,14,26,0.15) 45%, rgba(12,14,26,0.1) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-img-placeholder.has-photo {
+      background: var(--ink);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: ABOUT H2 (Gravel. Bikepacking. Avventura.)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .about-h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4.2vw, 3.4rem);
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      color: var(--blue);
+      margin-bottom: 1.4rem;
+      font-weight: 400;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: ROUTES bottom note
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .routes-bottom-note {
+      max-width: 1160px;
+      margin: 3rem auto 0;
+      text-align: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: PIONEER EDITION section (editorial)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .pioneer {
+      background: var(--ink);
+      padding: 7rem 3.5rem;
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .pioneer::before {
+      content: 'PIONEER';
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(6rem, 18vw, 16rem);
+      color: rgba(232,85,32,0.06);
+      letter-spacing: 0.02em;
+      line-height: 0.85;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .pioneer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 6fr;
+      gap: 4.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .pioneer-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.1rem;
+    }
+    .pioneer-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 5.4rem);
+      line-height: 0.9;
+      letter-spacing: 0.015em;
+      color: var(--cream);
+      font-weight: 400;
+    }
+    .pioneer-title em {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.72em;
+      color: var(--orange);
+      letter-spacing: 0;
+    }
+    .pioneer-right p {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(242,238,174,0.75);
+      margin-bottom: 1.2rem;
+    }
+    .pioneer-right p:last-child { margin-bottom: 0; }
+    .pioneer-kicker-end {
+      font-family: 'Barlow Condensed', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: var(--cream) !important;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(242,238,174,0.15);
+      margin-top: 1.5rem !important;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: PLACES intro copy
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .places-intro {
+      margin-top: 1.6rem;
+      max-width: 760px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(12,14,26,0.7);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: STORY editorial blocks
+       (Vette dolomitiche, Un'esperienza completa)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .story {
+      background: var(--offwhite);
+      padding: 7rem 3.5rem;
+    }
+    .story-a { background: var(--offwhite); }
+    .story-b { background: var(--cream); }
+    .story-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 6fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+    .story-inner-reverse {
+      grid-template-columns: 6fr 5fr;
+      direction: rtl;
+    }
+    .story-inner-reverse > * { direction: ltr; }
+    .story-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.1rem;
+    }
+    .story-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      line-height: 0.9;
+      letter-spacing: 0.015em;
+      color: var(--blue);
+      margin-bottom: 1.6rem;
+      font-weight: 400;
+    }
+    .story-title em {
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.62em;
+      color: var(--orange);
+      letter-spacing: 0;
+    }
+    .story-text p {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.02rem;
+      line-height: 1.78;
+      color: rgba(12,14,26,0.75);
+      margin-bottom: 1.1rem;
+    }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-photo {
+      min-height: 520px;
+      position: relative;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE — HERO FORM & TRUST BAR
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      .pioneer { padding: 5rem 1.5rem; }
+      .pioneer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .story { padding: 5rem 1.5rem; }
+      .story-inner,
+      .story-inner-reverse { grid-template-columns: 1fr; gap: 2.5rem; direction: ltr; }
+      .story-photo { min-height: 360px; }
+      .places-intro { font-size: 0.95rem; }
+    }
+    @media (max-width: 640px) {
+      .hero-form { flex-direction: column; gap: 0.55rem; box-shadow: none; }
+      .hero-form-input { border: 1.5px solid rgba(242,238,174,0.35); padding: 0.95rem 1.1rem; }
+      .hero-form-btn { width: 100%; padding: 0.95rem; font-size: 0.88rem; letter-spacing: 0.16em; }
+
+      /* Mobile hero tuning */
+      .hero-logo-svg { width: clamp(66px, 18vw, 90px) !important; margin-bottom: 0.5rem !important; }
+      .hero-wordmark { font-size: clamp(3rem, 15vw, 4.4rem); margin-bottom: 0.75rem; }
+      .hero-date-line {
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        font-size: clamp(0.95rem, 4.2vw, 1.2rem);
+      }
+      .hero-date-line .hdate-dot { display: none; }
+      .hero-scarcity-badge {
+        padding: 0.65rem 1.1rem;
+        gap: 0.7rem;
+        margin-bottom: 1.2rem;
+      }
+      .hero-scarcity-badge::before,
+      .hero-scarcity-badge::after { width: 22px; }
+      .hero-scarcity-badge::before { margin-right: 8px; }
+      .hero-scarcity-badge::after { margin-left: 8px; }
+      .hsb-line { font-size: 0.78rem; letter-spacing: 0.14em; }
+      .hsb-sep { height: 14px; }
+      .hero-trust-line {
+        margin-top: 0.9rem;
+        font-size: 0.5rem;
+        letter-spacing: 0.22em;
+        gap: 0.4rem;
+      }
+
+      /* Pioneer + Story responsive mobile */
+      .pioneer { padding: 3.5rem 1.1rem; }
+      .pioneer-title { font-size: clamp(2.2rem, 9vw, 3rem); }
+      .pioneer-right p { font-size: 0.92rem; }
+      .story { padding: 3.5rem 1.1rem; }
+      .story-title { font-size: clamp(2rem, 9vw, 2.8rem); }
+      .story-text p { font-size: 0.92rem; }
+      .story-photo { min-height: 280px; }
+      .routes-bottom-note { font-size: 0.55rem; letter-spacing: 0.2em; margin-top: 2rem; }
+      .places-intro { font-size: 0.88rem; }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE — MOBILE  ≤ 640px
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 640px) {
+      /* Nav */
+      nav { padding: 0 1.2rem; height: 56px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      /* Hero */
+      .hero { padding-top: 56px; min-height: 100svh; }
+      .hero-content { padding: 1.5rem 1rem 5rem; }
+      .hero-logo-svg { width: clamp(100px, 38vw, 150px); margin-bottom: 1.4rem; }
+      .hero-event-bar { flex-direction: column; gap: 0.3rem; padding: 0.7rem 1.2rem; }
+      .hero-event-dot { display: none; }
+      .hero-date-txt, .hero-location-txt { font-size: clamp(1.1rem, 5vw, 1.5rem); }
+      .hero-stats { flex-direction: column; gap: 0; width: 100%; max-width: 260px; }
+      .hstat { padding: 0.75rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(242,238,174,0.18); }
+      .hstat:last-child { border-bottom: none; }
+      .hstat-val { font-size: 1.6rem; }
+      .hero-actions { flex-direction: column; gap: 0.75rem; width: 100%; max-width: 280px; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; padding: 1rem; }
+      .hero-scroll { bottom: 1.8rem; }
+      .hero-cut { height: 28px; }
+
+      /* Tagline strip */
+      .tagline-strip { padding: 1.2rem 1rem; gap: 1.2rem; overflow-x: auto; justify-content: flex-start; }
+      .tagline-word { font-size: 2rem; }
+
+      /* Numbers */
+      .numbers { padding: 3.5rem 1.2rem; }
+      .numbers-inner { grid-template-columns: 1fr; gap: 0; }
+      .num-item {
+        border-right: none;
+        border-bottom: 1.5px solid rgba(59,80,200,0.12);
+        padding: 1.5rem 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .num-item:last-child { border-bottom: none; }
+      .num-value { font-size: 3.5rem; flex-shrink: 0; }
+      .num-label-top { margin-bottom: 0.3rem; }
+
+      /* Routes */
+      .routes { padding: 4rem 1.2rem; }
+      .routes-head { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2.5rem; }
+      .routes-grid { grid-template-columns: 1fr; gap: 1.5px; }
+      .route-card-photo { height: 200px; }
+      .route-card-body { padding: 1.4rem; }
+
+      /* Photo strip */
+      .photo-strip { grid-template-columns: 1fr; height: auto; }
+      .strip-panel { height: 220px; }
+      .strip-panel:last-of-type { display: none; }
+      .strip-quote { padding: 2rem 1.2rem; }
+      .strip-quote p { font-size: 0.9rem; }
+
+      /* CTA */
+      .cta-split { grid-template-columns: 1fr; }
+      .cta-left { padding: 4rem 1.2rem; }
+      .cta-h2 { font-size: clamp(3rem, 14vw, 5rem); }
+      .cta-p { font-size: 0.88rem; }
+      .btn-white { width: 100%; text-align: center; padding: 1rem; }
+      .cta-right { padding: 3rem 1.2rem; }
+      .cta-info-grid { grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+
+      /* Footer */
+      footer { padding: 2rem 1.2rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .footer-links { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━━━━━━━━━━ NAV ━━━━━━━━━━━━ -->
+  <nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="nav-logo">
+      <img src="extracted/logo-real-light.svg" class="nav-mark" alt="Trentino Gravel logo">
+      <div class="nav-wordmark">
+        Trentino Gravel
+        <small data-i18n-it="Dolomiti · Est. 2024" data-i18n-en="Dolomites · Est. 2024">Dolomiti · Est. 2024</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#routes" data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a></li>
+      <li><a href="#pioneer" data-i18n-it="Pioneer" data-i18n-en="Pioneer">Pioneer</a></li>
+      <li><a href="#gallery" data-i18n-it="Gallery" data-i18n-en="Gallery">Gallery</a></li>
+      <li><a href="#faq" data-i18n-it="Info" data-i18n-en="FAQ">Info</a></li>
+      <li class="lang-toggle" aria-label="Language switch">
+        <button type="button" data-lang-btn="it" class="active">IT</button>
+        <span class="lang-sep">·</span>
+        <button type="button" data-lang-btn="en">EN</button>
+      </li>
+      <li><a href="#waitlist" class="nav-cta" data-i18n-it="Riserva" data-i18n-en="Reserve">Riserva</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#routes" onclick="closeMenu()" data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a>
+    <a href="#pioneer" onclick="closeMenu()" data-i18n-it="Pioneer" data-i18n-en="Pioneer">Pioneer</a>
+    <a href="#gallery" onclick="closeMenu()" data-i18n-it="Gallery" data-i18n-en="Gallery">Gallery</a>
+    <a href="#faq" onclick="closeMenu()" data-i18n-it="Info" data-i18n-en="FAQ">Info</a>
+    <a href="#waitlist" class="mobile-cta" onclick="closeMenu()" data-i18n-it="Riserva il posto" data-i18n-en="Reserve your spot">Riserva il posto</a>
+  </div>
+
+  <!-- ━━━━━━━━━━━━ HERO ━━━━━━━━━━━━ -->
+  <section class="hero">
+
+    <!-- BACKGROUND LAYER: swap .hero-img-placeholder for <img class="hero-img"> when photos are ready -->
+    <div class="hero-bg">
+      <div class="hero-img-placeholder"></div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+
+      <img src="extracted/logo-real-light.svg" class="hero-logo-svg hero-animate" alt="Trentino Gravel logo">
+
+      <h1 class="hero-wordmark hero-animate">
+        <span>Trentino</span>
+        <span>Gravel</span>
+      </h1>
+
+      <div class="hero-date-line hero-animate">
+        <span class="hdate-date" data-i18n-it="26 Settembre 2026" data-i18n-en="September 26, 2026">26 Settembre 2026</span>
+        <span class="hdate-dot"></span>
+        <span class="hdate-loc">Rovereto · Trentino</span>
+      </div>
+
+      <div class="hero-scarcity-badge hero-animate" role="note">
+        <span class="hsb-line hsb-line-1">Pioneer Edition</span>
+        <span class="hsb-sep"></span>
+        <span class="hsb-line hsb-line-2" data-i18n-it="Posti limitati" data-i18n-en="Limited spots">Posti limitati</span>
+      </div>
+
+      <a href="#signup" class="hero-cta-btn btn-primary hero-animate" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+
+      <div class="hero-trust-line hero-animate">
+        <span data-i18n-it="Organizzato da" data-i18n-en="Organized by">Organizzato da</span>
+        <strong>Tuscany Trail</strong>
+        <span class="htl-dot"></span>
+        <span>Bike Adventure Series</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll hero-animate">
+      <span data-i18n-it="Scorri" data-i18n-en="Scroll">Scorri</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/>
+        <circle cx="8" cy="7" r="2" fill="currentColor" opacity="0.6">
+          <animate attributeName="cy" values="7;14;7" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
+    <!-- Bottom cut into tagline strip -->
+    <svg class="hero-cut" viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L1440,0 L1440,40 L720,12 L0,40 Z" fill="#E85520"/>
+    </svg>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ TAGLINE STRIP ━━━━━━━━━━━━ -->
+  <div class="tagline-strip">
+    <span class="tagline-word" data-i18n-it="ESPLORA" data-i18n-en="EXPLORE">ESPLORA</span>
+    <span class="tagline-sep"></span>
+    <span class="tagline-word" data-i18n-it="RESISTI" data-i18n-en="ENDURE">RESISTI</span>
+    <span class="tagline-sep"></span>
+    <span class="tagline-word" data-i18n-it="GODITI" data-i18n-en="ENJOY">GODITI</span>
+    <span class="tagline-sep"></span>
+    <span class="tagline-word" data-i18n-it="ESPLORA" data-i18n-en="EXPLORE">ESPLORA</span>
+    <span class="tagline-sep"></span>
+    <span class="tagline-word" data-i18n-it="RESISTI" data-i18n-en="ENDURE">RESISTI</span>
+    <span class="tagline-sep"></span>
+    <span class="tagline-word" data-i18n-it="GODITI" data-i18n-en="ENJOY">GODITI</span>
+  </div>
+
+  <!-- ━━━━━━━━━━━━ ABOUT (2-col con foto) ━━━━━━━━━━━━ -->
+  <section class="about" id="about">
+    <div class="about-inner about-2col">
+      <div class="about-text sr">
+        <div class="section-label" style="color:var(--orange); margin-bottom:1rem;" data-i18n-it="Il manifesto" data-i18n-en="The manifesto">Il manifesto</div>
+        <h2 class="about-h2" data-i18n-it="Gravel. Bikepacking. Avventura." data-i18n-en="Gravel. Bikepacking. Adventure.">Gravel. Bikepacking. Avventura.</h2>
+        <p data-i18n-it="Un'avventura in Trentino, uno dei territori più belli d'Europa su un tracciato curato nei minimi dettagli per essere affrontato con una bicicletta gravel. Piste ciclabili perfette e strade sterrate in mezzo a boschi e prati. Alzando la testa vedrai vette che superano i tremila metri con neve anche d'estate, le Dolomiti UNESCO, torrenti di montagna e boschi. E quando ti fermi incontrerai la famigerata accoglienza trentina fatta di alloggi bike friendly e una enogastronomia che non ha eguali." data-i18n-en="An adventure in Trentino, one of Europe's most beautiful regions, on a route designed in every detail to be ridden on a gravel bike. Perfect cycle paths and gravel roads through forests and meadows. Look up and you'll see peaks soaring past three thousand meters — snow-capped even in summer, the UNESCO Dolomites, mountain streams and dense woods. And when you stop, you'll meet the legendary Trentino hospitality: bike-friendly stays and a food and wine culture without equal.">Un'avventura in Trentino, uno dei territori più belli d'Europa su un tracciato curato nei minimi dettagli per essere affrontato con una bicicletta gravel. Piste ciclabili perfette e strade sterrate in mezzo a boschi e prati. Alzando la testa vedrai vette che superano i tremila metri con neve anche d'estate, le Dolomiti UNESCO, torrenti di montagna e boschi. E quando ti fermi incontrerai la famigerata accoglienza trentina fatta di alloggi bike friendly e una enogastronomia che non ha eguali.</p>
+        <p class="about-highlight sr d1" data-i18n-it="<strong>I posti sono limitati. L'unico modo per partecipare è la waiting list.</strong><br>Chi si iscrive alla lista riceverà per primo tutte le informazioni e l'accesso prioritario." data-i18n-en="<strong>Spots are limited. The only way to participate is the waiting list.</strong><br>Those who sign up will be first to receive all information and priority access."><strong>I posti sono limitati. L'unico modo per partecipare è la waiting list.</strong><br>Chi si iscrive alla lista riceverà per primo tutte le informazioni e l'accesso prioritario.</p>
+      </div>
+      <div class="about-signup sr d1" id="signup">
+        <div class="about-signup-head">
+          <div class="about-signup-kicker" data-i18n-it="Posti limitati · Pioneer Edition" data-i18n-en="Limited spots · Pioneer Edition">Posti limitati · Pioneer Edition</div>
+          <h3 class="about-signup-title" data-i18n-it="Iscriviti alla<br>waiting list" data-i18n-en="Join the<br>waiting list">Iscriviti alla<br>waiting list</h3>
+        </div>
+        <form class="waitlist-form about-form" id="aboutWaitlistForm" onsubmit="handleWaitlist(event)">
+          <div class="wf-field">
+            <label class="form-label" for="aName" data-i18n-it="Nome" data-i18n-en="Name">Nome</label>
+            <input type="text" id="aName" name="name" class="form-input form-input-full" placeholder="Mario" required autocomplete="given-name">
+          </div>
+          <div class="wf-field">
+            <label class="form-label" for="aEmail" data-i18n-it="Email" data-i18n-en="Email">Email</label>
+            <input type="email" id="aEmail" name="email" class="form-input form-input-full" placeholder="tu@example.com" required autocomplete="email">
+          </div>
+          <div class="wf-field">
+            <label class="form-label" data-i18n-it="Hai già fatto il Tuscany Trail?" data-i18n-en="Have you done the Tuscany Trail?">Hai già fatto il Tuscany Trail?</label>
+            <div class="wf-radio-row" role="radiogroup">
+              <label class="wf-radio">
+                <input type="radio" name="exTT" value="yes" required>
+                <span class="wf-radio-label" data-i18n-it="Sì" data-i18n-en="Yes">Sì</span>
+              </label>
+              <label class="wf-radio">
+                <input type="radio" name="exTT" value="no" required>
+                <span class="wf-radio-label" data-i18n-it="No" data-i18n-en="No">No</span>
+              </label>
+            </div>
+          </div>
+          <div class="wf-field">
+            <label class="form-label" data-i18n-it="Preferenza percorso" data-i18n-en="Route preference">Preferenza percorso</label>
+            <div class="wf-radio-row" role="radiogroup">
+              <label class="wf-radio">
+                <input type="radio" name="route" value="long" required>
+                <span class="wf-radio-label" data-i18n-it="Lungo · 400 km" data-i18n-en="Long · 400 km">Lungo · 400 km</span>
+              </label>
+              <label class="wf-radio">
+                <input type="radio" name="route" value="short" required>
+                <span class="wf-radio-label" data-i18n-it="Corto · 220 km" data-i18n-en="Short · 220 km">Corto · 220 km</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="form-btn form-btn-full" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</button>
+          <p class="form-note" data-i18n-it="I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi." data-i18n-en="Data is handled by Brevo. No spam — unsubscribe anytime.">I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.</p>
+          <p class="form-error" role="alert"></p>
+          <div class="form-success" data-i18n-it="✓ Sei in lista. Ti scriviamo presto." data-i18n-en="✓ You're on the list. We'll be in touch soon.">
+            ✓ Sei in lista. Ti scriviamo presto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ━━━━━━━━━━━━ ROUTES ━━━━━━━━━━━━ -->
+  <section class="routes" id="routes">
+    <div class="routes-head">
+      <div>
+        <div class="section-label sr" data-i18n-it="Due percorsi · Un unico standard" data-i18n-en="Two routes · One standard">Due percorsi · Un unico standard</div>
+        <h2 class="section-h2 sr d1" data-i18n-it="Scegli la tua<br><span class='dim'>distanza</span>" data-i18n-en="Choose your<br><span class='dim'>distance</span>">Scegli la tua<br><span class="dim">distanza</span></h2>
+      </div>
+      <p class="routes-desc sr d2" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
+    </div>
+
+    <div class="routes-grid routes-grid-2">
+
+      <!-- Route 1 — Long -->
+      <div class="route-card featured sr">
+        <div class="route-card-photo route-photo-tall photo-slot" aria-label="Long route photo placeholder">
+          <div class="slot-badge">
+            <span data-i18n-it="Percorso lungo · Foto" data-i18n-en="Long route · Photo">Percorso lungo · Foto</span>
+            <span data-i18n-it="Azione gravel · paesaggio" data-i18n-en="Gravel action · landscape">Azione gravel · paesaggio</span>
+          </div>
+          <span class="route-difficulty" data-i18n-it="Full Adventure" data-i18n-en="Full Adventure">Full Adventure</span>
+        </div>
+        <div class="route-card-body">
+          <div class="route-num" data-i18n-it="01 / Percorso lungo" data-i18n-en="01 / Long Route">01 / Percorso lungo</div>
+          <h3 class="route-name" data-i18n-it="Percorso<br>lungo" data-i18n-en="Long<br>Route">Percorso<br>lungo</h3>
+          <span class="route-elevation-label" data-i18n-it="Profilo altimetrico" data-i18n-en="Elevation profile">Profilo altimetrico</span>
+          <svg class="route-elevation" viewBox="0 0 400 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0,52 L20,44 L42,38 L58,42 L78,26 L98,32 L118,20 L142,28 L162,12 L182,22 L208,8 L232,18 L256,14 L280,26 L302,20 L322,34 L344,28 L368,42 L388,36 L400,48 L400,58 L0,58 Z" fill="rgba(242,238,174,0.14)" stroke="none"/>
+            <path d="M0,52 L20,44 L42,38 L58,42 L78,26 L98,32 L118,20 L142,28 L162,12 L182,22 L208,8 L232,18 L256,14 L280,26 L302,20 L322,34 L344,28 L368,42 L388,36 L400,48" fill="none" stroke="#E85520" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <p class="route-tagline" data-i18n-it="Per chi cerca la piena avventura." data-i18n-en="For those who want the full adventure.">Per chi cerca la piena avventura.</p>
+          <div class="route-stats">
+            <div>
+              <div class="rstat-val">400 km</div>
+              <div class="rstat-lbl" data-i18n-it="Distanza" data-i18n-en="Distance">Distanza</div>
+            </div>
+            <div>
+              <div class="rstat-val">7.600 m</div>
+              <div class="rstat-lbl" data-i18n-it="Dislivello D+" data-i18n-en="Elevation D+">Dislivello D+</div>
+            </div>
+            <div>
+              <div class="rstat-val">70%</div>
+              <div class="rstat-lbl" data-i18n-it="Sterrato" data-i18n-en="Unpaved">Sterrato</div>
+            </div>
+          </div>
+          <a href="#waitlist" class="route-cta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+        </div>
+      </div>
+
+      <!-- Route 2 — Short -->
+      <div class="route-card sr d1">
+        <div class="route-card-photo route-photo-tall photo-slot cream-bg" aria-label="Short route photo placeholder">
+          <div class="slot-badge">
+            <span data-i18n-it="Percorso corto · Foto" data-i18n-en="Short route · Photo">Percorso corto · Foto</span>
+            <span data-i18n-it="Sterrato tra vigneti" data-i18n-en="Gravel through vineyards">Sterrato tra vigneti</span>
+          </div>
+          <span class="route-difficulty" data-i18n-it="First Timer" data-i18n-en="First Timer">First Timer</span>
+        </div>
+        <div class="route-card-body">
+          <div class="route-num" data-i18n-it="02 / Percorso corto" data-i18n-en="02 / Short Route">02 / Percorso corto</div>
+          <h3 class="route-name" data-i18n-it="Percorso<br>corto" data-i18n-en="Short<br>Route">Percorso<br>corto</h3>
+          <span class="route-elevation-label" data-i18n-it="Profilo altimetrico" data-i18n-en="Elevation profile">Profilo altimetrico</span>
+          <svg class="route-elevation" viewBox="0 0 400 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0,50 L22,46 L44,42 L68,36 L92,40 L118,30 L144,36 L170,26 L196,32 L222,22 L248,30 L274,26 L300,34 L326,28 L352,38 L378,32 L400,44 L400,58 L0,58 Z" fill="rgba(59,80,200,0.1)" stroke="none"/>
+            <path d="M0,50 L22,46 L44,42 L68,36 L92,40 L118,30 L144,36 L170,26 L196,32 L222,22 L248,30 L274,26 L300,34 L326,28 L352,38 L378,32 L400,44" fill="none" stroke="#3B50C8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <p class="route-tagline" data-i18n-it="Perfetto per chi ha meno tempo e non vuole rinunciare." data-i18n-en="Perfect for those with less time who don't want to miss out.">Perfetto per chi ha meno tempo e non vuole rinunciare.</p>
+          <div class="route-stats">
+            <div>
+              <div class="rstat-val">220 km</div>
+              <div class="rstat-lbl" data-i18n-it="Distanza" data-i18n-en="Distance">Distanza</div>
+            </div>
+            <div>
+              <div class="rstat-val">2.900 m</div>
+              <div class="rstat-lbl" data-i18n-it="Dislivello D+" data-i18n-en="Elevation D+">Dislivello D+</div>
+            </div>
+            <div>
+              <div class="rstat-val">70%</div>
+              <div class="rstat-lbl" data-i18n-it="Sterrato" data-i18n-en="Unpaved">Sterrato</div>
+            </div>
+          </div>
+          <a href="#waitlist" class="route-cta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="routes-bottom-note sr" data-i18n-it="Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza." data-i18n-en="Choose your route at sign-up. You can change your mind up until the start.">Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza.</p>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ PIONEER EDITION (editorial) ━━━━━━━━━━━━ -->
+  <section class="pioneer" id="pioneer">
+    <div class="pioneer-inner">
+      <div class="pioneer-left sr">
+        <div class="pioneer-kicker">Pioneer Edition</div>
+        <h2 class="pioneer-title" data-i18n-it="La prima volta.<br><em>La tua.</em>" data-i18n-en="The first time.<br><em>Yours.</em>">La prima volta.<br><em>La tua.</em></h2>
+      </div>
+      <div class="pioneer-right sr d1">
+        <p data-i18n-it="Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel." data-i18n-en="This is the zero edition of Trentino Gravel. You'll take part in the birth of something big. Together we'll discover everything Trentino has to offer to those who cross it on a gravel bike.">Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel.</p>
+        <p data-i18n-it="Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future." data-i18n-en="We've given everything to create this experience, but your feedback will be essential to shape future editions.">Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future.</p>
+        <p class="pioneer-kicker-end" data-i18n-it="Chi parteciperà farà la storia di questo evento." data-i18n-en="Those who join will make this event's history.">Chi parteciperà farà la storia di questo evento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ PLACES — BENTO MOSAIC ━━━━━━━━━━━━ -->
+  <section class="places" id="places">
+    <div class="places-inner">
+      <div class="places-head sr">
+        <div class="section-label" style="color:var(--orange)" data-i18n-it="Luoghi attraversati" data-i18n-en="Places you'll cross">Luoghi attraversati</div>
+        <h2 class="places-title" data-i18n-it="Iconic<br><em>Trentino</em>" data-i18n-en="Iconic<br><em>Trentino</em>">Iconic<br><em>Trentino</em></h2>
+        <p class="places-intro" data-i18n-it="Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel." data-i18n-en="You'll cross iconic places like Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — all on the best possible route for a gravel bike.">Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel.</p>
+      </div>
+      <div class="places-mosaic">
+        <div class="place-tile p-1 sr" aria-label="Dolomiti di Brenta placeholder">
+          <span class="place-tag">01</span>
+          <div class="place-name">Dolomiti<br>di Brenta</div>
+        </div>
+        <div class="place-tile p-2 sr d1" aria-label="Riva del Garda placeholder">
+          <span class="place-tag">02</span>
+          <div class="place-name">Riva del Garda</div>
+        </div>
+        <div class="place-tile p-3 sr d2" aria-label="Madonna di Campiglio placeholder">
+          <span class="place-tag">03</span>
+          <div class="place-name">Madonna<br>di Campiglio</div>
+        </div>
+        <div class="place-tile p-4 sr d3" aria-label="Pale di San Martino placeholder">
+          <span class="place-tag">04</span>
+          <div class="place-name">Pale di<br>San Martino</div>
+        </div>
+        <div class="place-tile p-5 sr d1" aria-label="Val di Fiemme placeholder">
+          <span class="place-tag">05</span>
+          <div class="place-name">Val di Fiemme</div>
+        </div>
+        <div class="place-tile p-6 sr d2" aria-label="Val di Fassa placeholder">
+          <span class="place-tag">06</span>
+          <div class="place-name">Val di Fassa</div>
+        </div>
+        <div class="place-tile p-7 sr d3" aria-label="Moena placeholder">
+          <span class="place-tag">07</span>
+          <div class="place-name">Moena</div>
+        </div>
+        <div class="place-tile p-8 sr d1" aria-label="Trento placeholder">
+          <span class="place-tag">08</span>
+          <div class="place-name">Trento</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ STORY BLOCK · Vette dolomitiche ━━━━━━━━━━━━ -->
+  <section class="story story-a" id="vette">
+    <div class="story-inner">
+      <div class="story-text sr">
+        <div class="story-kicker" data-i18n-it="Paesaggi" data-i18n-en="Landscapes">Paesaggi</div>
+        <h2 class="story-title" data-i18n-it="Vette<br><em>dolomitiche</em>" data-i18n-en="Dolomite<br><em>peaks</em>">Vette<br><em>dolomitiche</em></h2>
+        <p data-i18n-it="Immagina una valle raccolta tra pareti di roccia bianca che salgono verticali per centinaia di metri. In fondo scorre un torrente con acqua cristallina: lo senti prima di vederlo, il rumore dell'acqua che rimbalza tra i sassi." data-i18n-en="Imagine a narrow valley held between white rock walls rising vertically for hundreds of meters. At the bottom flows a stream with crystal-clear water — you hear it before you see it, the sound of water bouncing between stones.">Immagina una valle raccolta tra pareti di roccia bianca che salgono verticali per centinaia di metri. In fondo scorre un torrente con acqua cristallina: lo senti prima di vederlo, il rumore dell'acqua che rimbalza tra i sassi.</p>
+        <p data-i18n-it="Sali e il paesaggio cambia. Boschi fitti di abeti dove l'aria sa di resina e il suolo è morbido di aghi. Poi pascoli aperti dove l'unica cosa che senti sono i campanacci e il vento tra l'erba." data-i18n-en="You climb and the landscape changes. Dense spruce forests where the air smells of resin and the ground is soft with needles. Then open pastures where the only thing you hear are cowbells and wind through the grass.">Sali e il paesaggio cambia. Boschi fitti di abeti dove l'aria sa di resina e il suolo è morbido di aghi. Poi pascoli aperti dove l'unica cosa che senti sono i campanacci e il vento tra l'erba.</p>
+        <p data-i18n-it="Ancora più su la vegetazione finisce e resta solo la roccia. L'aria diventa fresca e sottile, il silenzio è totale. Il panorama si apre sulle vette dolomitiche. Questo e molto di più è il Trentino che ti aspetta — e hai la possibilità di viverlo con la tua bicicletta gravel." data-i18n-en="Higher still, vegetation ends and only rock remains. The air turns fresh and thin, the silence complete. The view opens onto the Dolomite peaks. This and much more is the Trentino waiting for you — and you have the chance to live it on your gravel bike.">Ancora più su la vegetazione finisce e resta solo la roccia. L'aria diventa fresca e sottile, il silenzio è totale. Il panorama si apre sulle vette dolomitiche. Questo e molto di più è il Trentino che ti aspetta — e hai la possibilità di viverlo con la tua bicicletta gravel.</p>
+      </div>
+      <div class="story-photo photo-slot sr d1" aria-label="Dolomite peaks placeholder">
+        <div class="slot-badge">
+          <span data-i18n-it="Vette · Foto" data-i18n-en="Peaks · Photo">Vette · Foto</span>
+          <span data-i18n-it="Dolomiti UNESCO" data-i18n-en="UNESCO Dolomites">Dolomiti UNESCO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ STORY BLOCK · Un'esperienza completa ━━━━━━━━━━━━ -->
+  <section class="story story-b" id="esperienza">
+    <div class="story-inner story-inner-reverse">
+      <div class="story-text sr">
+        <div class="story-kicker" data-i18n-it="La sosta" data-i18n-en="The stop">La sosta</div>
+        <h2 class="story-title" data-i18n-it="Un'esperienza<br><em>completa</em>" data-i18n-en="A complete<br><em>experience</em>">Un'esperienza<br><em>completa</em></h2>
+        <p data-i18n-it="Quando vedi il rifugio ti scappa un sorriso: finalmente, ci siamo. Appoggi la bici polverosa carica di borse al muro, ti siedi fuori al sole. Dalla cucina arriva l'odore del burro che sfrigola: stanno rosolando la tosèla, un formaggio che esiste solo qui." data-i18n-en="When you spot the refuge a smile escapes you — finally, we're here. You lean the dusty bike, loaded with bags, against the wall and sit outside in the sun. From the kitchen comes the smell of butter sizzling — they're browning the tosèla, a cheese that exists only here.">Quando vedi il rifugio ti scappa un sorriso: finalmente, ci siamo. Appoggi la bici polverosa carica di borse al muro, ti siedi fuori al sole. Dalla cucina arriva l'odore del burro che sfrigola: stanno rosolando la tosèla, un formaggio che esiste solo qui.</p>
+        <p data-i18n-it="Ti portano un tagliere di speck, canederli in brodo, polenta tagliata col filo. Davanti a te solo prato, campanacci e le Dolomiti che devi ancora attraversare." data-i18n-en="They bring you a board of speck, canederli in broth, polenta cut with string. In front of you: meadow, cowbells, and the Dolomites still to cross.">Ti portano un tagliere di speck, canederli in brodo, polenta tagliata col filo. Davanti a te solo prato, campanacci e le Dolomiti che devi ancora attraversare.</p>
+        <p data-i18n-it="Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause: sono parte essenziale dell'esperienza di viaggio." data-i18n-en="You set off again on a gravel road descending through the larches, legs rested. In Trentino, stopping is not a pause — it's an essential part of the journey.">Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause: sono parte essenziale dell'esperienza di viaggio.</p>
+      </div>
+      <div class="story-photo photo-slot cream-bg sr d1" aria-label="Mountain refuge placeholder">
+        <div class="slot-badge">
+          <span data-i18n-it="Rifugio · Foto" data-i18n-en="Refuge · Photo">Rifugio · Foto</span>
+          <span data-i18n-it="Tavola in quota" data-i18n-en="Table in the mountains">Tavola in quota</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ ORGANIZED BY / TRUST ━━━━━━━━━━━━ -->
+  <section class="organized" id="organized">
+    <div class="organized-inner">
+      <div class="organized-kicker sr" data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</div>
+      <div class="organized-main">
+        <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" class="organized-bas-logo sr d1" aria-label="Bike Adventure Series">
+          <img src="extracted/logo-bas.png" alt="Bike Adventure Series" width="280">
+        </a>
+        <h2 class="organized-title sr d2" data-i18n-it="Dal team che ha creato<br>il Tuscany Trail" data-i18n-en="From the team behind<br>Tuscany Trail">Dal team che ha creato<br>il Tuscany Trail</h2>
+        <p class="organized-desc sr d3" data-i18n-it="Bike Adventure Series è la casa del bikepacking italiano. Dal Tuscany Trail — il più grande evento italiano del genere con oltre 10.000 rider dal 2014 — al Grand Escape, fino a questo nuovo Trentino Gravel. Stessa filosofia, nuove montagne: partecipazione libera, gravel puro, nessuna classifica. Solo strada, persone e un'esperienza che ricorderai." data-i18n-en="Bike Adventure Series is the home of Italian bikepacking. From Tuscany Trail — the country's largest event of its kind with 10,000+ riders since 2014 — to The Grand Escape, and now this new Trentino Gravel. Same philosophy, new mountains: open participation, pure gravel, no ranking. Just road, people and an experience you will remember.">Bike Adventure Series è la casa del bikepacking italiano. Dal Tuscany Trail — il più grande evento italiano del genere con oltre 10.000 rider dal 2014 — al Grand Escape, fino a questo nuovo Trentino Gravel. Stessa filosofia, nuove montagne: partecipazione libera, gravel puro, nessuna classifica. Solo strada, persone e un'esperienza che ricorderai.</p>
+      </div>
+      <div class="organized-label-sub sr" data-i18n-it="Con il supporto di" data-i18n-en="Supported by">Con il supporto di</div>
+      <div class="organized-partners">
+        <div class="partner-slot sr"><span data-i18n-it="APT Trentino Marketing" data-i18n-en="APT Trentino Marketing">APT Trentino Marketing</span></div>
+        <div class="partner-slot sr d1"><span data-i18n-it="Comune di Rovereto" data-i18n-en="Rovereto Council">Comune di Rovereto</span></div>
+        <div class="partner-slot sr d2"><span data-i18n-it="Partner bike industry" data-i18n-en="Bike industry partner">Partner bike industry</span></div>
+        <div class="partner-slot sr d3"><span data-i18n-it="Partner tecnico" data-i18n-en="Technical partner">Partner tecnico</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ GALLERY (horizontal scroll) ━━━━━━━━━━━━ -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-head">
+      <div class="sr">
+        <div class="section-label" data-i18n-it="Momenti dal percorso" data-i18n-en="Moments from the route">Momenti dal percorso</div>
+        <h2 data-i18n-it="Gallery" data-i18n-en="Gallery">Gallery</h2>
+      </div>
+      <p class="gallery-quote sr d1" data-i18n-it="“Le strade sterrate raccontano storie più vere delle autostrade.”" data-i18n-en="&ldquo;Unpaved roads tell truer stories than motorways.&rdquo;">“Le strade sterrate raccontano storie più vere delle autostrade.”</p>
+    </div>
+    <div class="gallery-scroll" role="list" aria-label="Trentino Gravel photo gallery">
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">01 / Rovereto</span>
+        <span class="gal-label" data-i18n-it="Partenza · Alba" data-i18n-en="Start · Dawn">Partenza · Alba</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">02 / Val di Fiemme</span>
+        <span class="gal-label" data-i18n-it="Sterrato tra i larici" data-i18n-en="Gravel through larches">Sterrato tra i larici</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">03 / Pale di San Martino</span>
+        <span class="gal-label" data-i18n-it="Vette Dolomiti" data-i18n-en="Dolomite peaks">Vette Dolomiti</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">04 / Val di Fassa</span>
+        <span class="gal-label" data-i18n-it="Rifugio · Pausa" data-i18n-en="Refuge · Break">Rifugio · Pausa</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">05 / Brenta</span>
+        <span class="gal-label" data-i18n-it="Salita panoramica" data-i18n-en="Panorama climb">Salita panoramica</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">06 / Madonna di Campiglio</span>
+        <span class="gal-label" data-i18n-it="Pedalata in quota" data-i18n-en="Altitude ride">Pedalata in quota</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">07 / Moena</span>
+        <span class="gal-label" data-i18n-it="Tramonto in sella" data-i18n-en="Sunset saddle">Tramonto in sella</span>
+      </div>
+      <div class="gallery-tile sr" role="listitem">
+        <span class="gal-meta">08 / Trento</span>
+        <span class="gal-label" data-i18n-it="Arrivo · Festa" data-i18n-en="Finish · Party">Arrivo · Festa</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ FAQ ━━━━━━━━━━━━ -->
+  <section class="faq" id="faq">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <div class="section-label sr" data-i18n-it="Prima di partire" data-i18n-en="Before you ride">Prima di partire</div>
+        <h2 class="sr d1" data-i18n-it="Domande<br>frequenti" data-i18n-en="Frequently<br>Asked">Domande<br>frequenti</h2>
+        <div class="faq-list sr d2">
+          <details class="faq-item">
+            <summary data-i18n-it="Questo evento è per me?" data-i18n-en="Is this event for me?">Questo evento è per me?</summary>
+            <div class="faq-item-body" data-i18n-it="Sì se ami pedalare in autonomia, ti piacciono gli sterrati e vuoi scoprire il Trentino da una prospettiva diversa. Non è una gara: è un'esperienza di bikepacking aperta a tutti i livelli, con due percorsi di difficoltà diversa." data-i18n-en="Yes if you love riding solo, enjoy unpaved roads and want to discover Trentino from a different angle. This is not a race: it's a bikepacking experience open to all levels, with two routes of different difficulty.">Sì se ami pedalare in autonomia, ti piacciono gli sterrati e vuoi scoprire il Trentino da una prospettiva diversa. Non è una gara: è un'esperienza di bikepacking aperta a tutti i livelli, con due percorsi di difficoltà diversa.</div>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n-it="Che bici mi serve?" data-i18n-en="What bike do I need?">Che bici mi serve?</summary>
+            <div class="faq-item-body" data-i18n-it="Una gravel bike con gomme minimo 40mm. Sono ammesse anche MTB hardtail e bikepacking rig. No bici da corsa: il 70% del percorso è su sterrato." data-i18n-en="A gravel bike with at least 40mm tyres. Hardtail MTBs and bikepacking rigs are also welcome. No road bikes: 70% of the route is unpaved.">Una gravel bike con gomme minimo 40mm. Sono ammesse anche MTB hardtail e bikepacking rig. No bici da corsa: il 70% del percorso è su sterrato.</div>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n-it="Posso cambiare percorso dopo essermi iscritto?" data-i18n-en="Can I change route after signing up?">Posso cambiare percorso dopo essermi iscritto?</summary>
+            <div class="faq-item-body" data-i18n-it="Sì. Puoi scegliere o cambiare il percorso (lungo o corto) fino al giorno della partenza. Nessuna penalità." data-i18n-en="Yes. You can pick or change your route (long or short) up until the day of departure. No penalty.">Sì. Puoi scegliere o cambiare il percorso (lungo o corto) fino al giorno della partenza. Nessuna penalità.</div>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n-it="Dove si dorme?" data-i18n-en="Where do I sleep?">Dove si dorme?</summary>
+            <div class="faq-item-body" data-i18n-it="Il sistema è ibrido: tenda o rifugio/hotel bike-friendly. Ti forniremo una lista di strutture convenzionate lungo il percorso. Nessuna prenotazione obbligatoria: scegli tu dove e come riposare." data-i18n-en="Hybrid system: tent or bike-friendly lodge/hotel. We provide a list of partner accommodations along the route. No mandatory booking: you decide where and how to rest.">Il sistema è ibrido: tenda o rifugio/hotel bike-friendly. Ti forniremo una lista di strutture convenzionate lungo il percorso. Nessuna prenotazione obbligatoria: scegli tu dove e come riposare.</div>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n-it="C'è assistenza lungo il percorso?" data-i18n-en="Is there support on the route?">C'è assistenza lungo il percorso?</summary>
+            <div class="faq-item-body" data-i18n-it="L'evento è self-supported: devi essere autonomo su meccanica, cibo, idratazione. Forniamo numeri di emergenza e punti bike-shop convenzionati in città chiave. È lo spirito del bikepacking puro." data-i18n-en="The event is self-supported: you must be autonomous on mechanics, food and hydration. We provide emergency numbers and partner bike-shops in key towns. It's the spirit of pure bikepacking.">L'evento è self-supported: devi essere autonomo su meccanica, cibo, idratazione. Forniamo numeri di emergenza e punti bike-shop convenzionati in città chiave. È lo spirito del bikepacking puro.</div>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n-it="Quando si aprono le iscrizioni?" data-i18n-en="When does registration open?">Quando si aprono le iscrizioni?</summary>
+            <div class="faq-item-body" data-i18n-it="I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative." data-i18n-en="Spots are limited and will open first to those on the waiting list. Sign up to get priority access to registration and receive all operational info.">I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.</div>
+          </details>
+        </div>
+      </div>
+      <div class="faq-photo photo-slot cream-bg sr d1" aria-label="FAQ decorative photo placeholder">
+        <div class="slot-badge">
+          <span data-i18n-it="Foto decorativa" data-i18n-en="Decorative photo">Foto decorativa</span>
+          <span data-i18n-it="Dettaglio gravel" data-i18n-en="Gravel detail">Dettaglio gravel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ WAITLIST (3-col con foto) ━━━━━━━━━━━━ -->
+  <section class="waitlist" id="waitlist">
+    <div class="waitlist-inner waitlist-3col">
+
+      <div class="waitlist-photo photo-slot sr" aria-label="Waitlist photo placeholder">
+        <div class="slot-badge">
+          <span data-i18n-it="Waitlist · Foto" data-i18n-en="Waitlist · Photo">Waitlist · Foto</span>
+          <span data-i18n-it="Azione · spirito gravel" data-i18n-en="Action · gravel spirit">Azione · spirito gravel</span>
+        </div>
+      </div>
+
+      <div class="waitlist-left">
+        <div class="cta-kicker sr" data-i18n-it="Posti limitati · Pioneer Edition" data-i18n-en="Limited spots · Pioneer Edition">Posti limitati · Pioneer Edition</div>
+        <h2 class="cta-h2 sr d1" data-i18n-it="Entra nella<br>Pioneer<br>Edition" data-i18n-en="Join the<br>Pioneer<br>Edition">Entra nella<br>Pioneer<br>Edition</h2>
+        <p class="cta-p sr d2" data-i18n-it="Lascia la tua email per ricevere tutte le informazioni e accedere per primo all'iscrizione." data-i18n-en="Leave your email to receive all information and get priority access to registration.">Lascia la tua email per ricevere tutte le informazioni e accedere per primo all'iscrizione.</p>
+        <ul class="waitlist-perks sr d3">
+          <li data-i18n-it="Accesso prioritario alle iscrizioni" data-i18n-en="Priority access to registration">Accesso prioritario alle iscrizioni</li>
+          <li data-i18n-it="Tutti gli aggiornamenti dell'evento in anteprima" data-i18n-en="All event updates first">Tutti gli aggiornamenti dell'evento in anteprima</li>
+          <li data-i18n-it="Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza" data-i18n-en="Choose your route at sign-up — change anytime until the start">Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza</li>
+        </ul>
+      </div>
+
+      <div class="waitlist-right">
+        <div class="waitlist-event-info sr">
+          <div class="wevent-row">
+            <span class="wevent-label" data-i18n-it="Evento" data-i18n-en="Event">Evento</span>
+            <span class="wevent-val">Trentino Gravel — Pioneer Edition</span>
+          </div>
+          <div class="wevent-row">
+            <span class="wevent-label" data-i18n-it="Data" data-i18n-en="Date">Data</span>
+            <span class="wevent-val" data-i18n-it="26 Settembre 2026" data-i18n-en="September 26, 2026">26 Settembre 2026</span>
+          </div>
+          <div class="wevent-row">
+            <span class="wevent-label" data-i18n-it="Partenza" data-i18n-en="Start">Partenza</span>
+            <span class="wevent-val">Rovereto, Trentino</span>
+          </div>
+          <div class="wevent-row">
+            <span class="wevent-label" data-i18n-it="Organizer" data-i18n-en="Organizer">Organizer</span>
+            <span class="wevent-val">Tuscany Trail · Bike Adventure Series</span>
+          </div>
+        </div>
+        <form class="waitlist-form sr d1" id="waitlistForm" onsubmit="handleWaitlist(event)">
+          <!-- Row 1: nome -->
+          <div class="wf-field">
+            <label class="form-label" for="wlName" data-i18n-it="Nome" data-i18n-en="Name">Nome</label>
+            <input type="text" id="wlName" name="name" class="form-input form-input-full" placeholder="Mario" required autocomplete="given-name">
+          </div>
+          <!-- Row 2: email -->
+          <div class="wf-field">
+            <label class="form-label" for="wlEmail" data-i18n-it="Email" data-i18n-en="Email">Email</label>
+            <input type="email" id="wlEmail" name="email" class="form-input form-input-full" placeholder="tu@example.com" required autocomplete="email">
+          </div>
+          <!-- Row 3: Ex Tuscany Trail -->
+          <div class="wf-field">
+            <label class="form-label" data-i18n-it="Hai già fatto il Tuscany Trail?" data-i18n-en="Have you done the Tuscany Trail?">Hai già fatto il Tuscany Trail?</label>
+            <div class="wf-radio-row" role="radiogroup" aria-label="Tuscany Trail participation">
+              <label class="wf-radio">
+                <input type="radio" name="exTT" value="yes" required>
+                <span class="wf-radio-label" data-i18n-it="Sì" data-i18n-en="Yes">Sì</span>
+              </label>
+              <label class="wf-radio">
+                <input type="radio" name="exTT" value="no" required>
+                <span class="wf-radio-label" data-i18n-it="No" data-i18n-en="No">No</span>
+              </label>
+            </div>
+          </div>
+          <!-- Row 4: preferenza percorso -->
+          <div class="wf-field">
+            <label class="form-label" data-i18n-it="Preferenza percorso" data-i18n-en="Route preference">Preferenza percorso</label>
+            <div class="wf-radio-row" role="radiogroup" aria-label="Route preference">
+              <label class="wf-radio">
+                <input type="radio" name="route" value="long" required>
+                <span class="wf-radio-label" data-i18n-it="Lungo · 400 km" data-i18n-en="Long · 400 km">Lungo · 400 km</span>
+              </label>
+              <label class="wf-radio">
+                <input type="radio" name="route" value="short" required>
+                <span class="wf-radio-label" data-i18n-it="Corto · 220 km" data-i18n-en="Short · 220 km">Corto · 220 km</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="form-btn form-btn-full" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</button>
+          <p class="form-note" data-i18n-it="I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi." data-i18n-en="Data is handled by Brevo. No spam — unsubscribe anytime.">I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.</p>
+          <p class="form-error" id="formError" role="alert"></p>
+          <div class="form-success" id="formSuccess" data-i18n-it="✓ Sei in lista. Ti scriviamo presto." data-i18n-en="✓ You're on the list. We'll be in touch soon.">
+            ✓ Sei in lista. Ti scriviamo presto.
+          </div>
+        </form>
+        <div class="waitlist-counter sr d2" aria-live="polite">
+          <div class="wcount-block">
+            <div class="wcount-num" id="waitlistCount">—</div>
+            <div class="wcount-lbl" data-i18n-it="Rider già in lista" data-i18n-en="Riders already on the list">Rider già in lista</div>
+          </div>
+          <div class="wcount-divider"></div>
+          <div class="wcount-block">
+            <div class="wcount-num orange" id="daysToGo">—</div>
+            <div class="wcount-lbl" data-i18n-it="Giorni alla partenza" data-i18n-en="Days to go">Giorni alla partenza</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ IG STRIP (above footer) ━━━━━━━━━━━━ -->
+  <div class="ig-strip">
+    <div class="ig-strip-inner">
+      <div class="ig-strip-head">
+        <div class="ig-strip-title" data-i18n-it="Seguici" data-i18n-en="Follow along">Seguici</div>
+        <a href="#" class="ig-handle">@trentinogravel</a>
+      </div>
+      <div class="ig-grid">
+        <div class="ig-tile sr" aria-label="Instagram post 1 placeholder"></div>
+        <div class="ig-tile sr" aria-label="Instagram post 2 placeholder"></div>
+        <div class="ig-tile sr" aria-label="Instagram post 3 placeholder"></div>
+        <div class="ig-tile sr" aria-label="Instagram post 4 placeholder"></div>
+        <div class="ig-tile sr" aria-label="Instagram post 5 placeholder"></div>
+        <div class="ig-tile sr" aria-label="Instagram post 6 placeholder"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <img src="extracted/logo-real-light.svg" width="32" height="36" alt="Trentino Gravel logo" style="width:32px;height:auto;">
+        <div class="footer-wordmark">
+          Trentino Gravel
+          <small data-i18n-it="Dolomiti · Est. 2024 · Italia" data-i18n-en="Dolomites · Est. 2024 · Italy">Dolomiti · Est. 2024 · Italia</small>
+        </div>
+      </div>
+      <div class="footer-mono">
+        <span>© 2026 Trentino Gravel</span>
+        <span class="footer-divider">·</span>
+        <span data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</span>
+        <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" class="footer-bas">
+          <img src="extracted/logo-bas.png" alt="Bike Adventure Series" height="18">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Strava</a>
+        <a href="#" data-i18n-it="Contatti" data-i18n-en="Contact">Contatti</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ━━━━━━━━━━━━ I18N TOGGLE ━━━━━━━━━━━━
+    const I18N_KEY = 'tg-lang';
+    const DEFAULT_LANG = 'it';
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      const attr = 'data-i18n-' + lang;
+      document.querySelectorAll('[data-i18n-it],[data-i18n-en]').forEach(el => {
+        const txt = el.getAttribute(attr);
+        if (txt != null) {
+          if (txt.includes('<')) el.innerHTML = txt;
+          else el.textContent = txt;
+        }
+      });
+      document.querySelectorAll('[data-lang-btn]').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
+      });
+      try { localStorage.setItem(I18N_KEY, lang); } catch (e) {}
+    }
+
+    (function initLang() {
+      let lang = DEFAULT_LANG;
+      try { lang = localStorage.getItem(I18N_KEY) || DEFAULT_LANG; } catch (e) {}
+      applyLang(lang);
+      document.querySelectorAll('[data-lang-btn]').forEach(b => {
+        b.addEventListener('click', () => applyLang(b.getAttribute('data-lang-btn')));
+      });
+    })();
+
+    // ━━━━━━━━━━━━ SCROLL REVEAL ━━━━━━━━━━━━
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.sr').forEach(el => io.observe(el));
+
+    // Hero stagger on load
+    const heroItems = document.querySelectorAll('.hero-animate');
+    heroItems.forEach((el, i) => {
+      setTimeout(() => el.classList.add('in'), 200 + i * 140);
+    });
+
+    // ━━━━━━━━━━━━ HAMBURGER / MOBILE MENU ━━━━━━━━━━━━
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 640) closeMenu();
+    });
+
+    // ━━━━━━━━━━━━ WAITLIST FORM (Brevo integration) ━━━━━━━━━━━━
+    // ⚠️ In production move the POST through a backend proxy so the API key
+    // is NOT shipped to the client. For now we follow the same pattern used
+    // on The Grand Escape website (client-side Brevo fetch) — swap this out
+    // before launch if you want to hide the key.
+    //
+    // Required Brevo dashboard setup:
+    //   1. Create a contact list dedicated to "Trentino Gravel – Pioneer"
+    //      and paste its numeric id in `listId` below.
+    //   2. Create custom attributes (Contacts > Attributes):
+    //        · EX_TUSCANY_TRAIL (Boolean)
+    //        · ROUTE_PREFERENCE (Text)   — values: "long" | "short"
+    //        · SOURCE            (Text)
+    //        · SIGNUP_LANG       (Text)
+    //      FIRSTNAME already exists by default in every Brevo account.
+    const BREVO_CONFIG = {
+      apiKey: 'REPLACE_WITH_YOUR_BREVO_API_KEY',
+      listId: 0, // TODO: replace 0 with the real list id from Brevo dashboard
+      source: 'trentino_gravel_pioneer_2026',
+    };
+
+    async function handleWaitlist(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const errorEl = document.getElementById('formError');
+      const successEl = document.getElementById('formSuccess');
+      if (errorEl) { errorEl.textContent = ''; errorEl.style.display = 'none'; }
+
+      const data = new FormData(form);
+      const payload = {
+        email: data.get('email'),
+        attributes: {
+          FIRSTNAME: data.get('name') || undefined,
+          EX_TUSCANY_TRAIL: data.get('exTT') === 'yes',
+          ROUTE_PREFERENCE: data.get('route'),
+          SOURCE: BREVO_CONFIG.source,
+          SIGNUP_LANG: document.documentElement.lang || 'it',
+        },
+        listIds: BREVO_CONFIG.listId ? [BREVO_CONFIG.listId] : undefined,
+        updateEnabled: true,
+      };
+
+      const btnOriginalText = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = '...'; }
+
+      try {
+        // Skip the network call until a real list id is configured.
+        const isDevPreview = BREVO_CONFIG.apiKey.startsWith('REPLACE_') || !BREVO_CONFIG.listId;
+        if (!isDevPreview) {
+          const res = await fetch('https://api.brevo.com/v3/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'api-key': BREVO_CONFIG.apiKey,
+            },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok && res.status !== 204) {
+            const err = await res.json().catch(() => ({}));
+            // "duplicate_parameter" means the contact already exists — treat as success.
+            if (err.code !== 'duplicate_parameter') {
+              throw new Error(err.message || `Errore ${res.status}`);
+            }
+          }
+        }
+        if (successEl) successEl.style.display = 'block';
+        form.reset();
+      } catch (err) {
+        if (errorEl) {
+          errorEl.textContent = err.message || 'Qualcosa è andato storto. Riprova.';
+          errorEl.style.display = 'block';
+        }
+      } finally {
+        if (btn) { btn.disabled = false; btn.textContent = btnOriginalText; }
+      }
+    }
+
+    // ━━━━━━━━━━━━ UNSPLASH PHOTO INJECTION ━━━━━━━━━━━━
+    // Temporary: populate placeholders with real photos from Unsplash.
+    // Replace with local assets before launch.
+    (function injectPhotos() {
+      const U = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w || 1200}&q=80&fm=jpg&auto=format&fit=crop`;
+      const PHOTOS = {
+        hero:         U('1506905925346-21bda4d32df4', 2000),
+        about:        U('1551632811-561732d1e306', 1200),
+        exp1:         U('1520250497591-112f2f40a3f4', 800),
+        exp2:         U('1533777857889-4be7c70b33f7', 800),
+        exp3:         U('1464822759023-fed622ff2c3b', 800),
+        exp4:         U('1558981806-ec527fa84c39', 800),
+        routeLong:    U('1541625602330-2277a4c46182', 1200),
+        routeShort:   U('1471506480208-91b3a4cc78be', 1200),
+        place1:       U('1519681393784-d120267933ba', 1200),
+        place2:       U('1501785888041-af3ef285b470', 800),
+        place3:       U('1469521669194-babb45599def', 800),
+        place4:       U('1506905925346-21bda4d32df4', 1000),
+        place5:       U('1441974231531-c6227db76b6e', 800),
+        place6:       U('1476514525535-07fb3b4ae5f1', 800),
+        place7:       U('1551632811-561732d1e306', 800),
+        place8:       U('1534073828943-f801091bb18c', 800),
+        gallery1:     U('1541625602330-2277a4c46182', 800),
+        gallery2:     U('1441974231531-c6227db76b6e', 800),
+        gallery3:     U('1506905925346-21bda4d32df4', 800),
+        gallery4:     U('1520250497591-112f2f40a3f4', 800),
+        gallery5:     U('1519681393784-d120267933ba', 800),
+        gallery6:     U('1471506480208-91b3a4cc78be', 800),
+        gallery7:     U('1469521669194-babb45599def', 800),
+        gallery8:     U('1534073828943-f801091bb18c', 800),
+        faq:          U('1517649763962-0c623066013b', 800),
+        waitlist:     U('1471506480208-91b3a4cc78be', 1200),
+        ig1:          U('1541625602330-2277a4c46182', 500),
+        ig2:          U('1519681393784-d120267933ba', 500),
+        ig3:          U('1506905925346-21bda4d32df4', 500),
+        ig4:          U('1558981806-ec527fa84c39', 500),
+        ig5:          U('1476514525535-07fb3b4ae5f1', 500),
+        ig6:          U('1520250497591-112f2f40a3f4', 500),
+        storyVette:   U('1519681393784-d120267933ba', 1400),
+        storyEsperienza: U('1533777857889-4be7c70b33f7', 1400),
+      };
+
+      function applyPhoto(selector, url, alt) {
+        const el = document.querySelector(selector);
+        if (!el || !url) return;
+        el.classList.add('has-photo');
+        const img = document.createElement('img');
+        img.className = 'bg-photo';
+        img.src = url;
+        img.alt = alt || '';
+        img.loading = 'lazy';
+        el.insertBefore(img, el.firstChild);
+      }
+      function applyPhotoAll(selector, urls, altBase) {
+        document.querySelectorAll(selector).forEach((el, i) => {
+          if (!urls[i]) return;
+          el.classList.add('has-photo');
+          const img = document.createElement('img');
+          img.className = 'bg-photo';
+          img.src = urls[i];
+          img.alt = altBase ? `${altBase} ${i + 1}` : '';
+          img.loading = 'lazy';
+          el.insertBefore(img, el.firstChild);
+        });
+      }
+
+      // Hero background
+      applyPhoto('.hero-img-placeholder', PHOTOS.hero, 'Dolomiti landscape');
+      // Story blocks (new editorial sections)
+      applyPhoto('.story-a .story-photo', PHOTOS.storyVette, 'Dolomite peaks');
+      applyPhoto('.story-b .story-photo', PHOTOS.storyEsperienza, 'Mountain refuge table');
+      // Routes
+      const routeEls = document.querySelectorAll('.route-card-photo');
+      if (routeEls[0]) {
+        routeEls[0].classList.add('has-photo');
+        const i = document.createElement('img');
+        i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Long route'; i.loading = 'lazy';
+        routeEls[0].insertBefore(i, routeEls[0].firstChild);
+      }
+      if (routeEls[1]) {
+        routeEls[1].classList.add('has-photo');
+        const i = document.createElement('img');
+        i.className = 'bg-photo'; i.src = PHOTOS.routeShort; i.alt = 'Short route'; i.loading = 'lazy';
+        routeEls[1].insertBefore(i, routeEls[1].firstChild);
+      }
+      // Places bento (8 tiles)
+      const placePhotos = [
+        PHOTOS.place1, PHOTOS.place2, PHOTOS.place3, PHOTOS.place4,
+        PHOTOS.place5, PHOTOS.place6, PHOTOS.place7, PHOTOS.place8
+      ];
+      applyPhotoAll('.place-tile', placePhotos, 'Place');
+      // Gallery scroll (8 tiles)
+      const galleryPhotos = [
+        PHOTOS.gallery1, PHOTOS.gallery2, PHOTOS.gallery3, PHOTOS.gallery4,
+        PHOTOS.gallery5, PHOTOS.gallery6, PHOTOS.gallery7, PHOTOS.gallery8
+      ];
+      applyPhotoAll('.gallery-tile', galleryPhotos, 'Gallery');
+      // FAQ decorative
+      applyPhoto('.faq-photo', PHOTOS.faq, 'Gravel detail');
+      // Waitlist
+      applyPhoto('.waitlist-photo', PHOTOS.waitlist, 'Bikepacking action');
+      // IG grid
+      const igPhotos = [PHOTOS.ig1, PHOTOS.ig2, PHOTOS.ig3, PHOTOS.ig4, PHOTOS.ig5, PHOTOS.ig6];
+      applyPhotoAll('.ig-tile', igPhotos, 'Instagram post');
+    })();
+
+    // ━━━━━━━━━━━━ WAITLIST COUNTER + COUNTDOWN ━━━━━━━━━━━━
+    // Placeholder values — wire to real endpoint + real event date later.
+    (function initCounters() {
+      const EVENT_DATE = new Date('2026-09-26T09:00:00+02:00');
+      const now = new Date();
+      const daysEl = document.getElementById('daysToGo');
+      const countEl = document.getElementById('waitlistCount');
+      if (daysEl) {
+        const ms = EVENT_DATE - now;
+        const days = Math.ceil(ms / (1000 * 60 * 60 * 24));
+        // If the event is in the past (placeholder data), show a demo countdown.
+        daysEl.textContent = (days > 0 ? days : 62).toLocaleString('it-IT');
+      }
+      if (countEl) {
+        countEl.textContent = '1.247';
+      }
+    })();
+  </script>
+</body>
+</html>

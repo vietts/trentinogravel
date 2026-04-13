@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Trentino Gravel</title>
+  <meta name="description" content="Privacy policy di Trentino Gravel — Pioneer Edition.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="extracted/logo-real.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue:       #3B50C8;
+      --blue-deep:  #2B3DA0;
+      --orange:     #E85520;
+      --orange-lt:  #F06030;
+      --cream:      #F2EEAE;
+      --offwhite:   #F5EDE0;
+      --ink:        #0C0E1A;
+      --white:      #FFFFFF;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--offwhite);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    /* Nav (simplified clone) */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3rem;
+      height: 64px;
+      background: var(--blue);
+      border-bottom: 2px solid var(--blue-deep);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+    }
+    .nav-mark { height: 42px; width: auto; }
+    .nav-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      line-height: 1.15;
+    }
+    .nav-wordmark small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.55rem;
+      letter-spacing: 0.3em;
+      color: rgba(242,238,174,0.55);
+      margin-top: 1px;
+    }
+    .nav-back {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.75);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--cream); }
+
+    /* Header */
+    .privacy-header {
+      background: var(--blue);
+      color: var(--cream);
+      padding: 5rem 3rem 4rem;
+      border-bottom: 1px solid rgba(242,238,174,0.15);
+    }
+    .privacy-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .privacy-kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+    .privacy-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: 0.015em;
+      color: var(--cream);
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+    }
+    .privacy-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+    }
+
+    /* Content */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 3rem 6rem;
+    }
+    .placeholder-note {
+      background: var(--cream);
+      border-left: 4px solid var(--orange);
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 3rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+    .placeholder-note strong {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    article h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+      letter-spacing: 0.02em;
+      color: var(--blue);
+      margin: 2.8rem 0 1rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+    article h2:first-of-type { margin-top: 0; }
+    article h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue-deep);
+      margin: 2rem 0 0.75rem;
+    }
+    article p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      color: rgba(12,14,26,0.8);
+      margin-bottom: 1.1rem;
+    }
+    article p strong { color: var(--ink); font-weight: 600; }
+    article ul, article ol {
+      margin: 0 0 1.4rem 1.4rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      color: rgba(12,14,26,0.8);
+    }
+    article li { margin-bottom: 0.5rem; line-height: 1.65; }
+    article a {
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    article a:hover { color: var(--orange-lt); }
+    article hr {
+      border: none;
+      height: 1px;
+      background: rgba(59,80,200,0.15);
+      margin: 3rem 0;
+    }
+
+    /* Footer (simplified) */
+    footer {
+      background: var(--ink);
+      padding: 2.5rem 3rem;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+    .footer-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+    }
+    .footer-mono {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.35);
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.3);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--orange); }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; height: 56px; }
+      .privacy-header { padding: 3.5rem 1.2rem 2.8rem; }
+      main { padding: 2.8rem 1.2rem 4rem; }
+      footer { padding: 2rem 1.2rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="extracted/logo-real-light.svg" class="nav-mark" alt="Trentino Gravel logo">
+      <div class="nav-wordmark">
+        Trentino Gravel
+        <small>Dolomiti · Est. 2024</small>
+      </div>
+    </a>
+    <a href="index.html" class="nav-back">← Torna al sito</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="privacy-header">
+    <div class="privacy-header-inner">
+      <div class="privacy-kicker">Informativa</div>
+      <h1 class="privacy-title">Privacy Policy</h1>
+      <div class="privacy-meta">Ultimo aggiornamento: —</div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main>
+
+    <div class="placeholder-note">
+      <strong>Placeholder — da sostituire</strong>
+      Il testo sottostante è un placeholder indicativo per l'impaginazione. Il testo definitivo della privacy policy verrà fornito dal cliente e inserito qui. Rimuovere questo blocco prima della pubblicazione.
+    </div>
+
+    <article>
+      <h2>1. Titolare del trattamento</h2>
+      <p><em>[Ragione sociale del titolare del trattamento, P.IVA, sede legale, email di contatto.]</em></p>
+
+      <h2>2. Dati raccolti</h2>
+      <p>Attraverso il form di iscrizione alla waiting list di Trentino Gravel — Pioneer Edition, il titolare raccoglie i seguenti dati:</p>
+      <ul>
+        <li><strong>Nome</strong> — per comunicazioni personalizzate;</li>
+        <li><strong>Indirizzo email</strong> — per l'invio delle informazioni relative all'evento e l'apertura delle iscrizioni;</li>
+        <li><strong>Partecipazione pregressa al Tuscany Trail</strong> — dato aggregato utile alla pianificazione dell'evento;</li>
+        <li><strong>Preferenza di percorso (lungo / corto)</strong> — dato aggregato utile a calibrare le edizioni future;</li>
+        <li><strong>Lingua di iscrizione</strong> — per rispondere nella lingua corretta;</li>
+        <li><strong>Data e ora di iscrizione</strong> — registrate automaticamente.</li>
+      </ul>
+
+      <h2>3. Finalità del trattamento</h2>
+      <p>I dati vengono trattati esclusivamente per le seguenti finalità:</p>
+      <ol>
+        <li>Gestione della waiting list e comunicazioni operative sull'evento;</li>
+        <li>Invio, al momento dell'apertura delle iscrizioni, del link per accedere in via prioritaria alla registrazione;</li>
+        <li>Analisi aggregata e anonimizzata per migliorare l'organizzazione delle future edizioni.</li>
+      </ol>
+
+      <h2>4. Base giuridica</h2>
+      <p>Il trattamento si basa sul <strong>consenso esplicito</strong> rilasciato dall'interessato al momento dell'iscrizione (art. 6, par. 1, lett. a GDPR).</p>
+
+      <h2>5. Modalità e strumenti</h2>
+      <p>I dati vengono conservati sulla piattaforma <strong>Brevo</strong> (Sendinblue SAS), con sede nell'Unione Europea, che agisce come responsabile esterno del trattamento.</p>
+      <p>Privacy policy di Brevo: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
+
+      <h2>6. Periodo di conservazione</h2>
+      <p>I dati sono conservati fino alla revoca del consenso da parte dell'interessato o, in assenza di revoca, per un periodo massimo di <em>[numero]</em> mesi dalla conclusione dell'evento.</p>
+
+      <h2>7. Diritti dell'interessato</h2>
+      <p>In ogni momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR:</p>
+      <ul>
+        <li>Accesso ai dati;</li>
+        <li>Rettifica o cancellazione;</li>
+        <li>Limitazione o opposizione al trattamento;</li>
+        <li>Portabilità dei dati;</li>
+        <li>Revoca del consenso (è sufficiente cliccare su "Annulla iscrizione" in fondo a qualsiasi email).</li>
+      </ul>
+      <p>Per esercitare questi diritti scrivi a: <em>[email del titolare]</em>.</p>
+
+      <h2>8. Reclamo all'autorità di controllo</h2>
+      <p>Se ritieni che il trattamento dei tuoi dati violi il GDPR, hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+
+      <h2>9. Cookie e strumenti di terze parti</h2>
+      <p>Il sito utilizza font forniti da Google Fonts e immagini ospitate su Unsplash. Non vengono utilizzati cookie di profilazione. Per dettagli: <em>[eventuale cookie policy dedicata].</em></p>
+
+      <hr>
+
+      <p><em>Questo documento è un placeholder. Il testo definitivo verrà redatto dal cliente e sostituirà integralmente il contenuto di questa pagina.</em></p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-wordmark">Trentino Gravel</div>
+      <div class="footer-mono">© 2026 Trentino Gravel</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#waitlist">Iscriviti</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
