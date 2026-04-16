@@ -1,1506 +1,209 @@
+# Pages CMS configuration — https://pagescms.org
+#
+# How to connect:
+#   1. Go to https://app.pagescms.org, log in with GitHub
+#   2. Select vietts/trentinogravel → admin is auto-generated from this file
+#   3. Editors see structured forms, save triggers a commit → Cloudflare rebuilds
+#
+# Docs: https://pagescms.org/docs/configuration/
+
+media:
+  input: photos
+  output: photos/
+
 content:
   - name: content
     label: Contenuto Sito
     type: file
     path: content.json
     fields:
-      - name: "nav_01"
-        label: "Nav · Dolomiti · Est. 2024"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_02"
-        label: "Nav · Percorsi"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_03"
-        label: "Nav · Pioneer"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_04"
-        label: "Nav · Gallery"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_05"
-        label: "Nav · Info"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_06"
-        label: "Nav · Riserva"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_07"
-        label: "Nav · Percorsi"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_08"
-        label: "Nav · Pioneer"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_09"
-        label: "Nav · Gallery"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_10"
-        label: "Nav · Info"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "nav_11"
-        label: "Nav · Riserva il posto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "hero_01"
-        label: "Hero · 26 Settembre 2026"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "hero_02"
-        label: "Hero · Iscriviti alla waiting list →"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "hero_03"
-        label: "Hero · Organizzato da"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "hero_04"
-        label: "Hero · Scorri"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_01"
-        label: "About · Il manifesto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_02"
-        label: "About · Gravel. Bikepacking. Avventura."
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_03"
-        label: "About · Un'avventura in Trentino, uno dei t"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_04"
-        label: "About · strongI posti sono limitati. L'un"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_05"
-        label: "About · Edizione Zero · Posti limitati"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_06"
-        label: "About · Iscriviti allabrwaiting list"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_07"
-        label: "About · Nome"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_08"
-        label: "About · Email"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_09"
-        label: "About · Hai già fatto il Tuscany Trail?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_10"
-        label: "About · Sì"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_11"
-        label: "About · No"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_12"
-        label: "About · Preferenza percorso"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_13"
-        label: "About · Lungo · 400 km"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_14"
-        label: "About · Corto · 220 km"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_15"
-        label: "About · Accetto la"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_16"
-        label: "About · privacy policy"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_17"
-        label: "About · e il trattamento dei miei dati per "
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_18"
-        label: "About · Iscriviti alla waiting list →"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_19"
-        label: "About · I dati vengono gestiti da Brevo. Ni"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "about_20"
-        label: "About · ✓ Sei in lista. Ti scriviamo presto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_01"
-        label: "Percorsi · Due percorsi · Un unico standard"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_02"
-        label: "Percorsi · Scegli la tuabrspan class='dim'"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_03"
-        label: "Percorsi · Il 70% di entrambi i tracciati è fa"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_04"
-        label: "Percorsi · Percorso lungo · Foto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_05"
-        label: "Percorsi · Azione gravel · paesaggio"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_06"
-        label: "Percorsi · Full Adventure"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_07"
-        label: "Percorsi · 01 / Percorso lungo"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_08"
-        label: "Percorsi · Percorsobrlungo"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_09"
-        label: "Percorsi · Profilo altimetrico"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_10"
-        label: "Percorsi · Per chi cerca la piena avventura."
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_11"
-        label: "Percorsi · Distanza"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_12"
-        label: "Percorsi · Dislivello D+"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_13"
-        label: "Percorsi · Sterrato"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_14"
-        label: "Percorsi · Iscriviti alla waiting list →"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_15"
-        label: "Percorsi · Percorso corto · Foto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_16"
-        label: "Percorsi · Sterrato tra vigneti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_17"
-        label: "Percorsi · First Timer"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_18"
-        label: "Percorsi · 02 / Percorso corto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_19"
-        label: "Percorsi · Percorsobrcorto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_20"
-        label: "Percorsi · Profilo altimetrico"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_21"
-        label: "Percorsi · Perfetto per chi ha meno tempo e no"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_22"
-        label: "Percorsi · Distanza"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_23"
-        label: "Percorsi · Dislivello D+"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_24"
-        label: "Percorsi · Sterrato"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_25"
-        label: "Percorsi · Iscriviti alla waiting list →"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "routes_26"
-        label: "Percorsi · Scegli il tuo percorso al momento d"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "pioneer_01"
-        label: "Pioneer · La prima volta.bremLa tua./em"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "pioneer_02"
-        label: "Pioneer · Questa è l'edizione zero del Trenti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "pioneer_03"
-        label: "Pioneer · Abbiamo dato il massimo nella reali"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "pioneer_04"
-        label: "Pioneer · Chi parteciperà farà la storia di q"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "places_01"
-        label: "Luoghi · Luoghi attraversati"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "places_02"
-        label: "Luoghi · IconicbremTrentino/em"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "places_03"
-        label: "Luoghi · Attraverserai luoghi iconici come R"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_01"
-        label: "Story · Paesaggi"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_02"
-        label: "Story · Vettebremdolomitiche/em"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_03"
-        label: "Story · Immagina una valle raccolta tra par"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_04"
-        label: "Story · Sali e il paesaggio cambia. Boschi "
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_05"
-        label: "Story · Ancora più su la vegetazione finisc"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_06"
-        label: "Story · Vette · Foto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_07"
-        label: "Story · Dolomiti UNESCO"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_08"
-        label: "Story · La sosta"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_09"
-        label: "Story · Un'esperienzabremcompleta/em"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_10"
-        label: "Story · Quando vedi il rifugio ti scappa un"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_11"
-        label: "Story · Ti portano un tagliere di speck, ca"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_12"
-        label: "Story · Riparti su una strada sterrata che "
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_13"
-        label: "Story · Rifugio · Foto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "story_14"
-        label: "Story · Tavola in quota"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_01"
-        label: "Organized · Un evento"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_02"
-        label: "Organized · Dal team che ha creatobril Tuscan"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_03"
-        label: "Organized · Bike Adventure Series è la casa del"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_04"
-        label: "Organized · Con il supporto di"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_05"
-        label: "Organized · APT Trentino Marketing"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_06"
-        label: "Organized · Comune di Rovereto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_07"
-        label: "Organized · Partner bike industry"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "organized_08"
-        label: "Organized · Partner tecnico"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_01"
-        label: "Gallery · Momenti dal percorso"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_02"
-        label: "Gallery · Gallery"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_03"
-        label: "Gallery · “Le strade sterrate raccontano stor"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_04"
-        label: "Gallery · Partenza · Alba"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_05"
-        label: "Gallery · Sterrato tra i larici"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_06"
-        label: "Gallery · Vette Dolomiti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_07"
-        label: "Gallery · Rifugio · Pausa"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_08"
-        label: "Gallery · Salita panoramica"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_09"
-        label: "Gallery · Pedalata in quota"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_10"
-        label: "Gallery · Tramonto in sella"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "gallery_11"
-        label: "Gallery · Arrivo · Festa"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_01"
-        label: "FAQ · Prima di partire"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_02"
-        label: "FAQ · Domandebrfrequenti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_03"
-        label: "FAQ · Questo evento è per me?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_04"
-        label: "FAQ · Sì se ami pedalare in autonomia, ti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_05"
-        label: "FAQ · Che bici mi serve?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_06"
-        label: "FAQ · Una gravel bike con gomme minimo 40"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_07"
-        label: "FAQ · Posso cambiare percorso dopo esserm"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_08"
-        label: "FAQ · Sì. Puoi scegliere o cambiare il pe"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_09"
-        label: "FAQ · Dove si dorme?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_10"
-        label: "FAQ · Il sistema è ibrido: tenda o rifugi"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_11"
-        label: "FAQ · C'è assistenza lungo il percorso?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_12"
-        label: "FAQ · L'evento è self-supported: devi ess"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_13"
-        label: "FAQ · Quando si aprono le iscrizioni?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_14"
-        label: "FAQ · I posti sono limitati e verranno ap"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_15"
-        label: "FAQ · Foto decorativa"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "faq_16"
-        label: "FAQ · Dettaglio gravel"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_01"
-        label: "Waitlist · Waitlist · Foto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_02"
-        label: "Waitlist · Azione · spirito gravel"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_03"
-        label: "Waitlist · Edizione Zero · Posti limitati"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_04"
-        label: "Waitlist · Entra nellabrPioneerbrEdition"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_05"
-        label: "Waitlist · Lascia la tua email per ricevere tu"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_06"
-        label: "Waitlist · Accesso prioritario alle iscrizioni"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_07"
-        label: "Waitlist · Tutti gli aggiornamenti dell'evento"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_08"
-        label: "Waitlist · Scegli il percorso all'iscrizione —"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_09"
-        label: "Waitlist · Evento"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_10"
-        label: "Waitlist · Data"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_11"
-        label: "Waitlist · 26 Settembre 2026"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_12"
-        label: "Waitlist · Partenza"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_13"
-        label: "Waitlist · Organizer"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_14"
-        label: "Waitlist · Nome"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_15"
-        label: "Waitlist · Email"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_16"
-        label: "Waitlist · Hai già fatto il Tuscany Trail?"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_17"
-        label: "Waitlist · Sì"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_18"
-        label: "Waitlist · No"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_19"
-        label: "Waitlist · Preferenza percorso"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_20"
-        label: "Waitlist · Lungo · 400 km"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_21"
-        label: "Waitlist · Corto · 220 km"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_22"
-        label: "Waitlist · Accetto la"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_23"
-        label: "Waitlist · privacy policy"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_24"
-        label: "Waitlist · e il trattamento dei miei dati per "
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_25"
-        label: "Waitlist · Iscriviti alla waiting list →"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_26"
-        label: "Waitlist · I dati vengono gestiti da Brevo. Ni"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_27"
-        label: "Waitlist · ✓ Sei in lista. Ti scriviamo presto"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_28"
-        label: "Waitlist · Rider già in lista"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "waitlist_29"
-        label: "Waitlist · Giorni alla partenza"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "footer_01"
-        label: "Footer · Seguici"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "footer_02"
-        label: "Footer · Dolomiti · Est. 2024 · Italia"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "footer_03"
-        label: "Footer · Un evento"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
-      - name: "footer_04"
-        label: "Footer · Contatti"
-        type: object
-        fields:
-          - name: it
-            label: "🇮🇹 Italiano"
-            type: string
-          - name: en
-            label: "🇬🇧 English"
-            type: string
+
+      - name: nav
+        label: Navigazione
+        type: object
+        fields:
+          - { name: logoTagline,   label: "Logo tagline",          type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: linkRoutes,    label: "Link Percorsi",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: linkPioneer,   label: "Link Pioneer",          type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: linkGallery,   label: "Link Gallery",          type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: linkFaq,       label: "Link FAQ",              type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: linkCta,       label: "CTA desktop",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: mobileCta,     label: "CTA mobile",            type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: date,          label: "Data evento",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: cta,           label: "CTA bottone",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: organizedBy,   label: "Organizzato da",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: scroll,        label: "Scroll hint",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: about
+        label: About — Manifesto
+        type: object
+        fields:
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: body,          label: "Paragrafo principale",  type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: highlight,     label: "Paragrafo in evidenza", type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: formKicker,    label: "Form kicker",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: formTitle,     label: "Form titolo",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: submitBtn,     label: "Bottone submit",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: legal,         label: "Legal / Brevo",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: success,       label: "Messaggio successo",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: routes
+        label: Percorsi
+        type: object
+        fields:
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo sezione",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: intro,         label: "Intro (70% sterrato)",  type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: longBadge,     label: "Badge percorso lungo",  type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: longTitle,     label: "Titolo percorso lungo", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: longDesc,      label: "Desc percorso lungo",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: shortBadge,    label: "Badge percorso corto",  type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: shortTitle,    label: "Titolo percorso corto", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: shortDesc,     label: "Desc percorso corto",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: footnote,      label: "Nota scelta percorso",  type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: pioneer
+        label: Pioneer Edition
+        type: object
+        fields:
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: body1,         label: "Paragrafo 1",           type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: body2,         label: "Paragrafo 2",           type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: body3,         label: "Paragrafo 3",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: places
+        label: Luoghi attraversati
+        type: object
+        fields:
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: intro,         label: "Intro luoghi",          type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+
+      - name: story
+        label: Story — Vette + Esperienza
+        type: object
+        fields:
+          - { name: aLabel,        label: "Vette · kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: aTitle,        label: "Vette · titolo",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: aBody1,        label: "Vette · paragrafo 1",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: aBody2,        label: "Vette · paragrafo 2",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: aBody3,        label: "Vette · paragrafo 3",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: bLabel,        label: "Esperienza · kicker",   type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: bTitle,        label: "Esperienza · titolo",   type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: bBody1,        label: "Esperienza · par. 1",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: bBody2,        label: "Esperienza · par. 2",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: bBody3,        label: "Esperienza · par. 3",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+
+      - name: organized
+        label: Organizzato da
+        type: object
+        fields:
+          - { name: label,         label: "Kicker",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: body,          label: "Testo BAS",             type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: partnersLabel, label: "Label partner",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: partner1,      label: "Partner 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: partner2,      label: "Partner 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: partner3,      label: "Partner 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: partner4,      label: "Partner 4",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: gallery
+        label: Gallery
+        type: object
+        fields:
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: quote,         label: "Citazione",             type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: caption1,      label: "Didascalia foto 1",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption2,      label: "Didascalia foto 2",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption3,      label: "Didascalia foto 3",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption4,      label: "Didascalia foto 4",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption5,      label: "Didascalia foto 5",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption6,      label: "Didascalia foto 6",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption7,      label: "Didascalia foto 7",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: caption8,      label: "Didascalia foto 8",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: faq
+        label: FAQ
+        type: object
+        fields:
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: q1,            label: "Domanda 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a1,            label: "Risposta 1",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q2,            label: "Domanda 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a2,            label: "Risposta 2",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q3,            label: "Domanda 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a3,            label: "Risposta 3",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q4,            label: "Domanda 4",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a4,            label: "Risposta 4",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q5,            label: "Domanda 5",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a5,            label: "Risposta 5",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q6,            label: "Domanda 6",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a6,            label: "Risposta 6",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+
+      - name: waitlist
+        label: Waitlist
+        type: object
+        fields:
+          - { name: kicker,        label: "Kicker",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: body,          label: "Testo intro",           type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: benefit1,      label: "Benefit 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: benefit2,      label: "Benefit 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: benefit3,      label: "Benefit 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: date,          label: "Data evento",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: submitBtn,     label: "Bottone submit",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: legal,         label: "Legal / Brevo",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: success,       label: "Messaggio successo",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: countLabel,    label: "Label contatore rider", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: daysLabel,     label: "Label giorni alla partenza", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - { name: followLabel,   label: "Seguici",               type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: logoTagline,   label: "Logo tagline",          type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: eventLabel,    label: "Label un evento",       type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: contactsLabel, label: "Label contatti",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+
+      - name: photos
+        label: Foto
+        type: object
+        fields:
+          - { name: hero,            label: "Hero (sfondo principale)",       type: image, required: false }
+          - { name: storyVette,      label: "Story · Vette dolomitiche",      type: image, required: false }
+          - { name: storyEsperienza, label: "Story · Esperienza rifugio",     type: image, required: false }
+          - { name: routeLong,       label: "Percorso lungo",                 type: image, required: false }
+          - { name: routeShort,      label: "Percorso corto",                 type: image, required: false }
+          - { name: place1,          label: "Luogo 1 · Molveno",              type: image, required: false }
+          - { name: place2,          label: "Luogo 2 · Vigneti",              type: image, required: false }
+          - { name: place3,          label: "Luogo 3 · Borgo",                type: image, required: false }
+          - { name: place4,          label: "Luogo 4",                        type: image, required: false }
+          - { name: place5,          label: "Luogo 5 · Brenta",               type: image, required: false }
+          - { name: place6,          label: "Luogo 6 · Foresta",              type: image, required: false }
+          - { name: place7,          label: "Luogo 7 · Autunno",              type: image, required: false }
+          - { name: place8,          label: "Luogo 8 · Val di Sole",          type: image, required: false }
+          - { name: gallery1,        label: "Gallery 1",                      type: image, required: false }
+          - { name: gallery2,        label: "Gallery 2",                      type: image, required: false }
+          - { name: gallery3,        label: "Gallery 3",                      type: image, required: false }
+          - { name: gallery4,        label: "Gallery 4",                      type: image, required: false }
+          - { name: gallery5,        label: "Gallery 5",                      type: image, required: false }
+          - { name: gallery6,        label: "Gallery 6",                      type: image, required: false }
+          - { name: gallery7,        label: "Gallery 7",                      type: image, required: false }
+          - { name: gallery8,        label: "Gallery 8",                      type: image, required: false }
+          - { name: faq,             label: "FAQ · foto laterale",            type: image, required: false }
+          - { name: waitlist,        label: "Waitlist · foto",                type: image, required: false }
+          - { name: ig1,             label: "Instagram 1",                    type: image, required: false }
+          - { name: ig2,             label: "Instagram 2",                    type: image, required: false }
+          - { name: ig3,             label: "Instagram 3",                    type: image, required: false }
+          - { name: ig4,             label: "Instagram 4",                    type: image, required: false }
+          - { name: ig5,             label: "Instagram 5",                    type: image, required: false }
+          - { name: ig6,             label: "Instagram 6",                    type: image, required: false }

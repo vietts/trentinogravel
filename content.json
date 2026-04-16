@@ -1,602 +1,657 @@
 {
-  "nav_01": {
-    "it": "Dolomiti · Est. 2024",
-    "en": "Dolomites · Est. 2024"
-  },
-  "nav_02": {
-    "it": "Percorsi",
-    "en": "Routes"
-  },
-  "nav_03": {
-    "it": "Pioneer",
-    "en": "Pioneer"
-  },
-  "nav_04": {
-    "it": "Gallery",
-    "en": "Gallery"
-  },
-  "nav_05": {
-    "it": "Info",
-    "en": "FAQ"
-  },
-  "nav_06": {
-    "it": "Riserva",
-    "en": "Reserve"
-  },
-  "nav_07": {
-    "it": "Percorsi",
-    "en": "Routes"
-  },
-  "nav_08": {
-    "it": "Pioneer",
-    "en": "Pioneer"
-  },
-  "nav_09": {
-    "it": "Gallery",
-    "en": "Gallery"
-  },
-  "nav_10": {
-    "it": "Info",
-    "en": "FAQ"
-  },
-  "nav_11": {
-    "it": "Riserva il posto",
-    "en": "Reserve your spot"
-  },
-  "hero_01": {
-    "it": "26 Settembre 2026",
-    "en": "September 26, 2026"
-  },
-  "hero_02": {
-    "it": "Iscriviti alla waiting list →",
-    "en": "Join the waiting list →"
-  },
-  "hero_03": {
-    "it": "Organizzato da",
-    "en": "Organized by"
-  },
-  "hero_04": {
-    "it": "Scorri",
-    "en": "Scroll"
-  },
-  "about_01": {
-    "it": "Il manifesto",
-    "en": "The manifesto"
-  },
-  "about_02": {
-    "it": "Gravel. Bikepacking. Avventura.",
-    "en": "Gravel. Bikepacking. Adventure."
-  },
-  "about_03": {
-    "it": "Un'avventura in Trentino, uno dei territori più belli d'Europa su un tracciato curato nei minimi dettagli per essere affrontato con una bicicletta gravel. Piste ciclabili perfette e strade sterrate in mezzo a boschi e prati. Alzando la testa vedrai vette che superano i tremila metri con neve anche d'estate, le Dolomiti UNESCO, torrenti di montagna e boschi. E quando ti fermi incontrerai la famigerata accoglienza trentina fatta di alloggi bike friendly e una enogastronomia che non ha eguali.",
-    "en": "An adventure in Trentino, one of Europe's most beautiful regions, on a route designed in every detail to be ridden on a gravel bike. Perfect cycle paths and gravel roads through forests and meadows. Look up and you'll see peaks soaring past three thousand meters — snow-capped even in summer, the UNESCO Dolomites, mountain streams and dense woods. And when you stop, you'll meet the legendary Trentino hospitality: bike-friendly stays and a food and wine culture without equal."
-  },
-  "about_04": {
-    "it": "<strong>I posti sono limitati. L'unico modo per partecipare è la waiting list.</strong><br>Chi si iscrive alla lista riceverà per primo tutte le informazioni e l'accesso prioritario.",
-    "en": "<strong>Spots are limited. The only way to participate is the waiting list.</strong><br>Those who sign up will be first to receive all information and priority access."
-  },
-  "about_05": {
-    "it": "Edizione Zero · Posti limitati",
-    "en": "Edition Zero · Limited spots"
-  },
-  "about_06": {
-    "it": "Iscriviti alla<br>waiting list",
-    "en": "Join the<br>waiting list"
-  },
-  "about_07": {
-    "it": "Nome",
-    "en": "Name"
-  },
-  "about_08": {
-    "it": "Email",
-    "en": "Email"
-  },
-  "about_09": {
-    "it": "Hai già fatto il Tuscany Trail?",
-    "en": "Have you done the Tuscany Trail?"
-  },
-  "about_10": {
-    "it": "Sì",
-    "en": "Yes"
-  },
-  "about_11": {
-    "it": "No",
-    "en": "No"
-  },
-  "about_12": {
-    "it": "Preferenza percorso",
-    "en": "Route preference"
-  },
-  "about_13": {
-    "it": "Lungo · 400 km",
-    "en": "Long · 400 km"
-  },
-  "about_14": {
-    "it": "Corto · 220 km",
-    "en": "Short · 220 km"
-  },
-  "about_15": {
-    "it": "Accetto la",
-    "en": "I accept the"
-  },
-  "about_16": {
-    "it": "privacy policy",
-    "en": "privacy policy"
-  },
-  "about_17": {
-    "it": "e il trattamento dei miei dati per la gestione della waiting list.",
-    "en": "and the processing of my data to manage the waiting list."
-  },
-  "about_18": {
-    "it": "Iscriviti alla waiting list →",
-    "en": "Join the waiting list →"
-  },
-  "about_19": {
-    "it": "I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.",
-    "en": "Data is handled by Brevo. No spam — unsubscribe anytime."
-  },
-  "about_20": {
-    "it": "✓ Sei in lista. Ti scriviamo presto.",
-    "en": "✓ You're on the list. We'll be in touch soon."
-  },
-  "routes_01": {
-    "it": "Due percorsi · Un unico standard",
-    "en": "Two routes · One standard"
-  },
-  "routes_02": {
-    "it": "Scegli la tua<br><span class='dim'>distanza</span>",
-    "en": "Choose your<br><span class='dim'>distance</span>"
-  },
-  "routes_03": {
-    "it": "Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.",
-    "en": "70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike."
-  },
-  "routes_04": {
-    "it": "Percorso lungo · Foto",
-    "en": "Long route · Photo"
-  },
-  "routes_05": {
-    "it": "Azione gravel · paesaggio",
-    "en": "Gravel action · landscape"
-  },
-  "routes_06": {
-    "it": "Full Adventure",
-    "en": "Full Adventure"
-  },
-  "routes_07": {
-    "it": "01 / Percorso lungo",
-    "en": "01 / Long Route"
-  },
-  "routes_08": {
-    "it": "Percorso<br>lungo",
-    "en": "Long<br>Route"
-  },
-  "routes_09": {
-    "it": "Profilo altimetrico",
-    "en": "Elevation profile"
-  },
-  "routes_10": {
-    "it": "Per chi cerca la piena avventura.",
-    "en": "For those who want the full adventure."
-  },
-  "routes_11": {
-    "it": "Distanza",
-    "en": "Distance"
-  },
-  "routes_12": {
-    "it": "Dislivello D+",
-    "en": "Elevation D+"
-  },
-  "routes_13": {
-    "it": "Sterrato",
-    "en": "Unpaved"
-  },
-  "routes_14": {
-    "it": "Iscriviti alla waiting list →",
-    "en": "Join the waiting list →"
-  },
-  "routes_15": {
-    "it": "Percorso corto · Foto",
-    "en": "Short route · Photo"
-  },
-  "routes_16": {
-    "it": "Sterrato tra vigneti",
-    "en": "Gravel through vineyards"
-  },
-  "routes_17": {
-    "it": "First Timer",
-    "en": "First Timer"
-  },
-  "routes_18": {
-    "it": "02 / Percorso corto",
-    "en": "02 / Short Route"
-  },
-  "routes_19": {
-    "it": "Percorso<br>corto",
-    "en": "Short<br>Route"
-  },
-  "routes_20": {
-    "it": "Profilo altimetrico",
-    "en": "Elevation profile"
-  },
-  "routes_21": {
-    "it": "Perfetto per chi ha meno tempo e non vuole rinunciare.",
-    "en": "Perfect for those with less time who don't want to miss out."
-  },
-  "routes_22": {
-    "it": "Distanza",
-    "en": "Distance"
-  },
-  "routes_23": {
-    "it": "Dislivello D+",
-    "en": "Elevation D+"
-  },
-  "routes_24": {
-    "it": "Sterrato",
-    "en": "Unpaved"
-  },
-  "routes_25": {
-    "it": "Iscriviti alla waiting list →",
-    "en": "Join the waiting list →"
-  },
-  "routes_26": {
-    "it": "Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza.",
-    "en": "Choose your route at sign-up. You can change your mind up until the start."
-  },
-  "pioneer_01": {
-    "it": "La prima volta.<br><em>La tua.</em>",
-    "en": "The first time.<br><em>Yours.</em>"
-  },
-  "pioneer_02": {
-    "it": "Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel.",
-    "en": "This is the zero edition of Trentino Gravel. You'll take part in the birth of something big. Together we'll discover everything Trentino has to offer to those who cross it on a gravel bike."
-  },
-  "pioneer_03": {
-    "it": "Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future.",
-    "en": "We've given everything to create this experience, but your feedback will be essential to shape future editions."
-  },
-  "pioneer_04": {
-    "it": "Chi parteciperà farà la storia di questo evento.",
-    "en": "Those who join will make this event's history."
-  },
-  "places_01": {
-    "it": "Luoghi attraversati",
-    "en": "Places you'll cross"
-  },
-  "places_02": {
-    "it": "Iconic<br><em>Trentino</em>",
-    "en": "Iconic<br><em>Trentino</em>"
-  },
-  "places_03": {
-    "it": "Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel.",
-    "en": "You'll cross iconic places like Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — all on the best possible route for a gravel bike."
-  },
-  "story_01": {
-    "it": "Paesaggi",
-    "en": "Landscapes"
-  },
-  "story_02": {
-    "it": "Vette<br><em>dolomitiche</em>",
-    "en": "Dolomite<br><em>peaks</em>"
-  },
-  "story_03": {
-    "it": "Immagina una valle raccolta tra pareti di roccia bianca che salgono verticali per centinaia di metri. In fondo scorre un torrente con acqua cristallina: lo senti prima di vederlo, il rumore dell'acqua che rimbalza tra i sassi.",
-    "en": "Imagine a narrow valley held between white rock walls rising vertically for hundreds of meters. At the bottom flows a stream with crystal-clear water — you hear it before you see it, the sound of water bouncing between stones."
-  },
-  "story_04": {
-    "it": "Sali e il paesaggio cambia. Boschi fitti di abeti dove l'aria sa di resina e il suolo è morbido di aghi. Poi pascoli aperti dove l'unica cosa che senti sono i campanacci e il vento tra l'erba.",
-    "en": "You climb and the landscape changes. Dense spruce forests where the air smells of resin and the ground is soft with needles. Then open pastures where the only thing you hear are cowbells and wind through the grass."
-  },
-  "story_05": {
-    "it": "Ancora più su la vegetazione finisce e resta solo la roccia. L'aria diventa fresca e sottile, il silenzio è totale. Il panorama si apre sulle vette dolomitiche. Questo e molto di più è il Trentino che ti aspetta — e hai la possibilità di viverlo con la tua bicicletta gravel.",
-    "en": "Higher still, vegetation ends and only rock remains. The air turns fresh and thin, the silence complete. The view opens onto the Dolomite peaks. This and much more is the Trentino waiting for you — and you have the chance to live it on your gravel bike."
-  },
-  "story_06": {
-    "it": "Vette · Foto",
-    "en": "Peaks · Photo"
-  },
-  "story_07": {
-    "it": "Dolomiti UNESCO",
-    "en": "UNESCO Dolomites"
-  },
-  "story_08": {
-    "it": "La sosta",
-    "en": "The stop"
-  },
-  "story_09": {
-    "it": "Un'esperienza<br><em>completa</em>",
-    "en": "A complete<br><em>experience</em>"
-  },
-  "story_10": {
-    "it": "Quando vedi il rifugio ti scappa un sorriso: finalmente, ci siamo. Appoggi la bici polverosa carica di borse al muro, ti siedi fuori al sole. Dalla cucina arriva l'odore del burro che sfrigola: stanno rosolando la tosèla, un formaggio che esiste solo qui.",
-    "en": "When you spot the refuge a smile escapes you — finally, we're here. You lean the dusty bike, loaded with bags, against the wall and sit outside in the sun. From the kitchen comes the smell of butter sizzling — they're browning the tosèla, a cheese that exists only here."
-  },
-  "story_11": {
-    "it": "Ti portano un tagliere di speck, canederli in brodo, polenta tagliata col filo. Davanti a te solo prato, campanacci e le Dolomiti che devi ancora attraversare.",
-    "en": "They bring you a board of speck, canederli in broth, polenta cut with string. In front of you: meadow, cowbells, and the Dolomites still to cross."
-  },
-  "story_12": {
-    "it": "Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause: sono parte essenziale dell'esperienza di viaggio.",
-    "en": "You set off again on a gravel road descending through the larches, legs rested. In Trentino, stopping is not a pause — it's an essential part of the journey."
-  },
-  "story_13": {
-    "it": "Rifugio · Foto",
-    "en": "Refuge · Photo"
-  },
-  "story_14": {
-    "it": "Tavola in quota",
-    "en": "Table in the mountains"
-  },
-  "organized_01": {
-    "it": "Un evento",
-    "en": "An event by"
-  },
-  "organized_02": {
-    "it": "Dal team che ha creato<br>il Tuscany Trail",
-    "en": "From the team behind<br>Tuscany Trail"
-  },
-  "organized_03": {
-    "it": "Bike Adventure Series è la casa del bikepacking italiano. Dal Tuscany Trail — il più grande evento italiano del genere con oltre 10.000 rider dal 2014 — al Grand Escape, fino a questo nuovo Trentino Gravel. Stessa filosofia, nuove montagne: partecipazione libera, gravel puro, nessuna classifica. Solo strada, persone e un'esperienza che ricorderai.",
-    "en": "Bike Adventure Series is the home of Italian bikepacking. From Tuscany Trail — the country's largest event of its kind with 10,000+ riders since 2014 — to The Grand Escape, and now this new Trentino Gravel. Same philosophy, new mountains: open participation, pure gravel, no ranking. Just road, people and an experience you will remember."
-  },
-  "organized_04": {
-    "it": "Con il supporto di",
-    "en": "Supported by"
-  },
-  "organized_05": {
-    "it": "APT Trentino Marketing",
-    "en": "APT Trentino Marketing"
-  },
-  "organized_06": {
-    "it": "Comune di Rovereto",
-    "en": "Rovereto Council"
-  },
-  "organized_07": {
-    "it": "Partner bike industry",
-    "en": "Bike industry partner"
-  },
-  "organized_08": {
-    "it": "Partner tecnico",
-    "en": "Technical partner"
-  },
-  "gallery_01": {
-    "it": "Momenti dal percorso",
-    "en": "Moments from the route"
-  },
-  "gallery_02": {
-    "it": "Gallery",
-    "en": "Gallery"
-  },
-  "gallery_03": {
-    "it": "“Le strade sterrate raccontano storie più vere delle autostrade.”",
-    "en": "&ldquo;Unpaved roads tell truer stories than motorways.&rdquo;"
-  },
-  "gallery_04": {
-    "it": "Partenza · Alba",
-    "en": "Start · Dawn"
-  },
-  "gallery_05": {
-    "it": "Sterrato tra i larici",
-    "en": "Gravel through larches"
-  },
-  "gallery_06": {
-    "it": "Vette Dolomiti",
-    "en": "Dolomite peaks"
-  },
-  "gallery_07": {
-    "it": "Rifugio · Pausa",
-    "en": "Refuge · Break"
-  },
-  "gallery_08": {
-    "it": "Salita panoramica",
-    "en": "Panorama climb"
-  },
-  "gallery_09": {
-    "it": "Pedalata in quota",
-    "en": "Altitude ride"
-  },
-  "gallery_10": {
-    "it": "Tramonto in sella",
-    "en": "Sunset saddle"
-  },
-  "gallery_11": {
-    "it": "Arrivo · Festa",
-    "en": "Finish · Party"
-  },
-  "faq_01": {
-    "it": "Prima di partire",
-    "en": "Before you ride"
-  },
-  "faq_02": {
-    "it": "Domande<br>frequenti",
-    "en": "Frequently<br>Asked"
-  },
-  "faq_03": {
-    "it": "Questo evento è per me?",
-    "en": "Is this event for me?"
-  },
-  "faq_04": {
-    "it": "Sì se ami pedalare in autonomia, ti piacciono gli sterrati e vuoi scoprire il Trentino da una prospettiva diversa. Non è una gara: è un'esperienza di bikepacking aperta a tutti i livelli, con due percorsi di difficoltà diversa.",
-    "en": "Yes if you love riding solo, enjoy unpaved roads and want to discover Trentino from a different angle. This is not a race: it's a bikepacking experience open to all levels, with two routes of different difficulty."
-  },
-  "faq_05": {
-    "it": "Che bici mi serve?",
-    "en": "What bike do I need?"
-  },
-  "faq_06": {
-    "it": "Una gravel bike con gomme minimo 40mm. Sono ammesse anche MTB hardtail e bikepacking rig. No bici da corsa: il 70% del percorso è su sterrato.",
-    "en": "A gravel bike with at least 40mm tyres. Hardtail MTBs and bikepacking rigs are also welcome. No road bikes: 70% of the route is unpaved."
-  },
-  "faq_07": {
-    "it": "Posso cambiare percorso dopo essermi iscritto?",
-    "en": "Can I change route after signing up?"
-  },
-  "faq_08": {
-    "it": "Sì. Puoi scegliere o cambiare il percorso (lungo o corto) fino al giorno della partenza. Nessuna penalità.",
-    "en": "Yes. You can pick or change your route (long or short) up until the day of departure. No penalty."
-  },
-  "faq_09": {
-    "it": "Dove si dorme?",
-    "en": "Where do I sleep?"
-  },
-  "faq_10": {
-    "it": "Il sistema è ibrido: tenda o rifugio/hotel bike-friendly. Ti forniremo una lista di strutture convenzionate lungo il percorso. Nessuna prenotazione obbligatoria: scegli tu dove e come riposare.",
-    "en": "Hybrid system: tent or bike-friendly lodge/hotel. We provide a list of partner accommodations along the route. No mandatory booking: you decide where and how to rest."
-  },
-  "faq_11": {
-    "it": "C'è assistenza lungo il percorso?",
-    "en": "Is there support on the route?"
-  },
-  "faq_12": {
-    "it": "L'evento è self-supported: devi essere autonomo su meccanica, cibo, idratazione. Forniamo numeri di emergenza e punti bike-shop convenzionati in città chiave. È lo spirito del bikepacking puro.",
-    "en": "The event is self-supported: you must be autonomous on mechanics, food and hydration. We provide emergency numbers and partner bike-shops in key towns. It's the spirit of pure bikepacking."
-  },
-  "faq_13": {
-    "it": "Quando si aprono le iscrizioni?",
-    "en": "When does registration open?"
-  },
-  "faq_14": {
-    "it": "I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.",
-    "en": "Spots are limited and will open first to those on the waiting list. Sign up to get priority access to registration and receive all operational info."
-  },
-  "faq_15": {
-    "it": "Foto decorativa",
-    "en": "Decorative photo"
-  },
-  "faq_16": {
-    "it": "Dettaglio gravel",
-    "en": "Gravel detail"
-  },
-  "waitlist_01": {
-    "it": "Waitlist · Foto",
-    "en": "Waitlist · Photo"
-  },
-  "waitlist_02": {
-    "it": "Azione · spirito gravel",
-    "en": "Action · gravel spirit"
-  },
-  "waitlist_03": {
-    "it": "Edizione Zero · Posti limitati",
-    "en": "Edition Zero · Limited spots"
-  },
-  "waitlist_04": {
-    "it": "Entra nella<br>Pioneer<br>Edition",
-    "en": "Join the<br>Pioneer<br>Edition"
-  },
-  "waitlist_05": {
-    "it": "Lascia la tua email per ricevere tutte le informazioni e accedere per primo all'iscrizione.",
-    "en": "Leave your email to receive all information and get priority access to registration."
-  },
-  "waitlist_06": {
-    "it": "Accesso prioritario alle iscrizioni",
-    "en": "Priority access to registration"
-  },
-  "waitlist_07": {
-    "it": "Tutti gli aggiornamenti dell'evento in anteprima",
-    "en": "All event updates first"
-  },
-  "waitlist_08": {
-    "it": "Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza",
-    "en": "Choose your route at sign-up — change anytime until the start"
-  },
-  "waitlist_09": {
-    "it": "Evento",
-    "en": "Event"
-  },
-  "waitlist_10": {
-    "it": "Data",
-    "en": "Date"
-  },
-  "waitlist_11": {
-    "it": "26 Settembre 2026",
-    "en": "September 26, 2026"
-  },
-  "waitlist_12": {
-    "it": "Partenza",
-    "en": "Start"
-  },
-  "waitlist_13": {
-    "it": "Organizer",
-    "en": "Organizer"
-  },
-  "waitlist_14": {
-    "it": "Nome",
-    "en": "Name"
-  },
-  "waitlist_15": {
-    "it": "Email",
-    "en": "Email"
-  },
-  "waitlist_16": {
-    "it": "Hai già fatto il Tuscany Trail?",
-    "en": "Have you done the Tuscany Trail?"
-  },
-  "waitlist_17": {
-    "it": "Sì",
-    "en": "Yes"
-  },
-  "waitlist_18": {
-    "it": "No",
-    "en": "No"
-  },
-  "waitlist_19": {
-    "it": "Preferenza percorso",
-    "en": "Route preference"
-  },
-  "waitlist_20": {
-    "it": "Lungo · 400 km",
-    "en": "Long · 400 km"
-  },
-  "waitlist_21": {
-    "it": "Corto · 220 km",
-    "en": "Short · 220 km"
-  },
-  "waitlist_22": {
-    "it": "Accetto la",
-    "en": "I accept the"
-  },
-  "waitlist_23": {
-    "it": "privacy policy",
-    "en": "privacy policy"
-  },
-  "waitlist_24": {
-    "it": "e il trattamento dei miei dati per la gestione della waiting list.",
-    "en": "and the processing of my data to manage the waiting list."
-  },
-  "waitlist_25": {
-    "it": "Iscriviti alla waiting list →",
-    "en": "Join the waiting list →"
-  },
-  "waitlist_26": {
-    "it": "I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.",
-    "en": "Data is handled by Brevo. No spam — unsubscribe anytime."
-  },
-  "waitlist_27": {
-    "it": "✓ Sei in lista. Ti scriviamo presto.",
-    "en": "✓ You're on the list. We'll be in touch soon."
-  },
-  "waitlist_28": {
-    "it": "Rider già in lista",
-    "en": "Riders already on the list"
-  },
-  "waitlist_29": {
-    "it": "Giorni alla partenza",
-    "en": "Days to go"
-  },
-  "footer_01": {
-    "it": "Seguici",
-    "en": "Follow along"
-  },
-  "footer_02": {
-    "it": "Dolomiti · Est. 2024 · Italia",
-    "en": "Dolomites · Est. 2024 · Italy"
-  },
-  "footer_03": {
-    "it": "Un evento",
-    "en": "An event by"
-  },
-  "footer_04": {
-    "it": "Contatti",
-    "en": "Contact"
+  "nav": {
+    "logoTagline": {
+      "it": "Dolomiti · Est. 2024",
+      "en": "Dolomites · Est. 2024"
+    },
+    "linkRoutes": {
+      "it": "Percorsi",
+      "en": "Routes"
+    },
+    "linkPioneer": {
+      "it": "Pioneer",
+      "en": "Pioneer"
+    },
+    "linkGallery": {
+      "it": "Gallery",
+      "en": "Gallery"
+    },
+    "linkFaq": {
+      "it": "Info",
+      "en": "FAQ"
+    },
+    "linkCta": {
+      "it": "Riserva",
+      "en": "Reserve"
+    },
+    "mobileRoutes": {
+      "it": "Percorsi",
+      "en": "Routes"
+    },
+    "mobilePioneer": {
+      "it": "Pioneer",
+      "en": "Pioneer"
+    },
+    "mobileGallery": {
+      "it": "Gallery",
+      "en": "Gallery"
+    },
+    "mobileFaq": {
+      "it": "Info",
+      "en": "FAQ"
+    },
+    "mobileCta": {
+      "it": "Riserva il posto",
+      "en": "Reserve your spot"
+    }
+  },
+  "hero": {
+    "date": {
+      "it": "26 Settembre 2026",
+      "en": "September 26, 2026"
+    },
+    "cta": {
+      "it": "Iscriviti alla waiting list →",
+      "en": "Join the waiting list →"
+    },
+    "organizedBy": {
+      "it": "Organizzato da",
+      "en": "Organized by"
+    },
+    "scroll": {
+      "it": "Scorri",
+      "en": "Scroll"
+    }
+  },
+  "about": {
+    "label": {
+      "it": "Il manifesto",
+      "en": "The manifesto"
+    },
+    "title": {
+      "it": "Gravel. Bikepacking. Avventura.",
+      "en": "Gravel. Bikepacking. Adventure."
+    },
+    "body": {
+      "it": "Un'avventura in Trentino, uno dei territori più belli d'Europa su un tracciato curato nei minimi dettagli per essere affrontato con una bicicletta gravel. Piste ciclabili perfette e strade sterrate in mezzo a boschi e prati. Alzando la testa vedrai vette che superano i tremila metri con neve anche d'estate, le Dolomiti UNESCO, torrenti di montagna e boschi. E quando ti fermi incontrerai la famigerata accoglienza trentina fatta di alloggi bike friendly e una enogastronomia che non ha eguali.",
+      "en": "An adventure in Trentino, one of Europe's most beautiful regions, on a route designed in every detail to be ridden on a gravel bike. Perfect cycle paths and gravel roads through forests and meadows. Look up and you'll see peaks soaring past three thousand meters — snow-capped even in summer, the UNESCO Dolomites, mountain streams and dense woods. And when you stop, you'll meet the legendary Trentino hospitality: bike-friendly stays and a food and wine culture without equal."
+    },
+    "highlight": {
+      "it": "<strong>I posti sono limitati. L'unico modo per partecipare è la waiting list.</strong><br>Chi si iscrive alla lista riceverà per primo tutte le informazioni e l'accesso prioritario.",
+      "en": "<strong>Spots are limited. The only way to participate is the waiting list.</strong><br>Those who sign up will be first to receive all information and priority access."
+    },
+    "formKicker": {
+      "it": "Edizione Zero · Posti limitati",
+      "en": "Edition Zero · Limited spots"
+    },
+    "formTitle": {
+      "it": "Iscriviti alla<br>waiting list",
+      "en": "Join the<br>waiting list"
+    },
+    "fieldName": {
+      "it": "Nome",
+      "en": "Name"
+    },
+    "fieldEmail": {
+      "it": "Email",
+      "en": "Email"
+    },
+    "fieldTuscany": {
+      "it": "Hai già fatto il Tuscany Trail?",
+      "en": "Have you done the Tuscany Trail?"
+    },
+    "optionYes": {
+      "it": "Sì",
+      "en": "Yes"
+    },
+    "optionNo": {
+      "it": "No",
+      "en": "No"
+    },
+    "fieldRoute": {
+      "it": "Preferenza percorso",
+      "en": "Route preference"
+    },
+    "optionLong": {
+      "it": "Lungo · 400 km",
+      "en": "Long · 400 km"
+    },
+    "optionShort": {
+      "it": "Corto · 220 km",
+      "en": "Short · 220 km"
+    },
+    "privacyPrefix": {
+      "it": "Accetto la",
+      "en": "I accept the"
+    },
+    "privacyLink": {
+      "it": "privacy policy",
+      "en": "privacy policy"
+    },
+    "privacySuffix": {
+      "it": "e il trattamento dei miei dati per la gestione della waiting list.",
+      "en": "and the processing of my data to manage the waiting list."
+    },
+    "submitBtn": {
+      "it": "Iscriviti alla waiting list →",
+      "en": "Join the waiting list →"
+    },
+    "legal": {
+      "it": "I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.",
+      "en": "Data is handled by Brevo. No spam — unsubscribe anytime."
+    },
+    "success": {
+      "it": "✓ Sei in lista. Ti scriviamo presto.",
+      "en": "✓ You're on the list. We'll be in touch soon."
+    }
+  },
+  "routes": {
+    "label": {
+      "it": "Due percorsi · Un unico standard",
+      "en": "Two routes · One standard"
+    },
+    "title": {
+      "it": "Scegli la tua<br><span class='dim'>distanza</span>",
+      "en": "Choose your<br><span class='dim'>distance</span>"
+    },
+    "intro": {
+      "it": "Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.",
+      "en": "70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike."
+    },
+    "longPhotoAlt": {
+      "it": "Percorso lungo · Foto",
+      "en": "Long route · Photo"
+    },
+    "longCaption": {
+      "it": "Azione gravel · paesaggio",
+      "en": "Gravel action · landscape"
+    },
+    "longBadge": {
+      "it": "Full Adventure",
+      "en": "Full Adventure"
+    },
+    "longKicker": {
+      "it": "01 / Percorso lungo",
+      "en": "01 / Long Route"
+    },
+    "longTitle": {
+      "it": "Percorso<br>lungo",
+      "en": "Long<br>Route"
+    },
+    "longElevAlt": {
+      "it": "Profilo altimetrico",
+      "en": "Elevation profile"
+    },
+    "longDesc": {
+      "it": "Per chi cerca la piena avventura.",
+      "en": "For those who want the full adventure."
+    },
+    "longDistance": {
+      "it": "Distanza",
+      "en": "Distance"
+    },
+    "longElevation": {
+      "it": "Dislivello D+",
+      "en": "Elevation D+"
+    },
+    "longGravel": {
+      "it": "Sterrato",
+      "en": "Unpaved"
+    },
+    "longCta": {
+      "it": "Iscriviti alla waiting list →",
+      "en": "Join the waiting list →"
+    },
+    "shortPhotoAlt": {
+      "it": "Percorso corto · Foto",
+      "en": "Short route · Photo"
+    },
+    "shortCaption": {
+      "it": "Sterrato tra vigneti",
+      "en": "Gravel through vineyards"
+    },
+    "shortBadge": {
+      "it": "First Timer",
+      "en": "First Timer"
+    },
+    "shortKicker": {
+      "it": "02 / Percorso corto",
+      "en": "02 / Short Route"
+    },
+    "shortTitle": {
+      "it": "Percorso<br>corto",
+      "en": "Short<br>Route"
+    },
+    "shortElevAlt": {
+      "it": "Profilo altimetrico",
+      "en": "Elevation profile"
+    },
+    "shortDesc": {
+      "it": "Perfetto per chi ha meno tempo e non vuole rinunciare.",
+      "en": "Perfect for those with less time who don't want to miss out."
+    },
+    "shortDistance": {
+      "it": "Distanza",
+      "en": "Distance"
+    },
+    "shortElevation": {
+      "it": "Dislivello D+",
+      "en": "Elevation D+"
+    },
+    "shortGravel": {
+      "it": "Sterrato",
+      "en": "Unpaved"
+    },
+    "shortCta": {
+      "it": "Iscriviti alla waiting list →",
+      "en": "Join the waiting list →"
+    },
+    "footnote": {
+      "it": "Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza.",
+      "en": "Choose your route at sign-up. You can change your mind up until the start."
+    }
+  },
+  "pioneer": {
+    "title": {
+      "it": "La prima volta.<br><em>La tua.</em>",
+      "en": "The first time.<br><em>Yours.</em>"
+    },
+    "body1": {
+      "it": "Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel.",
+      "en": "This is the zero edition of Trentino Gravel. You'll take part in the birth of something big. Together we'll discover everything Trentino has to offer to those who cross it on a gravel bike."
+    },
+    "body2": {
+      "it": "Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future.",
+      "en": "We've given everything to create this experience, but your feedback will be essential to shape future editions."
+    },
+    "body3": {
+      "it": "Chi parteciperà farà la storia di questo evento.",
+      "en": "Those who join will make this event's history."
+    }
+  },
+  "places": {
+    "label": {
+      "it": "Luoghi attraversati",
+      "en": "Places you'll cross"
+    },
+    "title": {
+      "it": "Iconic<br><em>Trentino</em>",
+      "en": "Iconic<br><em>Trentino</em>"
+    },
+    "intro": {
+      "it": "Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel.",
+      "en": "You'll cross iconic places like Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — all on the best possible route for a gravel bike."
+    }
+  },
+  "story": {
+    "aLabel": {
+      "it": "Paesaggi",
+      "en": "Landscapes"
+    },
+    "aTitle": {
+      "it": "Vette<br><em>dolomitiche</em>",
+      "en": "Dolomite<br><em>peaks</em>"
+    },
+    "aBody1": {
+      "it": "Immagina una valle raccolta tra pareti di roccia bianca che salgono verticali per centinaia di metri. In fondo scorre un torrente con acqua cristallina: lo senti prima di vederlo, il rumore dell'acqua che rimbalza tra i sassi.",
+      "en": "Imagine a narrow valley held between white rock walls rising vertically for hundreds of meters. At the bottom flows a stream with crystal-clear water — you hear it before you see it, the sound of water bouncing between stones."
+    },
+    "aBody2": {
+      "it": "Sali e il paesaggio cambia. Boschi fitti di abeti dove l'aria sa di resina e il suolo è morbido di aghi. Poi pascoli aperti dove l'unica cosa che senti sono i campanacci e il vento tra l'erba.",
+      "en": "You climb and the landscape changes. Dense spruce forests where the air smells of resin and the ground is soft with needles. Then open pastures where the only thing you hear are cowbells and wind through the grass."
+    },
+    "aBody3": {
+      "it": "Ancora più su la vegetazione finisce e resta solo la roccia. L'aria diventa fresca e sottile, il silenzio è totale. Il panorama si apre sulle vette dolomitiche. Questo e molto di più è il Trentino che ti aspetta — e hai la possibilità di viverlo con la tua bicicletta gravel.",
+      "en": "Higher still, vegetation ends and only rock remains. The air turns fresh and thin, the silence complete. The view opens onto the Dolomite peaks. This and much more is the Trentino waiting for you — and you have the chance to live it on your gravel bike."
+    },
+    "aPhotoAlt": {
+      "it": "Vette · Foto",
+      "en": "Peaks · Photo"
+    },
+    "aCaption": {
+      "it": "Dolomiti UNESCO",
+      "en": "UNESCO Dolomites"
+    },
+    "bLabel": {
+      "it": "La sosta",
+      "en": "The stop"
+    },
+    "bTitle": {
+      "it": "Un'esperienza<br><em>completa</em>",
+      "en": "A complete<br><em>experience</em>"
+    },
+    "bBody1": {
+      "it": "Quando vedi il rifugio ti scappa un sorriso: finalmente, ci siamo. Appoggi la bici polverosa carica di borse al muro, ti siedi fuori al sole. Dalla cucina arriva l'odore del burro che sfrigola: stanno rosolando la tosèla, un formaggio che esiste solo qui.",
+      "en": "When you spot the refuge a smile escapes you — finally, we're here. You lean the dusty bike, loaded with bags, against the wall and sit outside in the sun. From the kitchen comes the smell of butter sizzling — they're browning the tosèla, a cheese that exists only here."
+    },
+    "bBody2": {
+      "it": "Ti portano un tagliere di speck, canederli in brodo, polenta tagliata col filo. Davanti a te solo prato, campanacci e le Dolomiti che devi ancora attraversare.",
+      "en": "They bring you a board of speck, canederli in broth, polenta cut with string. In front of you: meadow, cowbells, and the Dolomites still to cross."
+    },
+    "bBody3": {
+      "it": "Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause: sono parte essenziale dell'esperienza di viaggio.",
+      "en": "You set off again on a gravel road descending through the larches, legs rested. In Trentino, stopping is not a pause — it's an essential part of the journey."
+    },
+    "bPhotoAlt": {
+      "it": "Rifugio · Foto",
+      "en": "Refuge · Photo"
+    },
+    "bCaption": {
+      "it": "Tavola in quota",
+      "en": "Table in the mountains"
+    }
+  },
+  "organized": {
+    "label": {
+      "it": "Un evento",
+      "en": "An event by"
+    },
+    "title": {
+      "it": "Dal team che ha creato<br>il Tuscany Trail",
+      "en": "From the team behind<br>Tuscany Trail"
+    },
+    "body": {
+      "it": "Bike Adventure Series è la casa del bikepacking italiano. Dal Tuscany Trail — il più grande evento italiano del genere con oltre 10.000 rider dal 2014 — al Grand Escape, fino a questo nuovo Trentino Gravel. Stessa filosofia, nuove montagne: partecipazione libera, gravel puro, nessuna classifica. Solo strada, persone e un'esperienza che ricorderai.",
+      "en": "Bike Adventure Series is the home of Italian bikepacking. From Tuscany Trail — the country's largest event of its kind with 10,000+ riders since 2014 — to The Grand Escape, and now this new Trentino Gravel. Same philosophy, new mountains: open participation, pure gravel, no ranking. Just road, people and an experience you will remember."
+    },
+    "partnersLabel": {
+      "it": "Con il supporto di",
+      "en": "Supported by"
+    },
+    "partner1": {
+      "it": "APT Trentino Marketing",
+      "en": "APT Trentino Marketing"
+    },
+    "partner2": {
+      "it": "Comune di Rovereto",
+      "en": "Rovereto Council"
+    },
+    "partner3": {
+      "it": "Partner bike industry",
+      "en": "Bike industry partner"
+    },
+    "partner4": {
+      "it": "Partner tecnico",
+      "en": "Technical partner"
+    }
+  },
+  "gallery": {
+    "label": {
+      "it": "Momenti dal percorso",
+      "en": "Moments from the route"
+    },
+    "title": {
+      "it": "Gallery",
+      "en": "Gallery"
+    },
+    "quote": {
+      "it": "“Le strade sterrate raccontano storie più vere delle autostrade.”",
+      "en": "&ldquo;Unpaved roads tell truer stories than motorways.&rdquo;"
+    },
+    "caption1": {
+      "it": "Partenza · Alba",
+      "en": "Start · Dawn"
+    },
+    "caption2": {
+      "it": "Sterrato tra i larici",
+      "en": "Gravel through larches"
+    },
+    "caption3": {
+      "it": "Vette Dolomiti",
+      "en": "Dolomite peaks"
+    },
+    "caption4": {
+      "it": "Rifugio · Pausa",
+      "en": "Refuge · Break"
+    },
+    "caption5": {
+      "it": "Salita panoramica",
+      "en": "Panorama climb"
+    },
+    "caption6": {
+      "it": "Pedalata in quota",
+      "en": "Altitude ride"
+    },
+    "caption7": {
+      "it": "Tramonto in sella",
+      "en": "Sunset saddle"
+    },
+    "caption8": {
+      "it": "Arrivo · Festa",
+      "en": "Finish · Party"
+    }
+  },
+  "faq": {
+    "label": {
+      "it": "Prima di partire",
+      "en": "Before you ride"
+    },
+    "title": {
+      "it": "Domande<br>frequenti",
+      "en": "Frequently<br>Asked"
+    },
+    "q1": {
+      "it": "Questo evento è per me?",
+      "en": "Is this event for me?"
+    },
+    "a1": {
+      "it": "Sì se ami pedalare in autonomia, ti piacciono gli sterrati e vuoi scoprire il Trentino da una prospettiva diversa. Non è una gara: è un'esperienza di bikepacking aperta a tutti i livelli, con due percorsi di difficoltà diversa.",
+      "en": "Yes if you love riding solo, enjoy unpaved roads and want to discover Trentino from a different angle. This is not a race: it's a bikepacking experience open to all levels, with two routes of different difficulty."
+    },
+    "q2": {
+      "it": "Che bici mi serve?",
+      "en": "What bike do I need?"
+    },
+    "a2": {
+      "it": "Una gravel bike con gomme minimo 40mm. Sono ammesse anche MTB hardtail e bikepacking rig. No bici da corsa: il 70% del percorso è su sterrato.",
+      "en": "A gravel bike with at least 40mm tyres. Hardtail MTBs and bikepacking rigs are also welcome. No road bikes: 70% of the route is unpaved."
+    },
+    "q3": {
+      "it": "Posso cambiare percorso dopo essermi iscritto?",
+      "en": "Can I change route after signing up?"
+    },
+    "a3": {
+      "it": "Sì. Puoi scegliere o cambiare il percorso (lungo o corto) fino al giorno della partenza. Nessuna penalità.",
+      "en": "Yes. You can pick or change your route (long or short) up until the day of departure. No penalty."
+    },
+    "q4": {
+      "it": "Dove si dorme?",
+      "en": "Where do I sleep?"
+    },
+    "a4": {
+      "it": "Il sistema è ibrido: tenda o rifugio/hotel bike-friendly. Ti forniremo una lista di strutture convenzionate lungo il percorso. Nessuna prenotazione obbligatoria: scegli tu dove e come riposare.",
+      "en": "Hybrid system: tent or bike-friendly lodge/hotel. We provide a list of partner accommodations along the route. No mandatory booking: you decide where and how to rest."
+    },
+    "q5": {
+      "it": "C'è assistenza lungo il percorso?",
+      "en": "Is there support on the route?"
+    },
+    "a5": {
+      "it": "L'evento è self-supported: devi essere autonomo su meccanica, cibo, idratazione. Forniamo numeri di emergenza e punti bike-shop convenzionati in città chiave. È lo spirito del bikepacking puro.",
+      "en": "The event is self-supported: you must be autonomous on mechanics, food and hydration. We provide emergency numbers and partner bike-shops in key towns. It's the spirit of pure bikepacking."
+    },
+    "q6": {
+      "it": "Quando si aprono le iscrizioni?",
+      "en": "When does registration open?"
+    },
+    "a6": {
+      "it": "I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.",
+      "en": "Spots are limited and will open first to those on the waiting list. Sign up to get priority access to registration and receive all operational info."
+    },
+    "photoAlt": {
+      "it": "Foto decorativa",
+      "en": "Decorative photo"
+    },
+    "photoCaption": {
+      "it": "Dettaglio gravel",
+      "en": "Gravel detail"
+    }
+  },
+  "waitlist": {
+    "photoAlt": {
+      "it": "Waitlist · Foto",
+      "en": "Waitlist · Photo"
+    },
+    "photoCaption": {
+      "it": "Azione · spirito gravel",
+      "en": "Action · gravel spirit"
+    },
+    "kicker": {
+      "it": "Edizione Zero · Posti limitati",
+      "en": "Edition Zero · Limited spots"
+    },
+    "title": {
+      "it": "Entra nella<br>Pioneer<br>Edition",
+      "en": "Join the<br>Pioneer<br>Edition"
+    },
+    "body": {
+      "it": "Lascia la tua email per ricevere tutte le informazioni e accedere per primo all'iscrizione.",
+      "en": "Leave your email to receive all information and get priority access to registration."
+    },
+    "benefit1": {
+      "it": "Accesso prioritario alle iscrizioni",
+      "en": "Priority access to registration"
+    },
+    "benefit2": {
+      "it": "Tutti gli aggiornamenti dell'evento in anteprima",
+      "en": "All event updates first"
+    },
+    "benefit3": {
+      "it": "Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza",
+      "en": "Choose your route at sign-up — change anytime until the start"
+    },
+    "statEvent": {
+      "it": "Evento",
+      "en": "Event"
+    },
+    "statDate": {
+      "it": "Data",
+      "en": "Date"
+    },
+    "date": {
+      "it": "26 Settembre 2026",
+      "en": "September 26, 2026"
+    },
+    "statStart": {
+      "it": "Partenza",
+      "en": "Start"
+    },
+    "statOrganizer": {
+      "it": "Organizer",
+      "en": "Organizer"
+    },
+    "fieldName": {
+      "it": "Nome",
+      "en": "Name"
+    },
+    "fieldEmail": {
+      "it": "Email",
+      "en": "Email"
+    },
+    "fieldTuscany": {
+      "it": "Hai già fatto il Tuscany Trail?",
+      "en": "Have you done the Tuscany Trail?"
+    },
+    "optionYes": {
+      "it": "Sì",
+      "en": "Yes"
+    },
+    "optionNo": {
+      "it": "No",
+      "en": "No"
+    },
+    "fieldRoute": {
+      "it": "Preferenza percorso",
+      "en": "Route preference"
+    },
+    "optionLong": {
+      "it": "Lungo · 400 km",
+      "en": "Long · 400 km"
+    },
+    "optionShort": {
+      "it": "Corto · 220 km",
+      "en": "Short · 220 km"
+    },
+    "privacyPrefix": {
+      "it": "Accetto la",
+      "en": "I accept the"
+    },
+    "privacyLink": {
+      "it": "privacy policy",
+      "en": "privacy policy"
+    },
+    "privacySuffix": {
+      "it": "e il trattamento dei miei dati per la gestione della waiting list.",
+      "en": "and the processing of my data to manage the waiting list."
+    },
+    "submitBtn": {
+      "it": "Iscriviti alla waiting list →",
+      "en": "Join the waiting list →"
+    },
+    "legal": {
+      "it": "I dati vengono gestiti da Brevo. Niente spam — disiscriviti quando vuoi.",
+      "en": "Data is handled by Brevo. No spam — unsubscribe anytime."
+    },
+    "success": {
+      "it": "✓ Sei in lista. Ti scriviamo presto.",
+      "en": "✓ You're on the list. We'll be in touch soon."
+    },
+    "countLabel": {
+      "it": "Rider già in lista",
+      "en": "Riders already on the list"
+    },
+    "daysLabel": {
+      "it": "Giorni alla partenza",
+      "en": "Days to go"
+    }
+  },
+  "footer": {
+    "followLabel": {
+      "it": "Seguici",
+      "en": "Follow along"
+    },
+    "logoTagline": {
+      "it": "Dolomiti · Est. 2024 · Italia",
+      "en": "Dolomites · Est. 2024 · Italy"
+    },
+    "eventLabel": {
+      "it": "Un evento",
+      "en": "An event by"
+    },
+    "contactsLabel": {
+      "it": "Contatti",
+      "en": "Contact"
+    }
+  },
+  "photos": {
+    "hero": "photos/hero.jpg",
+    "routeLong": "photos/route-lungo.jpg",
+    "routeShort": "photos/route-corto.jpg",
+    "place1": "photos/place-1.jpg",
+    "place2": "photos/place-2.jpg",
+    "place3": "photos/place-3.jpg",
+    "place4": "photos/place-4.jpg",
+    "place5": "photos/place-5.jpg",
+    "place6": "photos/place-6.jpg",
+    "place7": "photos/place-7.jpg",
+    "place8": "photos/place-8.jpg",
+    "gallery1": "photos/gallery-1.jpg",
+    "gallery2": "photos/gallery-2.jpg",
+    "gallery3": "photos/gallery-3.jpg",
+    "gallery4": "photos/gallery-4.jpg",
+    "gallery5": "photos/gallery-5.jpg",
+    "gallery6": "photos/gallery-6.jpg",
+    "gallery7": "photos/gallery-7.jpg",
+    "gallery8": "photos/gallery-8.jpg",
+    "faq": "photos/faq.jpg",
+    "waitlist": "photos/waitlist.jpg",
+    "ig1": "photos/ig-1.jpg",
+    "ig2": "photos/ig-2.jpg",
+    "ig3": "photos/ig-3.jpg",
+    "ig4": "photos/ig-4.jpg",
+    "ig5": "photos/ig-5.jpg",
+    "ig6": "photos/ig-6.jpg",
+    "storyVette": "photos/story-vette.jpg",
+    "storyEsperienza": "photos/story-esperienza.jpg"
   }
 }

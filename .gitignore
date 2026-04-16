@@ -19,8 +19,8 @@ node_modules/
 dist/
 .cache/
 
-# Real photos (served locally / via CDN, not in git)
-photos/
+# Photos are managed via PageCMS (committed to git, served by Cloudflare)
+# photos/  ← removed: now tracked in git
 
 # Large binary assets that don't belong in git
 *.pdf
