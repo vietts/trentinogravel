@@ -18,6 +18,17 @@ content:
     path: content.json
     fields:
 
+      - name: seo
+        label: "SEO / Social share"
+        type: object
+        fields:
+          - { name: siteTitle,       label: "Title tag",                       type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: siteDescription, label: "Meta description",                type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: ogTitle,         label: "Open Graph title",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: ogDescription,   label: "Open Graph description",          type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: ogImage,         label: "Social share image (1200×630)",   type: image, required: false }
+          - { name: canonicalUrl,    label: "Canonical URL (https://...)",     type: string }
+
       - name: nav
         label: Navigazione
         type: object
@@ -207,3 +218,14 @@ content:
           - { name: ig4,             label: "Instagram 4",                    type: image, required: false }
           - { name: ig5,             label: "Instagram 5",                    type: image, required: false }
           - { name: ig6,             label: "Instagram 6",                    type: image, required: false }
+
+      - name: privacy
+        label: "Privacy Policy"
+        type: object
+        fields:
+          - { name: lastUpdate,    label: "Ultimo aggiornamento (es. 20/04/2026)", type: string }
+          - { name: titolare,      label: "Titolare del trattamento (ragione sociale, P.IVA, sede)", type: text }
+          - { name: contactEmail,  label: "Email del titolare",                    type: string }
+          - { name: retentionText, label: "Periodo di conservazione (frase libera)", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: bodyIt,        label: "Testo completo — IT (HTML)",            type: text }
+          - { name: bodyEn,        label: "Testo completo — EN (HTML)",            type: text }

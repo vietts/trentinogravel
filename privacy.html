@@ -256,75 +256,56 @@
   <!-- Header -->
   <header class="privacy-header">
     <div class="privacy-header-inner">
-      <div class="privacy-kicker">Informativa</div>
-      <h1 class="privacy-title">Privacy Policy</h1>
-      <div class="privacy-meta">Ultimo aggiornamento: —</div>
+      <div class="privacy-kicker" data-privacy-kicker>Informativa</div>
+      <h1 class="privacy-title" data-privacy-title>Privacy Policy</h1>
+      <div class="privacy-meta" data-privacy-updated>Ultimo aggiornamento: —</div>
     </div>
   </header>
 
   <!-- Content -->
   <main>
-
-    <div class="placeholder-note">
-      <strong>Placeholder — da sostituire</strong>
-      Il testo sottostante è un placeholder indicativo per l'impaginazione. Il testo definitivo della privacy policy verrà fornito dal cliente e inserito qui. Rimuovere questo blocco prima della pubblicazione.
-    </div>
-
-    <article>
-      <h2>1. Titolare del trattamento</h2>
-      <p><em>[Ragione sociale del titolare del trattamento, P.IVA, sede legale, email di contatto.]</em></p>
-
-      <h2>2. Dati raccolti</h2>
-      <p>Attraverso il form di iscrizione alla waiting list di Trentino Gravel — Pioneer Edition, il titolare raccoglie i seguenti dati:</p>
-      <ul>
-        <li><strong>Nome</strong> — per comunicazioni personalizzate;</li>
-        <li><strong>Indirizzo email</strong> — per l'invio delle informazioni relative all'evento e l'apertura delle iscrizioni;</li>
-        <li><strong>Partecipazione pregressa al Tuscany Trail</strong> — dato aggregato utile alla pianificazione dell'evento;</li>
-        <li><strong>Preferenza di percorso (lungo / corto)</strong> — dato aggregato utile a calibrare le edizioni future;</li>
-        <li><strong>Lingua di iscrizione</strong> — per rispondere nella lingua corretta;</li>
-        <li><strong>Data e ora di iscrizione</strong> — registrate automaticamente.</li>
-      </ul>
-
-      <h2>3. Finalità del trattamento</h2>
-      <p>I dati vengono trattati esclusivamente per le seguenti finalità:</p>
-      <ol>
-        <li>Gestione della waiting list e comunicazioni operative sull'evento;</li>
-        <li>Invio, al momento dell'apertura delle iscrizioni, del link per accedere in via prioritaria alla registrazione;</li>
-        <li>Analisi aggregata e anonimizzata per migliorare l'organizzazione delle future edizioni.</li>
-      </ol>
-
-      <h2>4. Base giuridica</h2>
-      <p>Il trattamento si basa sul <strong>consenso esplicito</strong> rilasciato dall'interessato al momento dell'iscrizione (art. 6, par. 1, lett. a GDPR).</p>
-
-      <h2>5. Modalità e strumenti</h2>
-      <p>I dati vengono conservati sulla piattaforma <strong>Brevo</strong> (Sendinblue SAS), con sede nell'Unione Europea, che agisce come responsabile esterno del trattamento.</p>
-      <p>Privacy policy di Brevo: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
-
-      <h2>6. Periodo di conservazione</h2>
-      <p>I dati sono conservati fino alla revoca del consenso da parte dell'interessato o, in assenza di revoca, per un periodo massimo di <em>[numero]</em> mesi dalla conclusione dell'evento.</p>
-
-      <h2>7. Diritti dell'interessato</h2>
-      <p>In ogni momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR:</p>
-      <ul>
-        <li>Accesso ai dati;</li>
-        <li>Rettifica o cancellazione;</li>
-        <li>Limitazione o opposizione al trattamento;</li>
-        <li>Portabilità dei dati;</li>
-        <li>Revoca del consenso (è sufficiente cliccare su "Annulla iscrizione" in fondo a qualsiasi email).</li>
-      </ul>
-      <p>Per esercitare questi diritti scrivi a: <em>[email del titolare]</em>.</p>
-
-      <h2>8. Reclamo all'autorità di controllo</h2>
-      <p>Se ritieni che il trattamento dei tuoi dati violi il GDPR, hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
-
-      <h2>9. Cookie e strumenti di terze parti</h2>
-      <p>Il sito utilizza font forniti da Google Fonts e immagini ospitate su Unsplash. Non vengono utilizzati cookie di profilazione. Per dettagli: <em>[eventuale cookie policy dedicata].</em></p>
-
-      <hr>
-
-      <p><em>Questo documento è un placeholder. Il testo definitivo verrà redatto dal cliente e sostituirà integralmente il contenuto di questa pagina.</em></p>
+    <article id="privacy-body">
+      <p><em data-privacy-pending>Informativa in fase di pubblicazione.</em></p>
     </article>
   </main>
+
+  <script>
+    (async function () {
+      const LANG_KEY = 'tg-lang';
+      let lang = 'it';
+      try { lang = localStorage.getItem(LANG_KEY) || 'it'; } catch (e) {}
+      const isEn = lang === 'en';
+
+      document.documentElement.lang = lang;
+      const titleEl = document.querySelector('[data-privacy-title]');
+      const kickerEl = document.querySelector('[data-privacy-kicker]');
+      const updatedEl = document.querySelector('[data-privacy-updated]');
+      if (titleEl)  titleEl.textContent  = isEn ? 'Privacy Policy' : 'Privacy Policy';
+      if (kickerEl) kickerEl.textContent = isEn ? 'Notice' : 'Informativa';
+
+      try {
+        const resp = await fetch('content.json', { cache: 'no-cache' });
+        if (!resp.ok) return;
+        const content = await resp.json();
+        const priv = content.privacy || {};
+
+        if (updatedEl) {
+          const label = isEn ? 'Last updated' : 'Ultimo aggiornamento';
+          updatedEl.textContent = `${label}: ${priv.lastUpdate || '—'}`;
+        }
+
+        const body = isEn ? (priv.bodyEn || priv.bodyIt || '') : (priv.bodyIt || priv.bodyEn || '');
+        const article = document.getElementById('privacy-body');
+        if (article && body.trim()) {
+          article.innerHTML = body;
+        } else if (article) {
+          article.innerHTML = `<p><em>${isEn ? 'Privacy policy is being finalised.' : 'Informativa in fase di pubblicazione.'}</em></p>`;
+        }
+
+        document.title = isEn ? 'Privacy Policy — Trentino Gravel' : 'Privacy Policy — Trentino Gravel';
+      } catch (e) { /* offline: keep fallback */ }
+    })();
+  </script>
 
   <!-- Footer -->
   <footer>

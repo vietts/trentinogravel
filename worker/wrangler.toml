@@ -1,0 +1,27 @@
+# Cloudflare Worker — trentino-gravel-api
+#
+# Deploy:
+#   cd worker
+#   npm install
+#   npx wrangler login
+#   npx wrangler secret put BREVO_API_KEY
+#   npx wrangler secret put BREVO_LIST_ID
+#   npx wrangler secret put META_PIXEL_ID
+#   npx wrangler secret put META_CAPI_ACCESS_TOKEN
+#   npx wrangler secret put META_TEST_EVENT_CODE        # optional, remove after dedup is verified
+#   npx wrangler secret put TURNSTILE_SECRET_KEY
+#   npx wrangler deploy
+#
+# Production route (uncomment and edit zone after DNS is set):
+#   [[routes]]
+#   pattern = "api.trentinogravel.it/*"
+#   zone_name = "trentinogravel.it"
+
+name = "trentino-gravel-api"
+main = "src/index.js"
+compatibility_date = "2026-04-01"
+
+[vars]
+ALLOWED_ORIGIN   = "https://trentinogravel.it"
+BREVO_SOURCE_TAG = "trentino_gravel_pioneer_2026"
+META_API_VERSION = "v19.0"

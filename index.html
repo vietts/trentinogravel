@@ -16,6 +16,10 @@
   <meta name="twitter:title" content="Trentino Gravel — Pioneer Edition">
   <meta name="twitter:description" content="Un'avventura gravel di 400km attraverso le Dolomiti. 26 settembre 2026.">
   <meta name="twitter:image" content="extracted/og-image.jpg">
+  <link rel="canonical" href="https://trentinogravel.it/">
+  <link rel="alternate" hreflang="it" href="https://trentinogravel.it/">
+  <link rel="alternate" hreflang="en" href="https://trentinogravel.it/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://trentinogravel.it/">
   <link rel="icon" type="image/svg+xml" href="extracted/logo-forest.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3872,6 +3876,40 @@
     // ━━━━━━━━━━━━ I18N TOGGLE ━━━━━━━━━━━━
     const I18N_KEY = 'tg-lang';
     const DEFAULT_LANG = 'it';
+    let latestContent = null;
+
+    function applySeo(content, lang) {
+      if (!content || !content.seo) return;
+      const seo = content.seo;
+      const pick = (o) => (o && typeof o === 'object' ? (o[lang] || o.it || '') : (o || ''));
+      const setMeta = (selector, value) => {
+        if (value == null) return;
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute('content', value);
+      };
+      const setLink = (selector, value) => {
+        if (!value) return;
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute('href', value);
+      };
+      const title = pick(seo.siteTitle);
+      if (title) document.title = title;
+      setMeta('meta[name="description"]', pick(seo.siteDescription));
+      setMeta('meta[property="og:title"]', pick(seo.ogTitle));
+      setMeta('meta[property="og:description"]', pick(seo.ogDescription));
+      setMeta('meta[name="twitter:title"]', pick(seo.ogTitle));
+      setMeta('meta[name="twitter:description"]', pick(seo.ogDescription));
+      if (seo.ogImage) {
+        setMeta('meta[property="og:image"]', seo.ogImage);
+        setMeta('meta[name="twitter:image"]', seo.ogImage);
+      }
+      if (seo.canonicalUrl) {
+        setLink('link[rel="canonical"]', seo.canonicalUrl);
+        setMeta('meta[property="og:url"]', seo.canonicalUrl);
+      }
+      setMeta('meta[property="og:locale"]', lang === 'en' ? 'en_US' : 'it_IT');
+      setMeta('meta[property="og:locale:alternate"]', lang === 'en' ? 'it_IT' : 'en_US');
+    }
 
     function applyLang(lang) {
       document.documentElement.lang = lang;
@@ -3886,6 +3924,7 @@
       document.querySelectorAll('[data-lang-btn]').forEach(b => {
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
       });
+      applySeo(latestContent, lang);
       try { localStorage.setItem(I18N_KEY, lang); } catch (e) {}
     }
 
@@ -3895,6 +3934,7 @@
         const resp = await fetch('content.json');
         if (resp.ok) {
           const content = await resp.json();
+          latestContent = content;
           // Dot-notation lookup: "nav.logoTagline" → content.nav.logoTagline
           const get = (key) => key.split('.').reduce((o, k) => o?.[k], content);
           document.querySelectorAll('[data-i18n-key]').forEach(el => {

@@ -1,4 +1,24 @@
 {
+  "seo": {
+    "siteTitle": {
+      "it": "Trentino Gravel — Pioneer Edition · 26 Settembre 2026",
+      "en": "Trentino Gravel — Pioneer Edition · September 26, 2026"
+    },
+    "siteDescription": {
+      "it": "Trentino Gravel — Pioneer Edition. Un'avventura gravel e bikepacking attraverso le Dolomiti. 26 settembre 2026, partenza da Rovereto. Due percorsi, 400km e 220km, 70% sterrato. Posti limitati — iscriviti alla waiting list.",
+      "en": "Trentino Gravel — Pioneer Edition. A gravel and bikepacking adventure across the Dolomites. September 26, 2026, start in Rovereto. Two routes, 400km and 220km, 70% gravel. Limited spots — join the waiting list."
+    },
+    "ogTitle": {
+      "it": "Trentino Gravel — Pioneer Edition",
+      "en": "Trentino Gravel — Pioneer Edition"
+    },
+    "ogDescription": {
+      "it": "Un'avventura gravel di 400km attraverso le Dolomiti. 26 settembre 2026 · Rovereto · Trentino. Organizzato dal team di Tuscany Trail.",
+      "en": "A 400km gravel adventure through the Dolomites. September 26, 2026 · Rovereto · Trentino. Organised by the Tuscany Trail team."
+    },
+    "ogImage": "extracted/og-image.jpg",
+    "canonicalUrl": "https://trentinogravel.it/"
+  },
   "nav": {
     "logoTagline": {
       "it": "Dolomiti · Est. 2024",
@@ -653,5 +673,16 @@
     "ig6": "photos/ig-6.jpg",
     "storyVette": "photos/story-vette.jpg",
     "storyEsperienza": "photos/story-esperienza.jpg"
+  },
+  "privacy": {
+    "lastUpdate": "",
+    "titolare": "",
+    "contactEmail": "",
+    "retentionText": {
+      "it": "I dati sono conservati fino alla revoca del consenso o, in assenza di revoca, per un periodo massimo di 24 mesi dalla conclusione dell'evento.",
+      "en": "Data is kept until consent is withdrawn or, absent withdrawal, for a maximum of 24 months after the event."
+    },
+    "bodyIt": "",
+    "bodyEn": ""
   }
 }
