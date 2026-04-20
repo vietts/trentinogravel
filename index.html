@@ -21,6 +21,7 @@
   <link rel="alternate" hreflang="en" href="https://trentinogravel.it/?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://trentinogravel.it/">
   <link rel="icon" type="image/svg+xml" href="extracted/logo-forest.svg">
+  <link rel="preload" as="image" href="photos/hero.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -4146,9 +4147,13 @@
       };
       const PHOTOS = override ? { ...DEFAULTS, ...override } : DEFAULTS;
 
+      function clearExistingPhoto(el) {
+        el.querySelectorAll(':scope > img.bg-photo').forEach(img => img.remove());
+      }
       function applyPhoto(selector, url, alt) {
         const el = document.querySelector(selector);
         if (!el || !url) return;
+        clearExistingPhoto(el);
         el.classList.add('has-photo');
         const img = document.createElement('img');
         img.className = 'bg-photo';
@@ -4160,6 +4165,7 @@
       function applyPhotoAll(selector, urls, altBase) {
         document.querySelectorAll(selector).forEach((el, i) => {
           if (!urls[i]) return;
+          clearExistingPhoto(el);
           el.classList.add('has-photo');
           const img = document.createElement('img');
           img.className = 'bg-photo';
@@ -4178,12 +4184,14 @@
       // Routes
       const routeEls = document.querySelectorAll('.route-card-photo');
       if (routeEls[0]) {
+        clearExistingPhoto(routeEls[0]);
         routeEls[0].classList.add('has-photo');
         const i = document.createElement('img');
         i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Long route'; i.loading = 'lazy';
         routeEls[0].insertBefore(i, routeEls[0].firstChild);
       }
       if (routeEls[1]) {
+        clearExistingPhoto(routeEls[1]);
         routeEls[1].classList.add('has-photo');
         const i = document.createElement('img');
         i.className = 'bg-photo'; i.src = PHOTOS.routeShort; i.alt = 'Short route'; i.loading = 'lazy';

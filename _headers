@@ -1,0 +1,19 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.trentinogravel.it https://*.facebook.com; frame-src https://challenges.cloudflare.com https://www.facebook.com; form-action 'self'; base-uri 'self'; object-src 'none'
+
+/privacy.html
+  X-Robots-Tag: noindex
+
+/*.json
+  Cache-Control: public, max-age=60, must-revalidate
+
+/photos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/extracted/*
+  Cache-Control: public, max-age=31536000, immutable
