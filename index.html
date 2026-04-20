@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
+  <script id="event-schema" type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SportsEvent",
@@ -3912,6 +3912,38 @@
       setMeta('meta[property="og:locale:alternate"]', lang === 'en' ? 'it_IT' : 'en_US');
     }
 
+    function applyEvent(content) {
+      const ev = (content && content.event) || {};
+      const dateIso = ev.date || '2026-09-26T09:00:00+02:00';
+      const target = new Date(dateIso);
+      const daysEl = document.getElementById('daysToGo');
+      if (daysEl && !isNaN(target.getTime())) {
+        const days = Math.ceil((target - new Date()) / (1000 * 60 * 60 * 24));
+        if (days > 0) daysEl.textContent = days.toLocaleString('it-IT');
+      }
+      if (!content || !content.event) return;
+      const schemaEl = document.getElementById('event-schema');
+      if (!schemaEl) return;
+      try {
+        const data = JSON.parse(schemaEl.textContent);
+        if (ev.startDate) data.startDate = ev.startDate;
+        if (ev.endDate)   data.endDate   = ev.endDate;
+        if (data.location && data.location.address) {
+          if (ev.locationCity) {
+            data.location.name = ev.locationCity;
+            data.location.address.addressLocality = ev.locationCity;
+          }
+          if (ev.locationRegion)  data.location.address.addressRegion  = ev.locationRegion;
+          if (ev.locationCountry) data.location.address.addressCountry = ev.locationCountry;
+        }
+        if (data.organizer) {
+          if (ev.organizerName) data.organizer.name = ev.organizerName;
+          if (ev.organizerUrl)  data.organizer.url  = ev.organizerUrl;
+        }
+        schemaEl.textContent = JSON.stringify(data);
+      } catch (e) {}
+    }
+
     function applyLang(lang) {
       document.documentElement.lang = lang;
       const attr = 'data-i18n-' + lang;
@@ -3926,6 +3958,7 @@
         b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
       });
       applySeo(latestContent, lang);
+      applyEvent(latestContent);
       try { localStorage.setItem(I18N_KEY, lang); } catch (e) {}
     }
 
@@ -4178,15 +4211,10 @@
     }
     injectPhotos(); // called again with CMS override from initLang() if content.json loads
 
-    // ━━━━━━━━━━━━ COUNTDOWN ━━━━━━━━━━━━
-    (function initCountdown() {
-      const EVENT_DATE = new Date('2026-09-26T09:00:00+02:00');
-      const daysEl = document.getElementById('daysToGo');
-      if (!daysEl) return;
-      const ms = EVENT_DATE - new Date();
-      const days = Math.ceil(ms / (1000 * 60 * 60 * 24));
-      if (days > 0) daysEl.textContent = days.toLocaleString('it-IT');
-    })();
+    // Paint the countdown immediately with the hardcoded fallback; once
+    // content.json loads, applyEvent() re-runs from applyLang() with the
+    // CMS-edited date.
+    applyEvent(null);
   </script>
 
 </body>

@@ -29,6 +29,19 @@ content:
           - { name: ogImage,         label: "Social share image (1200×630)",   type: image, required: false }
           - { name: canonicalUrl,    label: "Canonical URL (https://...)",     type: string }
 
+      - name: event
+        label: "Evento — date e luogo"
+        type: object
+        fields:
+          - { name: date,             label: "Data+ora per countdown (ISO: 2026-09-26T09:00:00+02:00)", type: string }
+          - { name: startDate,        label: "Data inizio (YYYY-MM-DD, schema.org)",                     type: date }
+          - { name: endDate,          label: "Data fine (YYYY-MM-DD, schema.org)",                       type: date }
+          - { name: locationCity,     label: "Città di partenza",                                        type: string }
+          - { name: locationRegion,   label: "Regione",                                                  type: string }
+          - { name: locationCountry,  label: "Paese (codice ISO 2 lettere, es. IT)",                     type: string }
+          - { name: organizerName,    label: "Organizer — nome",                                         type: string }
+          - { name: organizerUrl,     label: "Organizer — URL (https://...)",                            type: string }
+
       - name: nav
         label: Navigazione
         type: object
