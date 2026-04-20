@@ -8,18 +8,21 @@ Goal: collect emails for the waiting list before registration opens.
 
 | File | Purpose |
 |------|---------|
-| `concept.html` | Live landing page (HTML + inline CSS + inline JS, mobile-first) |
-| `index.html` | Copy of `concept.html` — used by Netlify/Cloudflare (no symlinks) |
-| `privacy.html` | Privacy policy (placeholder copy, awaiting final text from client) |
+| `index.html` | Live landing page (HTML + inline CSS + inline JS, mobile-first) |
+| `privacy.html` | Privacy policy — body loaded at runtime from `content.privacy` |
+| `content.json` | i18n strings (IT/EN), SEO meta, privacy body — edited via PageCMS |
+| `.pages.yml` | PageCMS schema (`content.json` + `photos/` media) |
+| `worker/` | Cloudflare Worker — Brevo proxy + Meta CAPI |
 | `extracted/` | Brand assets (logos SVG/PNG, favicon) |
+| `photos/` | Photo assets (committed, served by Cloudflare) |
 | `archive/` | Old snapshot versions, kept for rollback |
 
 ## Local preview
 
 ```bash
-cd trentinogravelweb
+cd trentinogravel
 python3 -m http.server 8765
-open http://localhost:8765/concept.html
+open http://localhost:8765/
 ```
 
 ## Modifica contenuti (PageCMS)
@@ -33,7 +36,7 @@ Tutti i testi bilingui (IT/EN) sono in `content.json`. Per modificarli:
 
 Le modifiche sono live in ~30 secondi. Nessun codice, nessun terminale.
 
-> **Per testi hardcoded fuori da content.json** (meta tag, schema.org, placeholder form) usa Claude Code o modifica `concept.html` direttamente.
+> **Per testi hardcoded fuori da content.json** (schema.org, label form) usa Claude Code o modifica `index.html` direttamente.
 
 ## Usare Claude Code su questo progetto (macOS)
 
@@ -86,9 +89,9 @@ fai il commit e pusha su GitHub
 ### Workflow consigliato
 
 1. Avvia il server locale in un terminale: `python3 -m http.server 8765`
-2. Apri `http://localhost:8765/concept.html` nel browser
+2. Apri `http://localhost:8765/` nel browser
 3. In un altro terminale avvia Claude: `claude`
-4. Chiedi le modifiche — Claude le applica direttamente su `concept.html`
+4. Chiedi le modifiche — Claude le applica direttamente su `index.html`
 5. Ricarica il browser per vedere il risultato
 6. Quando sei soddisfatto: `fai commit e push`
 
@@ -114,24 +117,39 @@ fai il commit e pusha su GitHub
 --ink:        #0A150A
 ```
 
-## Brevo setup required before going live
+## Backend setup required before going live
 
-1. Create a contact list in Brevo and paste its numeric id into `BREVO_CONFIG.listId` inside `concept.html`
-2. Create these custom contact attributes:
-   - `EX_TUSCANY_TRAIL` — Boolean
-   - `ROUTE_PREFERENCE` — Text (values: `long` / `short`)
-   - `SOURCE` — Text
-   - `SIGNUP_LANG` — Text
-3. **Security**: move the POST call to a backend/edge-function proxy before publishing
+The form POSTs to the Cloudflare Worker in `worker/`. It owns the Brevo API
+key and the Meta CAPI token — nothing secret ships to the browser.
+
+1. In Brevo, create a contact list for "Trentino Gravel — Pioneer" and note
+   its numeric id.
+2. In Brevo → Contacts → Attributes, create:
+   - `EX_TUSCANY_TRAIL` (Boolean)
+   - `ROUTE_PREFERENCE` (Text: `long` | `short`)
+   - `SOURCE` (Text)
+   - `SIGNUP_LANG` (Text)
+3. Deploy the Worker and set secrets (see `worker/wrangler.toml`):
+   ```bash
+   cd worker && npm install
+   npx wrangler secret put BREVO_API_KEY
+   npx wrangler secret put BREVO_LIST_ID
+   npx wrangler secret put META_PIXEL_ID
+   npx wrangler secret put META_CAPI_ACCESS_TOKEN
+   npx wrangler secret put TURNSTILE_SECRET_KEY
+   npx wrangler deploy
+   ```
+4. Paste the deployed Worker URL into `WORKER_CONFIG.endpoint` inside
+   `index.html` (e.g. `https://api.trentinogravel.it/waitlist`).
 
 ## Roadmap
 
 - [ ] Replace placeholder photos with the real Trentino photo shoot
 - [ ] Swap partner logos (APT Trentino, Comune di Rovereto, bike brands)
-- [ ] Wire `BREVO_CONFIG.listId` to the real list
-- [ ] Move the Brevo POST behind a proxy (Cloudflare Worker / Supabase Edge Function)
-- [ ] Publish final privacy policy copy in `privacy.html`
-- [ ] OG image (`extracted/og-image.jpg`) for social previews (1200×630)
+- [ ] Deploy the Worker in `worker/` and wire `WORKER_CONFIG.endpoint`
+- [ ] Meta Pixel base code + consent banner (required before Pixel loads)
+- [ ] Fill `privacy.bodyIt` / `privacy.bodyEn` in PageCMS with final legal text
+- [ ] Upload OG image 1200×630 (set `seo.ogImage` in PageCMS)
 - [ ] Add real video to `.film-player` once the teaser is ready
 
 ## License

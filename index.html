@@ -3367,6 +3367,9 @@
           <h3 class="about-signup-title" data-i18n-key="about.formTitle" data-i18n-it="Iscriviti alla<br>waiting list" data-i18n-en="Join the<br>waiting list">Iscriviti alla<br>waiting list</h3>
         </div>
         <form class="waitlist-form about-form" id="aboutWaitlistForm" onsubmit="handleWaitlist(event)">
+          <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+            <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
           <div class="wf-field">
             <label class="form-label" for="aName" data-i18n-key="about.fieldName" data-i18n-it="Nome" data-i18n-en="Name">Nome</label>
             <input type="text" id="aName" name="name" class="form-input form-input-full" placeholder="Mario" required autocomplete="given-name">
@@ -3758,6 +3761,9 @@
           </div>
         </div>
         <form class="waitlist-form sr d1" id="waitlistForm" onsubmit="handleWaitlist(event)">
+          <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+            <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
           <!-- Row 1: nome -->
           <div class="wf-field">
             <label class="form-label" for="wlName" data-i18n-key="waitlist.fieldName" data-i18n-it="Nome" data-i18n-en="Name">Nome</label>
@@ -3812,11 +3818,6 @@
           </div>
         </form>
         <div class="waitlist-counter sr d2" aria-live="polite">
-          <div class="wcount-block">
-            <div class="wcount-num" id="waitlistCount">—</div>
-            <div class="wcount-lbl" data-i18n-key="waitlist.countLabel" data-i18n-it="Rider già in lista" data-i18n-en="Riders already on the list">Rider già in lista</div>
-          </div>
-          <div class="wcount-divider"></div>
           <div class="wcount-block">
             <div class="wcount-num orange" id="daysToGo">—</div>
             <div class="wcount-lbl" data-i18n-key="waitlist.daysLabel" data-i18n-it="Giorni alla partenza" data-i18n-en="Days to go">Giorni alla partenza</div>
@@ -3997,74 +3998,73 @@
       if (window.innerWidth > 640) closeMenu();
     });
 
-    // ━━━━━━━━━━━━ WAITLIST FORM (Brevo integration) ━━━━━━━━━━━━
-    // ⚠️ In production move the POST through a backend proxy so the API key
-    // is NOT shipped to the client. For now we follow the same pattern used
-    // on The Grand Escape website (client-side Brevo fetch) — swap this out
-    // before launch if you want to hide the key.
+    // ━━━━━━━━━━━━ WAITLIST FORM (Worker proxy → Brevo + Meta CAPI) ━━━━━━━━━━━━
+    // The form POSTs to a Cloudflare Worker that owns the Brevo API key and
+    // the Meta CAPI access token. The Worker returns an event_id used to
+    // dedupe the browser-side Meta Pixel `Lead` event with the CAPI one.
     //
-    // Required Brevo dashboard setup:
-    //   1. Create a contact list dedicated to "Trentino Gravel – Pioneer"
-    //      and paste its numeric id in `listId` below.
-    //   2. Create custom attributes (Contacts > Attributes):
-    //        · EX_TUSCANY_TRAIL (Boolean)
-    //        · ROUTE_PREFERENCE (Text)   — values: "long" | "short"
-    //        · SOURCE            (Text)
-    //        · SIGNUP_LANG       (Text)
-    //      FIRSTNAME already exists by default in every Brevo account.
-    const BREVO_CONFIG = {
-      apiKey: 'REPLACE_WITH_YOUR_BREVO_API_KEY',
-      listId: 0, // TODO: replace 0 with the real list id from Brevo dashboard
-      source: 'trentino_gravel_pioneer_2026',
+    // Before launch, set WORKER_CONFIG.endpoint to the deployed Worker URL
+    // (e.g. "https://api.trentinogravel.it/waitlist" or the same-origin
+    // "/api/waitlist" route). If left empty, the form runs in dev-preview
+    // mode: the UI shows success without calling any external API.
+    const WORKER_CONFIG = {
+      endpoint: '',
+      turnstileSiteKey: '',
     };
+
+    function readCookie(name) {
+      const re = new RegExp('(?:^|; )' + name.replace(/[.$?*|{}()[\]\\/+^]/g, '\\$&') + '=([^;]*)');
+      const m = document.cookie.match(re);
+      return m ? decodeURIComponent(m[1]) : '';
+    }
 
     async function handleWaitlist(e) {
       e.preventDefault();
       const form = e.target;
       const btn = form.querySelector('button[type="submit"]');
-      const errorEl = document.getElementById('formError');
-      const successEl = document.getElementById('formSuccess');
+      const errorEl = form.querySelector('.form-error') || document.getElementById('formError');
+      const successEl = form.querySelector('.form-success') || document.getElementById('formSuccess');
       if (errorEl) { errorEl.textContent = ''; errorEl.style.display = 'none'; }
 
       const data = new FormData(form);
       const payload = {
-        email: data.get('email'),
-        attributes: {
-          FIRSTNAME: data.get('name') || undefined,
-          EX_TUSCANY_TRAIL: data.get('exTT') === 'yes',
-          ROUTE_PREFERENCE: data.get('route'),
-          SOURCE: BREVO_CONFIG.source,
-          SIGNUP_LANG: document.documentElement.lang || 'it',
-        },
-        listIds: BREVO_CONFIG.listId ? [BREVO_CONFIG.listId] : undefined,
-        updateEnabled: true,
+        email: (data.get('email') || '').toString().trim(),
+        name: (data.get('name') || '').toString().trim(),
+        route: (data.get('route') || '').toString(),
+        ex_tuscany_trail: data.get('exTT') === 'yes',
+        lang: document.documentElement.lang || 'it',
+        turnstile_token: (data.get('cf-turnstile-response') || '').toString(),
+        fbp: readCookie('_fbp'),
+        fbc: readCookie('_fbc'),
+        website: (data.get('website') || '').toString(),
       };
 
       const btnOriginalText = btn ? btn.textContent : '';
       if (btn) { btn.disabled = true; btn.textContent = '...'; }
 
       try {
-        // Skip the network call until a real list id is configured.
-        const isDevPreview = BREVO_CONFIG.apiKey.startsWith('REPLACE_') || !BREVO_CONFIG.listId;
-        if (!isDevPreview) {
-          const res = await fetch('https://api.brevo.com/v3/contacts', {
+        let eventId = null;
+        if (!WORKER_CONFIG.endpoint) {
+          // Dev-preview: accept the submission locally without hitting the API.
+          await new Promise(r => setTimeout(r, 250));
+        } else {
+          const res = await fetch(WORKER_CONFIG.endpoint, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'api-key': BREVO_CONFIG.apiKey,
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),
           });
-          if (!res.ok && res.status !== 204) {
-            const err = await res.json().catch(() => ({}));
-            // "duplicate_parameter" means the contact already exists — treat as success.
-            if (err.code !== 'duplicate_parameter') {
-              throw new Error(err.message || `Errore ${res.status}`);
-            }
-          }
+          const result = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(result.error || `Errore ${res.status}`);
+          eventId = result.event_id || null;
+        }
+        if (eventId && typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {}, { eventID: eventId });
         }
         if (successEl) successEl.style.display = 'block';
         form.reset();
+        if (window.turnstile && typeof window.turnstile.reset === 'function') {
+          window.turnstile.reset();
+        }
       } catch (err) {
         if (errorEl) {
           errorEl.textContent = err.message || 'Qualcosa è andato storto. Riprova.';
@@ -4178,22 +4178,14 @@
     }
     injectPhotos(); // called again with CMS override from initLang() if content.json loads
 
-    // ━━━━━━━━━━━━ WAITLIST COUNTER + COUNTDOWN ━━━━━━━━━━━━
-    // Placeholder values — wire to real endpoint + real event date later.
-    (function initCounters() {
+    // ━━━━━━━━━━━━ COUNTDOWN ━━━━━━━━━━━━
+    (function initCountdown() {
       const EVENT_DATE = new Date('2026-09-26T09:00:00+02:00');
-      const now = new Date();
       const daysEl = document.getElementById('daysToGo');
-      const countEl = document.getElementById('waitlistCount');
-      if (daysEl) {
-        const ms = EVENT_DATE - now;
-        const days = Math.ceil(ms / (1000 * 60 * 60 * 24));
-        // If the event is in the past (placeholder data), show a demo countdown.
-        daysEl.textContent = (days > 0 ? days : 62).toLocaleString('it-IT');
-      }
-      if (countEl) {
-        countEl.textContent = '1.247';
-      }
+      if (!daysEl) return;
+      const ms = EVENT_DATE - new Date();
+      const days = Math.ceil(ms / (1000 * 60 * 60 * 24));
+      if (days > 0) daysEl.textContent = days.toLocaleString('it-IT');
     })();
   </script>
 
