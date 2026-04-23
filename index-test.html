@@ -1744,28 +1744,7 @@
 
     .mobile-menu a:hover { color: var(--orange); }
 
-    .menu-close {
-      position: absolute;
-      top: 1.8rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--orange);
-      border: none;
-      color: #fff;
-      font-size: 1.3rem;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      flex-shrink: 0;
-    }
-
-    .mobile-menu a.mobile-cta {
+.mobile-menu a.mobile-cta {
       margin-top: 2rem;
       background: var(--orange);
       color: var(--white);
@@ -3603,7 +3582,6 @@
 
   <!-- ━━━━━━━━━━━━ MOBILE MENU (overlay) ━━━━━━━━━━━━ -->
   <div class="mobile-menu" id="mobileMenu">
-    <button class="menu-close" onclick="closeMenu()" aria-label="Chiudi menu">✕</button>
     <a href="#routes"   onclick="closeMenu()" data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a>
     <a href="#pioneer"  onclick="closeMenu()" data-i18n-it="Pioneer"  data-i18n-en="Pioneer">Pioneer</a>
     <a href="#faq"      onclick="closeMenu()" data-i18n-it="Info"     data-i18n-en="FAQ">Info</a>
