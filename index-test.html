@@ -777,7 +777,8 @@
 
     .route-num { display: none; }
 
-    .route-card { flex-direction: row !important; }
+    .route-card { flex-direction: column !important; }
+    .route-card-inner { flex-direction: row; align-items: stretch; }
 
     .route-num-side {
       font-family: 'Bebas Neue', sans-serif;
@@ -1726,6 +1727,27 @@
     }
 
     .mobile-menu a:hover { color: var(--orange); }
+
+    .menu-close {
+      position: absolute;
+      top: 1.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: none;
+      color: #fff;
+      font-size: 1.3rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      flex-shrink: 0;
+    }
 
     .mobile-menu a.mobile-cta {
       margin-top: 2rem;
@@ -3547,6 +3569,7 @@
 
   <!-- ━━━━━━━━━━━━ MOBILE MENU (overlay) ━━━━━━━━━━━━ -->
   <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" onclick="closeMenu()" aria-label="Chiudi menu">✕</button>
     <a href="#routes"   onclick="closeMenu()" data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a>
     <a href="#pioneer"  onclick="closeMenu()" data-i18n-it="Pioneer"  data-i18n-en="Pioneer">Pioneer</a>
     <a href="#faq"      onclick="closeMenu()" data-i18n-it="Info"     data-i18n-en="FAQ">Info</a>
@@ -3758,8 +3781,6 @@
 
       <!-- Route 1 — Long -->
       <div class="route-card featured sr">
-        <div class="route-num-side">01</div>
-        <div class="route-card-inner">
         <div class="route-card-photo route-photo-tall photo-slot" aria-label="Long route photo placeholder">
           <div class="slot-badge">
             <span data-i18n-key="routes.longPhotoAlt" data-i18n-it="Percorso lungo · Foto" data-i18n-en="Long route · Photo">Percorso lungo · Foto</span>
@@ -3767,6 +3788,8 @@
           </div>
           <span class="route-difficulty" data-i18n-key="routes.longBadge" data-i18n-it="Full Adventure" data-i18n-en="Full Adventure">Full Adventure</span>
         </div>
+        <div class="route-card-inner">
+        <div class="route-num-side">01</div>
         <div class="route-card-body">
           <div class="route-num" data-i18n-key="routes.longKicker" data-i18n-it="01" data-i18n-en="01">01</div>
           <h3 class="route-name" data-i18n-key="routes.longTitle" data-i18n-it="Percorso lungo" data-i18n-en="Long Route">Percorso lungo</h3>
@@ -3797,8 +3820,6 @@
 
       <!-- Route 2 — Short -->
       <div class="route-card sr d1">
-        <div class="route-num-side">02</div>
-        <div class="route-card-inner">
         <div class="route-card-photo route-photo-tall photo-slot cream-bg" aria-label="Short route photo placeholder">
           <div class="slot-badge">
             <span data-i18n-key="routes.shortPhotoAlt" data-i18n-it="Percorso corto · Foto" data-i18n-en="Short route · Photo">Percorso corto · Foto</span>
@@ -3806,6 +3827,8 @@
           </div>
           <span class="route-difficulty" data-i18n-key="routes.shortBadge" data-i18n-it="First Timer" data-i18n-en="First Timer">First Timer</span>
         </div>
+        <div class="route-card-inner">
+        <div class="route-num-side">02</div>
         <div class="route-card-body">
           <div class="route-num" data-i18n-key="routes.shortKicker" data-i18n-it="02" data-i18n-en="02">02</div>
           <h3 class="route-name" data-i18n-key="routes.shortTitle" data-i18n-it="Percorso corto" data-i18n-en="Short Route">Percorso corto</h3>
