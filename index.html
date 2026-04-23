@@ -1152,31 +1152,34 @@
       filter: brightness(0) invert(1);
       opacity: 0.85;
     }
-    .footer-bas-featured {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      opacity: 0.65;
-      transition: opacity .2s;
-      text-decoration: none;
-      margin-top: 0.9rem;
-    }
-    .footer-bas-featured:hover { opacity: 1; }
-    .footer-bas-featured img {
-      height: 22px;
-      width: auto;
-      filter: brightness(0) invert(1);
-    }
-    .footer-bas-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.52rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(242,238,174,0.4);
-    }
     .footer-logo-wrap {
       flex-direction: column !important;
       align-items: flex-start !important;
+      gap: 1rem !important;
+    }
+    .footer-bas-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .footer-bas-by {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.3);
+    }
+    .footer-bas-block a {
+      display: block;
+      line-height: 0;
+      opacity: 0.7;
+      transition: opacity .2s;
+    }
+    .footer-bas-block a:hover { opacity: 1; }
+    .footer-bas-block img {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
     }
 
     .footer-links {
@@ -2742,14 +2745,15 @@
        UPDATE: WAITLIST 3-COL with photo + counter
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     .waitlist-inner.waitlist-3col {
-      grid-template-columns: 5fr 4fr 4fr;
+      grid-template-columns: 4fr 4fr 4fr;
       gap: 3rem;
-      align-items: stretch;
+      align-items: center;
     }
     .waitlist-photo {
-      min-height: 580px;
       position: relative;
       overflow: hidden;
+      aspect-ratio: 1 / 1;
+      width: 100%;
     }
     .waitlist-photo .bg-photo {
       object-fit: cover;
@@ -4036,13 +4040,6 @@
   <section class="waitlist" id="waitlist">
     <div class="waitlist-inner waitlist-3col">
 
-      <div class="waitlist-photo photo-slot sr" aria-label="Waitlist photo placeholder">
-        <div class="slot-badge">
-          <span data-i18n-key="waitlist.photoAlt" data-i18n-it="Waitlist · Foto" data-i18n-en="Waitlist · Photo">Waitlist · Foto</span>
-          <span data-i18n-key="waitlist.photoCaption" data-i18n-it="Azione · spirito gravel" data-i18n-en="Action · gravel spirit">Azione · spirito gravel</span>
-        </div>
-      </div>
-
       <div class="waitlist-left">
         <div class="cta-kicker sr" data-i18n-key="waitlist.kicker" data-i18n-it="Edizione Zero · Posti limitati" data-i18n-en="Edition Zero · Limited spots">Edizione Zero · Posti limitati</div>
         <h2 class="cta-h2 sr d1" data-i18n-key="waitlist.title" data-i18n-it="Entra nella<br>Pioneer<br>Edition" data-i18n-en="Join the<br>Pioneer<br>Edition">Entra nella<br>Pioneer<br>Edition</h2>
@@ -4052,6 +4049,13 @@
           <li data-i18n-key="waitlist.benefit2" data-i18n-it="Tutti gli aggiornamenti dell'evento in anteprima" data-i18n-en="All event updates first">Tutti gli aggiornamenti dell'evento in anteprima</li>
           <li data-i18n-key="waitlist.benefit3" data-i18n-it="Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza" data-i18n-en="Choose your route at sign-up — change anytime until the start">Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza</li>
         </ul>
+      </div>
+
+      <div class="waitlist-photo photo-slot sr" aria-label="Waitlist photo placeholder">
+        <div class="slot-badge">
+          <span data-i18n-key="waitlist.photoAlt" data-i18n-it="Waitlist · Foto" data-i18n-en="Waitlist · Photo">Waitlist · Foto</span>
+          <span data-i18n-key="waitlist.photoCaption" data-i18n-it="Azione · spirito gravel" data-i18n-en="Action · gravel spirit">Azione · spirito gravel</span>
+        </div>
       </div>
 
       <div class="waitlist-right">
@@ -4183,18 +4187,15 @@
           <img src="extracted/logo-real-light.svg" width="32" height="36" alt="Trentino Gravel logo" style="width:32px;height:auto;">
           <div class="footer-wordmark">Trentino Gravel</div>
         </div>
-        <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" class="footer-bas-featured">
-          <img src="extracted/logo-bas.png" alt="Bike Adventure Series">
-          <span class="footer-bas-label">Bike Adventure Series</span>
-        </a>
+        <div class="footer-bas-block">
+          <span class="footer-bas-by" data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</span>
+          <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" aria-label="Bike Adventure Series">
+            <img src="extracted/logo-bas.png" alt="Bike Adventure Series">
+          </a>
+        </div>
       </div>
       <div class="footer-mono">
         <span>© 2026 Trentino Gravel</span>
-        <span class="footer-divider">·</span>
-        <span data-i18n-key="footer.eventLabel" data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</span>
-        <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" class="footer-bas">
-          <img src="extracted/logo-bas.png" alt="Bike Adventure Series" height="18">
-        </a>
       </div>
       <div class="footer-links">
         <a href="#">Instagram</a>
