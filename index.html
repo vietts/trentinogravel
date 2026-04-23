@@ -777,6 +777,31 @@
 
     .route-num { display: none; }
 
+    .route-card { flex-direction: row !important; }
+
+    .route-num-side {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 9vw, 9rem);
+      line-height: 1;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      flex-shrink: 0;
+      border-right: 1px solid rgba(242,238,174,0.12);
+    }
+    .route-card.featured .route-num-side {
+      border-right-color: rgba(242,238,174,0.18);
+    }
+    .route-card-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-width: 0;
+    }
+
     .route-name {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.6rem, 3.8vw, 3.5rem);
@@ -3724,13 +3749,16 @@
         <div class="section-label sr" data-i18n-key="routes.label" data-i18n-it="Due percorsi · Un unico standard" data-i18n-en="Two routes · One standard">Due percorsi · Un unico standard</div>
         <h2 class="section-h2 sr d1" data-i18n-key="routes.title" data-i18n-it="Scegli la tua<br>distanza" data-i18n-en="Choose your<br>distance">Scegli la tua<br>distanza</h2>
       </div>
-      <p class="routes-desc sr d2" data-i18n-key="routes.intro" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
     </div>
+
+    <p class="routes-desc sr d2" style="max-width:580px;margin:0 auto 2.5rem;text-align:center;" data-i18n-key="routes.intro" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
 
     <div class="routes-grid routes-grid-2">
 
       <!-- Route 1 — Long -->
       <div class="route-card featured sr">
+        <div class="route-num-side">01</div>
+        <div class="route-card-inner">
         <div class="route-card-photo route-photo-tall photo-slot" aria-label="Long route photo placeholder">
           <div class="slot-badge">
             <span data-i18n-key="routes.longPhotoAlt" data-i18n-it="Percorso lungo · Foto" data-i18n-en="Long route · Photo">Percorso lungo · Foto</span>
@@ -3763,10 +3791,13 @@
           </div>
           <a href="#waitlist" class="route-cta" data-i18n-key="routes.longCta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
         </div>
+        </div><!-- /route-card-inner -->
       </div>
 
       <!-- Route 2 — Short -->
       <div class="route-card sr d1">
+        <div class="route-num-side">02</div>
+        <div class="route-card-inner">
         <div class="route-card-photo route-photo-tall photo-slot cream-bg" aria-label="Short route photo placeholder">
           <div class="slot-badge">
             <span data-i18n-key="routes.shortPhotoAlt" data-i18n-it="Percorso corto · Foto" data-i18n-en="Short route · Photo">Percorso corto · Foto</span>
@@ -3799,6 +3830,7 @@
           </div>
           <a href="#waitlist" class="route-cta" data-i18n-key="routes.shortCta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
         </div>
+        </div><!-- /route-card-inner -->
       </div>
 
     </div>
