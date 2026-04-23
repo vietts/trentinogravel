@@ -1174,12 +1174,12 @@
     .footer-bas-block a {
       display: block;
       line-height: 0;
-      opacity: 0.7;
+      opacity: 0.9;
       transition: opacity .2s;
     }
     .footer-bas-block a:hover { opacity: 1; }
     .footer-bas-block img {
-      height: 28px;
+      height: 36px;
       width: auto;
       filter: brightness(0) invert(1);
     }
@@ -2914,8 +2914,8 @@
       .gallery-bento { padding: 0 1.5rem; grid-auto-rows: 80px; gap: 8px; }
 
       .faq { padding: 5rem 1.5rem; }
-      .faq-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .faq-photo { min-height: 280px; position: relative; overflow: hidden; }
+      .faq-inner { grid-template-columns: 1fr; gap: 2rem; display: flex; flex-direction: column; }
+      .faq-photo { order: -1; min-height: 200px; max-height: 220px; position: relative; overflow: hidden; }
 
       .waitlist-inner.waitlist-3col { grid-template-columns: 1fr; gap: 2.5rem; }
       .waitlist-left-col { gap: 1.5rem; }
@@ -2969,6 +2969,7 @@
 
       .faq { padding: 3.5rem 1rem; }
       .faq-item summary { font-size: 0.92rem; padding: 1.1rem 0; gap: 1rem; }
+      .faq-photo { min-height: 180px; max-height: 200px; }
 
       .waitlist-photo { min-height: 220px; }
       .wcount-num { font-size: 1.8rem; }
