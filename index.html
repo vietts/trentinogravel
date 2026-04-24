@@ -1383,12 +1383,26 @@
     .countdown-section::before {
       content: 'TRENTINO GRAVEL';
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: 50%;
       transform: translate(-50%,-50%);
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(5rem, 18vw, 14rem);
       color: rgba(242,238,174,0.025);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+    .countdown-section::after {
+      content: 'PIONEER';
+      position: absolute;
+      top: 68%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 18vw, 14rem);
+      color: rgba(194,88,50,0.04);
       letter-spacing: 0.1em;
       white-space: nowrap;
       pointer-events: none;
@@ -3395,7 +3409,7 @@
     .pioneer::before {
       content: 'PIONEER';
       position: absolute;
-      top: -2rem;
+      top: 0;
       right: -2rem;
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(6rem, 18vw, 16rem);
