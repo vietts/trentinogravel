@@ -1,8 +1,8 @@
 {
   "nav": {
     "logoTagline": {
-      "it": "Dolomiti · Est. 2024",
-      "en": "Dolomites · Est. 2024"
+      "it": "Dolomiti · Est. 2026",
+      "en": "Dolomites · Est. 2026"
     },
     "linkRoutes": {
       "it": "Percorsi",
@@ -23,22 +23,6 @@
     "linkCta": {
       "it": "Riserva",
       "en": "Reserve"
-    },
-    "mobileRoutes": {
-      "it": "Percorsi",
-      "en": "Routes"
-    },
-    "mobilePioneer": {
-      "it": "Pioneer",
-      "en": "Pioneer"
-    },
-    "mobileGallery": {
-      "it": "Gallery",
-      "en": "Gallery"
-    },
-    "mobileFaq": {
-      "it": "Info",
-      "en": "FAQ"
     },
     "mobileCta": {
       "it": "Riserva il posto",
@@ -88,50 +72,6 @@
       "it": "Iscriviti alla<br>waiting list",
       "en": "Join the<br>waiting list"
     },
-    "fieldName": {
-      "it": "Nome",
-      "en": "Name"
-    },
-    "fieldEmail": {
-      "it": "Email",
-      "en": "Email"
-    },
-    "fieldTuscany": {
-      "it": "Hai già fatto il Tuscany Trail?",
-      "en": "Have you done the Tuscany Trail?"
-    },
-    "optionYes": {
-      "it": "Sì",
-      "en": "Yes"
-    },
-    "optionNo": {
-      "it": "No",
-      "en": "No"
-    },
-    "fieldRoute": {
-      "it": "Preferenza percorso",
-      "en": "Route preference"
-    },
-    "optionLong": {
-      "it": "Lungo · 400 km",
-      "en": "Long · 400 km"
-    },
-    "optionShort": {
-      "it": "Corto · 220 km",
-      "en": "Short · 220 km"
-    },
-    "privacyPrefix": {
-      "it": "Accetto la",
-      "en": "I accept the"
-    },
-    "privacyLink": {
-      "it": "privacy policy",
-      "en": "privacy policy"
-    },
-    "privacySuffix": {
-      "it": "e il trattamento dei miei dati per la gestione della waiting list.",
-      "en": "and the processing of my data to manage the waiting list."
-    },
     "submitBtn": {
       "it": "Iscriviti alla waiting list →",
       "en": "Join the waiting list →"
@@ -158,93 +98,29 @@
       "it": "Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.",
       "en": "70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike."
     },
-    "longPhotoAlt": {
-      "it": "Percorso lungo · Foto",
-      "en": "Long route · Photo"
-    },
-    "longCaption": {
-      "it": "Azione gravel · paesaggio",
-      "en": "Gravel action · landscape"
-    },
     "longBadge": {
       "it": "Full Adventure",
       "en": "Full Adventure"
-    },
-    "longKicker": {
-      "it": "01 / Percorso lungo",
-      "en": "01 / Long Route"
     },
     "longTitle": {
       "it": "Percorso<br>lungo",
       "en": "Long<br>Route"
     },
-    "longElevAlt": {
-      "it": "Profilo altimetrico",
-      "en": "Elevation profile"
-    },
     "longDesc": {
       "it": "Per chi cerca la piena avventura.",
       "en": "For those who want the full adventure."
-    },
-    "longDistance": {
-      "it": "Distanza",
-      "en": "Distance"
-    },
-    "longElevation": {
-      "it": "Dislivello D+",
-      "en": "Elevation D+"
-    },
-    "longGravel": {
-      "it": "Sterrato",
-      "en": "Unpaved"
-    },
-    "longCta": {
-      "it": "Iscriviti alla waiting list →",
-      "en": "Join the waiting list →"
-    },
-    "shortPhotoAlt": {
-      "it": "Percorso corto · Foto",
-      "en": "Short route · Photo"
-    },
-    "shortCaption": {
-      "it": "Sterrato tra vigneti",
-      "en": "Gravel through vineyards"
     },
     "shortBadge": {
       "it": "First Timer",
       "en": "First Timer"
     },
-    "shortKicker": {
-      "it": "02 / Percorso corto",
-      "en": "02 / Short Route"
-    },
     "shortTitle": {
       "it": "Percorso<br>corto",
       "en": "Short<br>Route"
     },
-    "shortElevAlt": {
-      "it": "Profilo altimetrico",
-      "en": "Elevation profile"
-    },
     "shortDesc": {
       "it": "Perfetto per chi ha meno tempo e non vuole rinunciare.",
       "en": "Perfect for those with less time who don't want to miss out."
-    },
-    "shortDistance": {
-      "it": "Distanza",
-      "en": "Distance"
-    },
-    "shortElevation": {
-      "it": "Dislivello D+",
-      "en": "Elevation D+"
-    },
-    "shortGravel": {
-      "it": "Sterrato",
-      "en": "Unpaved"
-    },
-    "shortCta": {
-      "it": "Iscriviti alla waiting list →",
-      "en": "Join the waiting list →"
     },
     "footnote": {
       "it": "Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza.",
@@ -304,14 +180,6 @@
       "it": "Ancora più su la vegetazione finisce e resta solo la roccia. L'aria diventa fresca e sottile, il silenzio è totale. Il panorama si apre sulle vette dolomitiche. Questo e molto di più è il Trentino che ti aspetta — e hai la possibilità di viverlo con la tua bicicletta gravel.",
       "en": "Higher still, vegetation ends and only rock remains. The air turns fresh and thin, the silence complete. The view opens onto the Dolomite peaks. This and much more is the Trentino waiting for you — and you have the chance to live it on your gravel bike."
     },
-    "aPhotoAlt": {
-      "it": "Vette · Foto",
-      "en": "Peaks · Photo"
-    },
-    "aCaption": {
-      "it": "Dolomiti UNESCO",
-      "en": "UNESCO Dolomites"
-    },
     "bLabel": {
       "it": "La sosta",
       "en": "The stop"
@@ -331,14 +199,6 @@
     "bBody3": {
       "it": "Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause: sono parte essenziale dell'esperienza di viaggio.",
       "en": "You set off again on a gravel road descending through the larches, legs rested. In Trentino, stopping is not a pause — it's an essential part of the journey."
-    },
-    "bPhotoAlt": {
-      "it": "Rifugio · Foto",
-      "en": "Refuge · Photo"
-    },
-    "bCaption": {
-      "it": "Tavola in quota",
-      "en": "Table in the mountains"
     }
   },
   "organized": {
@@ -477,25 +337,9 @@
     "a6": {
       "it": "I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.",
       "en": "Spots are limited and will open first to those on the waiting list. Sign up to get priority access to registration and receive all operational info."
-    },
-    "photoAlt": {
-      "it": "Foto decorativa",
-      "en": "Decorative photo"
-    },
-    "photoCaption": {
-      "it": "Dettaglio gravel",
-      "en": "Gravel detail"
     }
   },
   "waitlist": {
-    "photoAlt": {
-      "it": "Waitlist · Foto",
-      "en": "Waitlist · Photo"
-    },
-    "photoCaption": {
-      "it": "Azione · spirito gravel",
-      "en": "Action · gravel spirit"
-    },
     "kicker": {
       "it": "Edizione Zero · Posti limitati",
       "en": "Edition Zero · Limited spots"
@@ -520,69 +364,9 @@
       "it": "Scegli il percorso all'iscrizione — puoi cambiare fino alla partenza",
       "en": "Choose your route at sign-up — change anytime until the start"
     },
-    "statEvent": {
-      "it": "Evento",
-      "en": "Event"
-    },
-    "statDate": {
-      "it": "Data",
-      "en": "Date"
-    },
     "date": {
       "it": "26 Settembre 2026",
       "en": "September 26, 2026"
-    },
-    "statStart": {
-      "it": "Partenza",
-      "en": "Start"
-    },
-    "statOrganizer": {
-      "it": "Organizer",
-      "en": "Organizer"
-    },
-    "fieldName": {
-      "it": "Nome",
-      "en": "Name"
-    },
-    "fieldEmail": {
-      "it": "Email",
-      "en": "Email"
-    },
-    "fieldTuscany": {
-      "it": "Hai già fatto il Tuscany Trail?",
-      "en": "Have you done the Tuscany Trail?"
-    },
-    "optionYes": {
-      "it": "Sì",
-      "en": "Yes"
-    },
-    "optionNo": {
-      "it": "No",
-      "en": "No"
-    },
-    "fieldRoute": {
-      "it": "Preferenza percorso",
-      "en": "Route preference"
-    },
-    "optionLong": {
-      "it": "Lungo · 400 km",
-      "en": "Long · 400 km"
-    },
-    "optionShort": {
-      "it": "Corto · 220 km",
-      "en": "Short · 220 km"
-    },
-    "privacyPrefix": {
-      "it": "Accetto la",
-      "en": "I accept the"
-    },
-    "privacyLink": {
-      "it": "privacy policy",
-      "en": "privacy policy"
-    },
-    "privacySuffix": {
-      "it": "e il trattamento dei miei dati per la gestione della waiting list.",
-      "en": "and the processing of my data to manage the waiting list."
     },
     "submitBtn": {
       "it": "Iscriviti alla waiting list →",
@@ -625,6 +409,8 @@
   },
   "photos": {
     "hero": "photos/hero.jpg",
+    "storyVette": "photos/story-vette.jpg",
+    "storyEsperienza": "photos/story-esperienza.jpg",
     "routeLong": "photos/route-lungo.jpg",
     "routeShort": "photos/route-corto.jpg",
     "place1": "photos/place-1.jpg",
@@ -650,8 +436,6 @@
     "ig3": "photos/ig-3.jpg",
     "ig4": "photos/ig-4.jpg",
     "ig5": "photos/ig-5.jpg",
-    "ig6": "photos/ig-6.jpg",
-    "storyVette": "photos/story-vette.jpg",
-    "storyEsperienza": "photos/story-esperienza.jpg"
+    "ig6": "photos/ig-6.jpg"
   }
 }
