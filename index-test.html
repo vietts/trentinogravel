@@ -827,20 +827,22 @@
     .rstat-val {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
       color: var(--blue);
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      line-height: 1;
     }
 
     .featured .rstat-val { color: var(--cream); }
 
     .rstat-lbl {
       font-family: 'DM Mono', monospace;
-      font-size: 0.55rem;
+      font-size: 0.6rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--ink);
       opacity: 0.4;
+      margin-top: 0.3rem;
     }
 
     .featured .rstat-lbl { color: rgba(242,238,174,0.4); opacity: 1; }
@@ -3998,6 +4000,51 @@
         <p data-i18n-key="pioneer.body1" data-i18n-it="Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel." data-i18n-en="This is the zero edition of Trentino Gravel. You'll take part in the birth of something big. Together we'll discover everything Trentino has to offer to those who cross it on a gravel bike.">Questa è l'edizione zero del Trentino Gravel. Parteciperai alla nascita di qualcosa di grande. Insieme per scoprire tutto quello che il Trentino ha da offrire a chi lo attraversa su una bicicletta gravel.</p>
         <p data-i18n-key="pioneer.body2" data-i18n-it="Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future." data-i18n-en="We've given everything to create this experience, but your feedback will be essential to shape future editions.">Abbiamo dato il massimo nella realizzazione di questa esperienza ma i tuoi feedback saranno importantissimi per calibrare le edizioni future.</p>
         <p class="pioneer-kicker-end" data-i18n-key="pioneer.body3" data-i18n-it="Chi parteciperà farà la storia di questo evento." data-i18n-en="Those who join will make this event's history.">Chi parteciperà farà la storia di questo evento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━ PLACES — BENTO MOSAIC ━━━━━━━━━━━━ -->
+  <section class="places" id="places">
+    <div class="places-inner">
+      <div class="places-head sr">
+        <div class="section-label" style="color:var(--orange)" data-i18n-key="places.label" data-i18n-it="Luoghi attraversati" data-i18n-en="Places you'll cross">Luoghi attraversati</div>
+        <h2 class="places-title" data-i18n-key="places.title" data-i18n-it="Iconic<br><em>Trentino</em>" data-i18n-en="Iconic<br><em>Trentino</em>">Iconic<br><em>Trentino</em></h2>
+        <p class="places-intro" data-i18n-key="places.intro" data-i18n-it="Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel." data-i18n-en="You'll cross iconic places like Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — all on the best possible route for a gravel bike.">Attraverserai luoghi iconici come Riva del Garda, Madonna di Campiglio, Dolomiti di Brenta, Val di Fiemme, Pale di San Martino, Moena, Val di Fassa, Trento — il tutto grazie al miglior percorso possibile per una bicicletta gravel.</p>
+      </div>
+      <div class="places-mosaic">
+        <div class="place-tile p-1 sr" aria-label="Dolomiti di Brenta">
+          <span class="place-tag">01</span>
+          <div class="place-name">Dolomiti<br>di Brenta</div>
+        </div>
+        <div class="place-tile p-2 sr d1" aria-label="Riva del Garda">
+          <span class="place-tag">02</span>
+          <div class="place-name">Riva del Garda</div>
+        </div>
+        <div class="place-tile p-3 sr d2" aria-label="Madonna di Campiglio">
+          <span class="place-tag">03</span>
+          <div class="place-name">Madonna<br>di Campiglio</div>
+        </div>
+        <div class="place-tile p-4 sr d3" aria-label="Pale di San Martino">
+          <span class="place-tag">04</span>
+          <div class="place-name">Pale di<br>San Martino</div>
+        </div>
+        <div class="place-tile p-5 sr d1" aria-label="Val di Fiemme">
+          <span class="place-tag">05</span>
+          <div class="place-name">Val di Fiemme</div>
+        </div>
+        <div class="place-tile p-6 sr d2" aria-label="Val di Fassa">
+          <span class="place-tag">06</span>
+          <div class="place-name">Val di Fassa</div>
+        </div>
+        <div class="place-tile p-7 sr d3" aria-label="Moena">
+          <span class="place-tag">07</span>
+          <div class="place-name">Moena</div>
+        </div>
+        <div class="place-tile p-8 sr d1" aria-label="Trento">
+          <span class="place-tag">08</span>
+          <div class="place-name">Trento</div>
+        </div>
       </div>
     </div>
   </section>
