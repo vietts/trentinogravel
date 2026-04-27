@@ -2842,6 +2842,11 @@
     .waitlist-photo .bg-photo {
       object-fit: cover;
       object-position: center;
+      transform: scale(1.08);
+      transition: transform 0.6s ease;
+    }
+    .waitlist-photo:hover .bg-photo {
+      transform: scale(1.12);
     }
     .waitlist-counter {
       margin-top: 1.8rem;
