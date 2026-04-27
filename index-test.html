@@ -365,9 +365,10 @@
 
     .hero-new-sub {
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(.95rem,1.4vw,1.1rem);
+      font-size:clamp(1.2rem,2.2vw,1.7rem);
       color:rgba(242,238,174,.55);
       margin-bottom:2rem; line-height:1.5;
+      max-width:460px;
     }
 
     /* ── Waitlist form container ── */
@@ -3337,6 +3338,9 @@
       transform: scale(1.5);
       transform-origin: left center;
     }
+    .route-card:not(.featured) .route-card-photo .bg-photo {
+      object-position: center 60%;
+    }
     /* Gradient overlays for readability on photo */
     .place-tile.has-photo,
     .gallery-tile.has-photo {
@@ -3786,7 +3790,7 @@
           data-i18n-it="26 Settembre 2026"
           data-i18n-en="September 26, 2026">26 Settembre 2026</span>
         <span class="hero-event-dot"></span>
-        <span class="hero-location-txt">Trentino · Rovereto</span>
+        <span class="hero-location-txt">Trentino</span>
       </div>
 
       <p class="hero-new-sub"
@@ -3925,11 +3929,11 @@
     <div class="routes-head">
       <div>
         <div class="section-label sr" data-i18n-key="routes.label" data-i18n-it="Due percorsi · Un unico standard" data-i18n-en="Two routes · One standard">Due percorsi · Un unico standard</div>
-        <h2 class="section-h2 sr d1" data-i18n-key="routes.title" data-i18n-it="Scegli la tua<br>distanza" data-i18n-en="Choose your<br>distance">Scegli la tua<br>distanza</h2>
+        <h2 class="section-h2 sr d1" data-i18n-key="routes.title" data-i18n-it="Scegli la tua<br>avventura" data-i18n-en="Choose your<br>adventure">Scegli la tua<br>avventura</h2>
       </div>
     </div>
 
-    <p class="routes-desc sr d2" style="max-width:580px;margin:0 auto 1.5rem;text-align:center;" data-i18n-key="routes.intro" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
+    <p class="routes-desc sr d2" style="max-width:580px;margin:2.5rem auto 2.5rem;text-align:center;" data-i18n-key="routes.intro" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
 
     <div class="routes-grid routes-grid-2">
 
@@ -4008,34 +4012,6 @@
 
   </section>
 
-  <!-- ━━━━━━━━━━━━ COUNTDOWN ━━━━━━━━━━━━ -->
-  <section class="countdown-section sr" id="countdown">
-    <div class="countdown-inner">
-      <div class="countdown-kicker" data-i18n-it="Al via tra" data-i18n-en="Starts in">Al via tra</div>
-      <div class="countdown-date" data-i18n-it="26 Settembre 2026 · Trentino" data-i18n-en="September 26, 2026 · Trentino">26 Settembre 2026 · Trentino</div>
-      <div class="countdown-grid">
-        <div class="countdown-unit">
-          <div class="countdown-num" id="cd-days">--</div>
-          <div class="countdown-sub" data-i18n-it="Giorni" data-i18n-en="Days">Giorni</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-num" id="cd-hours">--</div>
-          <div class="countdown-sub" data-i18n-it="Ore" data-i18n-en="Hours">Ore</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-num" id="cd-minutes">--</div>
-          <div class="countdown-sub" data-i18n-it="Minuti" data-i18n-en="Minutes">Minuti</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-num" id="cd-seconds">--</div>
-          <div class="countdown-sub" data-i18n-it="Secondi" data-i18n-en="Seconds">Secondi</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ━━━━━━━━━━━━ PIONEER EDITION (editorial) ━━━━━━━━━━━━ -->
   <section class="pioneer" id="pioneer">
@@ -4326,17 +4302,6 @@
           <div class="wevent-row">
             <span class="wevent-label" data-i18n-it="Sterrato" data-i18n-en="Unpaved">Sterrato</span>
             <span class="wevent-val">70% del tracciato</span>
-          </div>
-        </div>
-        <div class="waitlist-counter sr d2" aria-live="polite">
-          <div class="wcount-block">
-            <div class="wcount-num" id="waitlistCount">—</div>
-            <div class="wcount-lbl" data-i18n-key="waitlist.countLabel" data-i18n-it="Rider già in lista" data-i18n-en="Riders already on the list">Rider già in lista</div>
-          </div>
-          <div class="wcount-divider"></div>
-          <div class="wcount-block">
-            <div class="wcount-num orange" id="daysToGo">—</div>
-            <div class="wcount-lbl" data-i18n-key="waitlist.daysLabel" data-i18n-it="Giorni alla partenza" data-i18n-en="Days to go">Giorni alla partenza</div>
           </div>
         </div>
       </div>
