@@ -3335,11 +3335,11 @@
       z-index: 3;
     }
     .route-card.featured .route-card-photo .bg-photo {
-      transform: scale(1.5);
-      transform-origin: left center;
+      object-position: center 60%;
     }
     .route-card:not(.featured) .route-card-photo .bg-photo {
-      object-position: center 60%;
+      transform: scale(1.5);
+      transform-origin: left center;
     }
     /* Gradient overlays for readability on photo */
     .place-tile.has-photo,
@@ -3937,73 +3937,47 @@
 
     <div class="routes-grid routes-grid-2">
 
-      <!-- Route 1 — Long -->
+      <!-- Route 1 — Discovery (corto) -->
       <div class="route-card featured sr">
-        <div class="route-card-photo route-photo-tall photo-slot" aria-label="Long route photo placeholder">
-          <div class="slot-badge">
-            <span data-i18n-key="routes.longPhotoAlt" data-i18n-it="Percorso lungo · Foto" data-i18n-en="Long route · Photo">Percorso lungo · Foto</span>
-            <span data-i18n-key="routes.longCaption" data-i18n-it="Azione gravel · paesaggio" data-i18n-en="Gravel action · landscape">Azione gravel · paesaggio</span>
-          </div>
-          <span class="route-difficulty" data-i18n-key="routes.longBadge" data-i18n-it="Full Adventure" data-i18n-en="Full Adventure">Full Adventure</span>
+        <div class="route-card-photo route-photo-tall photo-slot cream-bg" aria-label="Discovery route photo">
+          <span class="route-difficulty">First Timer</span>
         </div>
         <div class="route-card-body">
-          <h3 class="route-name" data-i18n-key="routes.longTitle" data-i18n-it="Percorso lungo" data-i18n-en="Long Route"><span class="route-num-inline">01</span> Percorso lungo</h3>
-          <span class="route-elevation-label" data-i18n-key="routes.longElevAlt" data-i18n-it="Profilo altimetrico" data-i18n-en="Elevation profile">Profilo altimetrico</span>
-          <svg class="route-elevation" viewBox="0 0 400 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M0,52 L20,44 L42,38 L58,42 L78,26 L98,32 L118,20 L142,28 L162,12 L182,22 L208,8 L232,18 L256,14 L280,26 L302,20 L322,34 L344,28 L368,42 L388,36 L400,48 L400,58 L0,58 Z" fill="rgba(242,238,174,0.14)" stroke="none"/>
-            <path d="M0,52 L20,44 L42,38 L58,42 L78,26 L98,32 L118,20 L142,28 L162,12 L182,22 L208,8 L232,18 L256,14 L280,26 L302,20 L322,34 L344,28 L368,42 L388,36 L400,48" fill="none" stroke="#E85520" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-          </svg>
-          <p class="route-tagline" data-i18n-key="routes.longDesc" data-i18n-it="Per chi cerca la piena avventura." data-i18n-en="For those who want the full adventure.">Per chi cerca la piena avventura.</p>
-          <div class="route-stats">
-            <div>
-              <div class="rstat-val">400 km</div>
-              <div class="rstat-lbl" data-i18n-key="routes.longDistance" data-i18n-it="Distanza" data-i18n-en="Distance">Distanza</div>
-            </div>
-            <div>
-              <div class="rstat-val">7.600 m</div>
-              <div class="rstat-lbl" data-i18n-key="routes.longElevation" data-i18n-it="Dislivello D+" data-i18n-en="Elevation D+">Dislivello D+</div>
-            </div>
-            <div>
-              <div class="rstat-val">70%</div>
-              <div class="rstat-lbl" data-i18n-key="routes.longGravel" data-i18n-it="Sterrato" data-i18n-en="Unpaved">Sterrato</div>
-            </div>
-          </div>
-          <a href="#waitlist" onclick="scrollToWaitlist(event)" class="route-cta" data-i18n-key="routes.longCta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
-        </div>
-      </div>
-
-      <!-- Route 2 — Short -->
-      <div class="route-card sr d1">
-        <div class="route-card-photo route-photo-tall photo-slot cream-bg" aria-label="Short route photo placeholder">
-          <div class="slot-badge">
-            <span data-i18n-key="routes.shortPhotoAlt" data-i18n-it="Percorso corto · Foto" data-i18n-en="Short route · Photo">Percorso corto · Foto</span>
-            <span data-i18n-key="routes.shortCaption" data-i18n-it="Sterrato tra vigneti" data-i18n-en="Gravel through vineyards">Sterrato tra vigneti</span>
-          </div>
-          <span class="route-difficulty" data-i18n-key="routes.shortBadge" data-i18n-it="First Timer" data-i18n-en="First Timer">First Timer</span>
-        </div>
-        <div class="route-card-body">
-          <h3 class="route-name" data-i18n-key="routes.shortTitle" data-i18n-it="Percorso corto" data-i18n-en="Short Route"><span class="route-num-inline">02</span> Percorso corto</h3>
-          <span class="route-elevation-label" data-i18n-key="routes.shortElevAlt" data-i18n-it="Profilo altimetrico" data-i18n-en="Elevation profile">Profilo altimetrico</span>
-          <svg class="route-elevation" viewBox="0 0 400 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M0,50 L22,46 L44,42 L68,36 L92,40 L118,30 L144,36 L170,26 L196,32 L222,22 L248,30 L274,26 L300,34 L326,28 L352,38 L378,32 L400,44 L400,58 L0,58 Z" fill="rgba(59,80,200,0.1)" stroke="none"/>
-            <path d="M0,50 L22,46 L44,42 L68,36 L92,40 L118,30 L144,36 L170,26 L196,32 L222,22 L248,30 L274,26 L300,34 L326,28 L352,38 L378,32 L400,44" fill="none" stroke="#3B50C8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-          </svg>
-          <p class="route-tagline" data-i18n-key="routes.shortDesc" data-i18n-it="Perfetto per chi ha meno tempo e non vuole rinunciare." data-i18n-en="Perfect for those with less time who don't want to miss out.">Perfetto per chi ha meno tempo e non vuole rinunciare.</p>
+          <h3 class="route-name"><span class="route-num-inline">01</span> Trentino Gravel Discovery</h3>
+          <p class="route-tagline">Perfetto per chi ha meno tempo e non vuole rinunciare.</p>
           <div class="route-stats">
             <div>
               <div class="rstat-val">220 km</div>
-              <div class="rstat-lbl" data-i18n-key="routes.shortDistance" data-i18n-it="Distanza" data-i18n-en="Distance">Distanza</div>
+              <div class="rstat-lbl">Distanza</div>
             </div>
             <div>
               <div class="rstat-val">2.900 m</div>
-              <div class="rstat-lbl" data-i18n-key="routes.shortElevation" data-i18n-it="Dislivello D+" data-i18n-en="Elevation D+">Dislivello D+</div>
-            </div>
-            <div>
-              <div class="rstat-val">70%</div>
-              <div class="rstat-lbl" data-i18n-key="routes.shortGravel" data-i18n-it="Sterrato" data-i18n-en="Unpaved">Sterrato</div>
+              <div class="rstat-lbl">Dislivello D+</div>
             </div>
           </div>
-          <a href="#waitlist" onclick="scrollToWaitlist(event)" class="route-cta" data-i18n-key="routes.shortCta" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+          <a href="#waitlist" onclick="scrollToWaitlist(event)" class="route-cta">Iscriviti alla waiting list →</a>
+        </div>
+      </div>
+
+      <!-- Route 2 — Expedition (lungo) -->
+      <div class="route-card sr d1">
+        <div class="route-card-photo route-photo-tall photo-slot" aria-label="Expedition route photo">
+          <span class="route-difficulty">Full Adventure</span>
+        </div>
+        <div class="route-card-body">
+          <h3 class="route-name"><span class="route-num-inline">02</span> Trentino Gravel Expedition</h3>
+          <p class="route-tagline">Per chi cerca la piena avventura.</p>
+          <div class="route-stats">
+            <div>
+              <div class="rstat-val">400 km</div>
+              <div class="rstat-lbl">Distanza</div>
+            </div>
+            <div>
+              <div class="rstat-val">7.600 m</div>
+              <div class="rstat-lbl">Dislivello D+</div>
+            </div>
+          </div>
+          <a href="#waitlist" onclick="scrollToWaitlist(event)" class="route-cta">Iscriviti alla waiting list →</a>
         </div>
       </div>
 
@@ -4686,18 +4660,18 @@
       // Story blocks (new editorial sections)
       applyPhoto('.story-a .story-photo', PHOTOS.storyVette, 'Dolomite peaks');
       applyPhoto('.story-b .story-photo', PHOTOS.storyEsperienza, 'Mountain refuge table');
-      // Routes
+      // Routes — Discovery (corto) first, Expedition (lungo) second
       const routeEls = document.querySelectorAll('.route-card-photo');
       if (routeEls[0]) {
         routeEls[0].classList.add('has-photo');
         const i = document.createElement('img');
-        i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Long route'; i.loading = 'lazy';
+        i.className = 'bg-photo'; i.src = PHOTOS.routeShort; i.alt = 'Discovery route'; i.loading = 'lazy';
         routeEls[0].insertBefore(i, routeEls[0].firstChild);
       }
       if (routeEls[1]) {
         routeEls[1].classList.add('has-photo');
         const i = document.createElement('img');
-        i.className = 'bg-photo'; i.src = PHOTOS.routeShort; i.alt = 'Short route'; i.loading = 'lazy';
+        i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Expedition route'; i.loading = 'lazy';
         routeEls[1].insertBefore(i, routeEls[1].firstChild);
       }
       // Places bento (8 tiles)
