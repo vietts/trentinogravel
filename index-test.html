@@ -657,7 +657,7 @@
     /* ━━━━━━━━━━━━ ROUTES ━━━━━━━━━━━━ */
     .routes {
       background: var(--blue);
-      padding: 7rem 3.5rem;
+      padding: 4rem 3.5rem 7rem;
       position: relative;
       overflow: hidden;
     }
@@ -742,13 +742,15 @@
       flex-direction: column;
       overflow: hidden;
       cursor: pointer;
-      transition: transform .3s cubic-bezier(.2,.8,.3,1);
+      transition: transform .3s cubic-bezier(.2,.8,.3,1), box-shadow .3s ease;
       position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
     }
 
     .route-card:hover {
       transform: translateY(-6px);
       z-index: 2;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.28), 0 4px 12px rgba(0,0,0,0.14);
     }
 
     .route-card.featured {
@@ -1234,7 +1236,7 @@
     /* ━━━━━━━━━━━━ ABOUT ━━━━━━━━━━━━ */
     .about {
       background: var(--offwhite);
-      padding: 7rem 3.5rem;
+      padding: 7rem 3.5rem 4rem;
     }
 
     .about-inner {
@@ -3381,6 +3383,51 @@
       position: relative;
       z-index: 1;
     }
+    .routes-newsletter-box {
+      max-width: 560px;
+      margin: 3.5rem auto 0;
+      text-align: center;
+      border: 1px solid rgba(242,238,174,0.12);
+      padding: 2.5rem 2rem;
+      position: relative;
+      z-index: 1;
+      background: rgba(242,238,174,0.03);
+    }
+    .routes-newsletter-box .rnb-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.7rem;
+    }
+    .routes-newsletter-box .rnb-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .routes-newsletter-box .rnb-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(242,238,174,0.45);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .routes-newsletter-box .rnb-btn {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--cream);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2.2rem;
+      transition: background 0.2s;
+    }
+    .routes-newsletter-box .rnb-btn:hover { background: var(--orange-lt); }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
        NEW: PIONEER EDITION section (editorial)
@@ -3880,8 +3927,6 @@
 
     <p class="routes-desc sr d2" style="max-width:580px;margin:0 auto 1.5rem;text-align:center;" data-i18n-key="routes.intro" data-i18n-it="Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel." data-i18n-en="70% of both routes is cycle paths and gravel roads. Every meter has been personally tested by our team: the best possible route for a gravel bike.">Il 70% di entrambi i tracciati è fatto di ciclabili e strade sterrate. Ogni metro è stato testato di persona dal nostro team: il miglior percorso possibile per una bicicletta gravel.</p>
 
-    <p class="routes-bottom-note sr" style="margin-bottom:2rem;" data-i18n-key="routes.footnote" data-i18n-it="Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza." data-i18n-en="Choose your route at sign-up. You can change your mind up until the start.">Scegli il tuo percorso al momento dell'iscrizione. Puoi cambiare idea fino alla partenza.</p>
-
     <div class="routes-grid routes-grid-2">
 
       <!-- Route 1 — Long -->
@@ -3954,6 +3999,13 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="routes-newsletter-box sr d2">
+      <div class="rnb-label" data-i18n-it="Resta aggiornato" data-i18n-en="Stay updated">Resta aggiornato</div>
+      <div class="rnb-title" data-i18n-it="Iscriviti alla Newsletter" data-i18n-en="Subscribe to the Newsletter">Iscriviti alla Newsletter</div>
+      <p class="rnb-sub" data-i18n-it="Aggiornamenti sull'evento, apertura iscrizioni e novità dal territorio." data-i18n-en="Event updates, registration opening and news from the area.">Aggiornamenti sull'evento, apertura iscrizioni e novità dal territorio.</p>
+      <a href="#waitlist" class="rnb-btn" data-i18n-it="Iscriviti ora →" data-i18n-en="Sign up now →">Iscriviti ora →</a>
     </div>
 
   </section>
