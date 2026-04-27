@@ -4442,7 +4442,7 @@
 
     // ━━━━━━━━━━━━ HAMBURGER / MOBILE MENU ━━━━━━━━━━━━
     // ── Waitlist form (hero) ────────────────────────────────────────────────
-  function wlSubmit(e) {
+  async function wlSubmit(e) {
     e.preventDefault();
     const form    = document.getElementById('wlForm');
     const btn     = document.getElementById('wlBtn');
@@ -4450,17 +4450,32 @@
     const success = document.getElementById('wlSuccess');
     if (!input || !input.value.trim()) return;
 
-    // Loading
     btn.disabled   = true;
     input.disabled = true;
     btn.innerHTML  = '<div class="wl-btn-spinner"></div>';
 
-    setTimeout(function() {
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: input.value.trim(),
+          lang: document.documentElement.lang || 'it',
+        }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error || `Errore ${res.status}`);
+      }
       form.classList.add('hidden');
       success.classList.add('show');
       input.value = '';
       wlFireConfetti();
-    }, 1400);
+    } catch {
+      btn.disabled   = false;
+      input.disabled = false;
+      btn.textContent = '→';
+    }
   }
 
   function wlFireConfetti() {
@@ -4517,26 +4532,14 @@
       if (window.innerWidth > 640) closeMenu();
     });
 
-    // ━━━━━━━━━━━━ WAITLIST FORM (Brevo integration) ━━━━━━━━━━━━
-    // ⚠️ In production move the POST through a backend proxy so the API key
-    // is NOT shipped to the client. For now we follow the same pattern used
-    // on The Grand Escape website (client-side Brevo fetch) — swap this out
-    // before launch if you want to hide the key.
+    // ━━━━━━━━━━━━ WAITLIST FORM ━━━━━━━━━━━━
+    // POST proxied through /api/waitlist (Cloudflare Pages Function).
+    // BREVO_API_KEY and BREVO_LIST_ID are env vars set in CF Pages dashboard.
     //
     // Required Brevo dashboard setup:
-    //   1. Create a contact list dedicated to "Trentino Gravel – Pioneer"
-    //      and paste its numeric id in `listId` below.
-    //   2. Create custom attributes (Contacts > Attributes):
-    //        · EX_TUSCANY_TRAIL (Boolean)
-    //        · ROUTE_PREFERENCE (Text)   — values: "long" | "short"
-    //        · SOURCE            (Text)
-    //        · SIGNUP_LANG       (Text)
-    //      FIRSTNAME already exists by default in every Brevo account.
-    const BREVO_CONFIG = {
-      apiKey: 'REPLACE_WITH_YOUR_BREVO_API_KEY',
-      listId: 0, // TODO: replace 0 with the real list id from Brevo dashboard
-      source: 'trentino_gravel_pioneer_2026',
-    };
+    //   · Create a contact list for "Trentino Gravel – Pioneer" → set BREVO_LIST_ID
+    //   · Custom attributes: EX_TUSCANY_TRAIL (Boolean), ROUTE_PREFERENCE (Text),
+    //     SOURCE (Text), SIGNUP_LANG (Text)  — FIRSTNAME exists by default.
 
     async function handleWaitlist(e) {
       e.preventDefault();
@@ -4547,41 +4550,24 @@
       if (errorEl) { errorEl.textContent = ''; errorEl.style.display = 'none'; }
 
       const data = new FormData(form);
-      const payload = {
-        email: data.get('email'),
-        attributes: {
-          FIRSTNAME: data.get('name') || undefined,
-          EX_TUSCANY_TRAIL: data.get('exTT') === 'yes',
-          ROUTE_PREFERENCE: data.get('route'),
-          SOURCE: BREVO_CONFIG.source,
-          SIGNUP_LANG: document.documentElement.lang || 'it',
-        },
-        listIds: BREVO_CONFIG.listId ? [BREVO_CONFIG.listId] : undefined,
-        updateEnabled: true,
-      };
-
       const btnOriginalText = btn ? btn.textContent : '';
       if (btn) { btn.disabled = true; btn.textContent = '...'; }
 
       try {
-        // Skip the network call until a real list id is configured.
-        const isDevPreview = BREVO_CONFIG.apiKey.startsWith('REPLACE_') || !BREVO_CONFIG.listId;
-        if (!isDevPreview) {
-          const res = await fetch('https://api.brevo.com/v3/contacts', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'api-key': BREVO_CONFIG.apiKey,
-            },
-            body: JSON.stringify(payload),
-          });
-          if (!res.ok && res.status !== 204) {
-            const err = await res.json().catch(() => ({}));
-            // "duplicate_parameter" means the contact already exists — treat as success.
-            if (err.code !== 'duplicate_parameter') {
-              throw new Error(err.message || `Errore ${res.status}`);
-            }
-          }
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: data.get('email'),
+            name: data.get('name') || undefined,
+            exTT: data.get('exTT'),
+            route: data.get('route') || undefined,
+            lang: document.documentElement.lang || 'it',
+          }),
+        });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || `Errore ${res.status}`);
         }
         if (successEl) successEl.style.display = 'block';
         form.reset();
