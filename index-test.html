@@ -4379,8 +4379,8 @@
       var form = document.getElementById('aboutWaitlistForm');
       if (!form) return;
 
-      // Land directly on the form with just enough offset for the nav
-      var navHeight = 90;
+      var nav = document.querySelector('nav');
+      var navHeight = (nav ? nav.getBoundingClientRect().bottom : 80) + 24;
       var top = form.getBoundingClientRect().top + window.pageYOffset - navHeight;
       window.scrollTo({ top: top, behavior: 'smooth' });
 
