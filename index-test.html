@@ -170,6 +170,8 @@
       align-items: center;
       gap: 0.2rem;
     }
+    .nav-lang-mobile { display: none; }
+    .nav-lang-desktop { display: flex; }
 
     .lang-toggle button {
       font-family: 'DM Mono', monospace;
@@ -574,6 +576,8 @@
       .hamburger { display:flex; }
       .nav-links  { display:none; }
       nav { width:calc(100% - 1.5rem); }
+      .nav-lang-mobile { display:flex; }
+      .nav-lang-desktop { display:none; }
     }
 
     @media (max-width:600px) {
@@ -3794,12 +3798,17 @@
           Trentino Gravel
         </div>
       </a>
+      <div class="lang-toggle nav-lang-mobile" aria-label="Language switch">
+        <button type="button" data-lang-btn="it" class="active">IT</button>
+        <span class="lang-sep">·</span>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
       <ul class="nav-links">
         <li><a href="#routes"   data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a></li>
         <li><a href="#pioneer"  data-i18n-it="Pioneer"  data-i18n-en="Pioneer">Pioneer</a></li>
         <li><a href="#faq"      data-i18n-it="Info"     data-i18n-en="FAQ">Info</a></li>
-        <li class="lang-toggle" aria-label="Language switch">
-          <button type="button" data-lang-btn="it" class="active">IT</button>
+        <li class="lang-toggle nav-lang-desktop" aria-label="Language switch">
+          <button type="button" data-lang-btn="it">IT</button>
           <span class="lang-sep">·</span>
           <button type="button" data-lang-btn="en">EN</button>
         </li>
