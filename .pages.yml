@@ -47,30 +47,9 @@ content:
         label: Percorsi
         type: object
         fields:
-          - { name: label,            label: "Section kicker",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: title,            label: "Titolo sezione",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: intro,            label: "Intro (70% sterrato)",       type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: longBadge,        label: "Lungo · badge",              type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longTitle,        label: "Lungo · titolo",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longDesc,         label: "Lungo · descrizione",        type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: longDistance,     label: "Lungo · label distanza",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longElevation,    label: "Lungo · label dislivello",   type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longGravel,       label: "Lungo · label sterrato",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longElevAlt,      label: "Lungo · alt profilo",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longPhotoAlt,     label: "Lungo · alt foto",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longCaption,      label: "Lungo · didascalia foto",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: longCta,          label: "Lungo · CTA",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortBadge,       label: "Corto · badge",              type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortTitle,       label: "Corto · titolo",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortDesc,        label: "Corto · descrizione",        type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: shortDistance,    label: "Corto · label distanza",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortElevation,   label: "Corto · label dislivello",   type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortGravel,      label: "Corto · label sterrato",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortElevAlt,     label: "Corto · alt profilo",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortPhotoAlt,    label: "Corto · alt foto",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortCaption,     label: "Corto · didascalia foto",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: shortCta,         label: "Corto · CTA",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: footnote,         label: "Nota scelta percorso",       type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: title,         label: "Titolo sezione",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: intro,         label: "Intro (70% sterrato)",  type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
 
       - name: pioneer
         label: Pioneer Edition
@@ -99,14 +78,10 @@ content:
           - { name: aBody2,        label: "Vette · paragrafo 2",    type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
           - { name: aBody3,        label: "Vette · paragrafo 3",    type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
           - { name: aPhotoAlt,     label: "Vette · alt foto",       type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: aCaption,      label: "Vette · didascalia foto",type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: aCaption,      label: "Vette · didascalia",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: bLabel,        label: "Esperienza · kicker",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: bTitle,        label: "Esperienza · titolo",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: bBody1,        label: "Esperienza · par. 1",    type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: bBody2,        label: "Esperienza · par. 2",    type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: bBody3,        label: "Esperienza · par. 3",    type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
           - { name: bPhotoAlt,     label: "Esperienza · alt foto",  type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: bCaption,      label: "Esperienza · didascalia",type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
 
       - name: organized
         label: Organizzato da
@@ -114,12 +89,6 @@ content:
         fields:
           - { name: label,         label: "Kicker",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: body,          label: "Testo BAS",             type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: partnersLabel, label: "Label partner",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: partner1,      label: "Partner 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: partner2,      label: "Partner 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: partner3,      label: "Partner 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: partner4,      label: "Partner 4",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
 
       - name: faq
         label: FAQ
@@ -129,18 +98,6 @@ content:
           - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: photoAlt,      label: "Foto · alt",            type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: photoCaption,  label: "Foto · didascalia",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: q1,            label: "Domanda 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a1,            label: "Risposta 1",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: q2,            label: "Domanda 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a2,            label: "Risposta 2",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: q3,            label: "Domanda 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a3,            label: "Risposta 3",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: q4,            label: "Domanda 4",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a4,            label: "Risposta 4",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: q5,            label: "Domanda 5",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a5,            label: "Risposta 5",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
-          - { name: q6,            label: "Domanda 6",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: a6,            label: "Risposta 6",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
 
       - name: waitlist
         label: Waitlist — CTA finale
@@ -169,8 +126,6 @@ content:
           - { name: submitBtn,     label: "Bottone submit",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: legal,         label: "Legal / Brevo",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: success,       label: "Messaggio successo",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: countLabel,    label: "Label contatore rider", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: daysLabel,     label: "Label giorni alla partenza", type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: statDate,      label: "Stat · Data",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: statStart,     label: "Stat · Partenza",       type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: statEvent,     label: "Stat · Evento",         type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
