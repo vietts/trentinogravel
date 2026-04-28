@@ -42,3 +42,9 @@ extracted/logo-illustration-only.svg
 extracted/logo-png-extracted.png
 extracted/logo-trentino-gravel.svg
 extracted/brand-*.png
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
