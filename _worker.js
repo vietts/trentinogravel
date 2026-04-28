@@ -44,6 +44,7 @@ async function handleWaitlist(request, env) {
       ...(route ? { ROUTE_PREFERENCE: route } : {}),
       SOURCE: 'trentino_gravel_pioneer_2026',
       SIGNUP_LANG: lang || 'it',
+      LINGUA: lang === 'en' ? 2 : 1, // 1=Ita, 2=Eng (categoria Brevo esistente)
     },
     listIds: [listId],
     updateEnabled: true,
