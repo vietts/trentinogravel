@@ -231,8 +231,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 6rem;
-      padding-bottom: 4rem;
+      padding-top: 5rem;
+      padding-bottom: 3rem;
     }
 
     /* Nav floats inside hero */
@@ -336,9 +336,9 @@
     /* ── Logo ── */
     .hero-icon {
       position:relative; z-index:2;
-      width: clamp(70px, 9vw, 120px);
+      width: clamp(55px, 7vw, 90px);
       height: auto;
-      margin-bottom:1.8rem;
+      margin-bottom:1.2rem;
       filter: drop-shadow(0 6px 28px rgba(0,0,0,0.55));
       flex-shrink:0;
     }
@@ -357,18 +357,18 @@
 
     .hero-new-title {
       font-family:'Bebas Neue',sans-serif;
-      font-size:clamp(4.5rem,9vw,8rem);
+      font-size:clamp(4rem,8vw,7rem);
       color:var(--cream);
       letter-spacing:.03em; line-height:.9;
-      margin-bottom:1rem;
+      margin-bottom:0.8rem;
       text-shadow:0 4px 32px rgba(0,0,0,.6);
     }
 
     .hero-new-sub {
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(1rem,1.8vw,1.4rem);
+      font-size:clamp(0.9rem,1.5vw,1.2rem);
       color:rgba(242,238,174,.6);
-      margin-bottom:2.5rem; line-height:1.5;
+      margin-bottom:2rem; line-height:1.5;
       max-width:460px;
       letter-spacing:0.02em;
     }
@@ -503,12 +503,12 @@
 
     /* ── Date badge — centrato sotto il titolo ── */
     .hero-media-badge {
-      display:inline-flex; flex-direction:column; align-items:center; gap:0.1rem;
+      display:inline-flex; flex-direction:row; align-items:center; gap:0.5rem;
       border:1px solid rgba(242,238,174,.25);
       background:rgba(4,7,4,.55);
       backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-      padding:.6rem 1.6rem; border-radius:.5rem;
-      margin-bottom:2rem;
+      padding:.5rem 1.4rem; border-radius:.5rem;
+      margin-bottom:1.4rem;
     }
 
     .hero-date-txt, .hero-location-txt {
@@ -579,16 +579,12 @@
     }
 
     @media (max-width:600px) {
-      .hero {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-      }
-      .hero-new-title { font-size:clamp(3.5rem,13vw,5.5rem); }
-      .hero-new-actions { max-width:100%; padding:0 1rem; }
-      .hero-media-badge { padding:.4rem 1rem; }
-      .hero-new-sub { font-size: 0.95rem; margin-bottom: 2rem; }
+      .hero { padding-top: 5rem; padding-bottom: 2.5rem; }
+      .hero-new-title { font-size:clamp(3.2rem,12vw,5rem); margin-bottom:0.6rem; }
+      .hero-media-badge { padding:.4rem 1rem; margin-bottom:1rem; }
+      .hero-new-sub { font-size: 0.85rem; margin-bottom: 1.6rem; }
       .hero-cta-btn { font-size: 0.65rem; padding: 0.85rem 1.8rem; }
-      .hero-icon { width: clamp(55px, 12vw, 80px); margin-bottom: 1rem; }
+      .hero-icon { width: clamp(45px, 11vw, 70px); margin-bottom: 0.8rem; }
     }
 
         /* ━━━━━━━━━━━━ TAGLINE STRIP ━━━━━━━━━━━━ */
