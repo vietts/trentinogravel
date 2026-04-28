@@ -1257,6 +1257,7 @@
     .about {
       background: var(--offwhite);
       padding: 7rem 3.5rem 4rem;
+      scroll-margin-top: 100px;
     }
 
     .about-inner {
@@ -3822,7 +3823,7 @@
         data-i18n-it="Gravel. Bikepacking. Avventura."
         data-i18n-en="Gravel. Bikepacking. Adventure.">Gravel. Bikepacking. Avventura.</p>
 
-      <a href="#about" onclick="(function(e){e.preventDefault();if(document.activeElement)document.activeElement.blur();setTimeout(function(){var s=document.getElementById('about');if(s){var nav=document.querySelector('nav');var isMob=('ontouchstart' in window)||window.innerWidth<1024;var extra=isMob?16:Math.min(48,window.innerHeight*0.04);var offset=(nav?nav.getBoundingClientRect().bottom:80)+extra;var top=s.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:top,behavior:'smooth'});}},('ontouchstart' in window)?420:0);})(event)" class="hero-cta-btn" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+      <a href="#about" onclick="(function(e){e.preventDefault();if(document.activeElement)document.activeElement.blur();setTimeout(function(){var s=document.getElementById('about');if(s)s.scrollIntoView({behavior:'smooth',block:'start'});},('ontouchstart' in window)?420:0);})(event)" class="hero-cta-btn" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
     </div><!-- /hero-new-text -->
 
   </section>
@@ -4312,14 +4313,10 @@
     function scrollToAboutForm(e) {
       if (e) e.preventDefault();
       if (document.activeElement) document.activeElement.blur();
-      var isMobile = window.innerWidth < 1024 || ('ontouchstart' in window);
+      var isMobile = 'ontouchstart' in window;
       setTimeout(function() {
         var section = document.getElementById('about');
-        if (!section) return;
-        var nav = document.querySelector('nav');
-        var offset = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
-        var top = section.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, isMobile ? 420 : 0);
     }
 
@@ -4374,11 +4371,7 @@
     setTimeout(function() {
       var section = document.getElementById('about');
       if (!section) return;
-
-      var nav = document.querySelector('nav');
-      var navHeight = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
-      var top = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       // Step 3: after scroll settles, focus name field to re-open keyboard in context
       setTimeout(function() {
