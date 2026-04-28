@@ -3822,7 +3822,7 @@
         data-i18n-it="Gravel. Bikepacking. Avventura."
         data-i18n-en="Gravel. Bikepacking. Adventure.">Gravel. Bikepacking. Avventura.</p>
 
-      <a href="#aboutWaitlistForm" onclick="(function(e){e.preventDefault();if(document.activeElement)document.activeElement.blur();setTimeout(function(){var f=document.getElementById('aboutWaitlistForm');if(f){var nav=document.querySelector('nav');var offset=(nav?nav.getBoundingClientRect().bottom:80)+24;var top=f.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:top,behavior:'smooth'});}},('ontouchstart' in window)?420:0);})(event)" class="hero-cta-btn" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
+      <a href="#about" onclick="(function(e){e.preventDefault();if(document.activeElement)document.activeElement.blur();setTimeout(function(){var s=document.getElementById('about');if(s){var nav=document.querySelector('nav');var offset=(nav?nav.getBoundingClientRect().bottom:80)+16;var top=s.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:top,behavior:'smooth'});}},('ontouchstart' in window)?420:0);})(event)" class="hero-cta-btn" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
     </div><!-- /hero-new-text -->
 
   </section>
@@ -4314,16 +4314,12 @@
       if (document.activeElement) document.activeElement.blur();
       var isMobile = window.innerWidth < 1024 || ('ontouchstart' in window);
       setTimeout(function() {
-        var form = document.getElementById('aboutWaitlistForm');
-        if (!form) return;
+        var section = document.getElementById('about');
+        if (!section) return;
         var nav = document.querySelector('nav');
-        var offset = (nav ? nav.getBoundingClientRect().bottom : 80) + 24;
-        var top = form.getBoundingClientRect().top + window.pageYOffset - offset;
+        var offset = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
+        var top = section.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
-        setTimeout(function() {
-          var nameField = document.getElementById('aName');
-          if (nameField) nameField.focus();
-        }, 700);
       }, isMobile ? 420 : 0);
     }
 
@@ -4376,12 +4372,12 @@
 
     // Step 2: wait for keyboard to fully close (~400ms on iOS), then scroll
     setTimeout(function() {
-      var form = document.getElementById('aboutWaitlistForm');
-      if (!form) return;
+      var section = document.getElementById('about');
+      if (!section) return;
 
       var nav = document.querySelector('nav');
-      var navHeight = (nav ? nav.getBoundingClientRect().bottom : 80) + 24;
-      var top = form.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      var navHeight = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
+      var top = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
       window.scrollTo({ top: top, behavior: 'smooth' });
 
       // Step 3: after scroll settles, focus name field to re-open keyboard in context
