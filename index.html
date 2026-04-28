@@ -1791,6 +1791,18 @@
       .form-input { border-right: 1.5px solid rgba(242,238,174,0.2); border-bottom: none; }
       .form-input:focus { border-color: var(--orange); }
       .form-btn { padding: 0.9rem; }
+
+      /* 16px inputs — prevent iOS auto-zoom */
+      .form-input,
+      .about-form .form-input,
+      input[type="text"], input[type="email"],
+      select, textarea { font-size: 16px !important; }
+
+      /* Fix button text scaling */
+      .wf-radio-label { font-size: 0.68rem; letter-spacing: 0.08em; padding: 0.75rem 0.5rem; }
+      .form-btn-full { font-size: 0.72rem; letter-spacing: 0.12em; }
+      .form-btn { font-size: 0.72rem; letter-spacing: 0.1em; }
+      .about-signup-title { font-size: clamp(1.4rem, 6vw, 1.8rem); }
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
