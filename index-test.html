@@ -356,20 +356,35 @@
 
     .hero-new-title {
       font-family:'Bebas Neue',sans-serif;
-      font-size:clamp(4rem,8vw,7.5rem);
+      font-size:clamp(5rem,10vw,10rem);
       color:var(--cream);
-      letter-spacing:.03em; line-height:.9;
-      margin-bottom:.8rem;
+      letter-spacing:.03em; line-height:.88;
+      margin-bottom:1.2rem;
       text-shadow:0 4px 32px rgba(0,0,0,.6);
     }
 
     .hero-new-sub {
       font-family:'DM Sans',sans-serif;
-      font-size:clamp(1.2rem,2.2vw,1.7rem);
-      color:rgba(242,238,174,.55);
-      margin-bottom:2rem; line-height:1.5;
+      font-size:clamp(1rem,1.8vw,1.4rem);
+      color:rgba(242,238,174,.6);
+      margin-bottom:2.5rem; line-height:1.5;
       max-width:460px;
+      letter-spacing:0.02em;
     }
+
+    .hero-cta-btn {
+      display:inline-block;
+      background: var(--orange);
+      color: var(--cream);
+      font-family:'DM Mono',monospace;
+      font-size:0.72rem;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      text-decoration:none;
+      padding:1rem 2.4rem;
+      transition: background 0.2s;
+    }
+    .hero-cta-btn:hover { background: var(--orange-lt); }
 
     /* ── Waitlist form container ── */
     .hero-new-actions {
@@ -568,10 +583,11 @@
         justify-content: center;
         padding-top: 5rem;
       }
-      .hero-new-title { font-size:clamp(3.2rem,13vw,5rem); }
+      .hero-new-title { font-size:clamp(3.8rem,14vw,6rem); }
       .hero-new-actions { max-width:100%; padding:0 1rem; }
       .hero-media-badge { padding:.4rem 1rem; }
-      .hero-new-sub { font-size: 0.85rem; margin-bottom: 1.4rem; }
+      .hero-new-sub { font-size: 0.95rem; margin-bottom: 2rem; }
+      .hero-cta-btn { font-size: 0.65rem; padding: 0.85rem 1.8rem; }
       .hero-icon { width: clamp(55px, 12vw, 80px); margin-bottom: 1rem; }
     }
 
@@ -3807,45 +3823,7 @@
         data-i18n-it="Gravel. Bikepacking. Avventura."
         data-i18n-en="Gravel. Bikepacking. Adventure.">Gravel. Bikepacking. Avventura.</p>
 
-      <!-- ── WAITLIST FORM ── -->
-      <div class="hero-new-actions" id="wlFormWrap">
-
-        <!-- Confetti canvas -->
-        <canvas class="hero-confetti" id="heroConfetti"></canvas>
-
-        <!-- Success state -->
-        <div class="wl-form-success" id="wlSuccess">
-          <div class="ring-anim"></div>
-          <div class="ring-anim"></div>
-          <div class="ring-anim"></div>
-          <div class="wl-success-inner">
-            <div class="wl-success-check">
-              <svg fill="none" stroke="white" viewBox="0 0 24 24">
-                <path class="wl-checkmark-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-              </svg>
-            </div>
-            <span data-i18n-it="Sei in lista!" data-i18n-en="You're on the list!">Sei in lista!</span>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <form class="wl-form" id="wlForm" onsubmit="wlSubmit(event)">
-          <input
-            type="email"
-            required
-            class="wl-email-input"
-            id="wlEmailInput"
-            placeholder="la@tua.email"
-            data-i18n-placeholder-it="la@tua.email"
-            data-i18n-placeholder-en="your@email.com">
-          <button type="submit" class="wl-form-btn" id="wlBtn">
-            <span class="wl-btn-label"
-              data-i18n-it="Iscriviti →"
-              data-i18n-en="Join waitlist →">Iscriviti →</span>
-          </button>
-        </form>
-
-      </div><!-- /hero-new-actions -->
+      <a href="#waitlist" onclick="scrollToWaitlist(event)" class="hero-cta-btn" data-i18n-it="Iscriviti alla waiting list →" data-i18n-en="Join the waiting list →">Iscriviti alla waiting list →</a>
     </div><!-- /hero-new-text -->
 
   </section>
