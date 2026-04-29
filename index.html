@@ -388,120 +388,6 @@
     }
     .hero-cta-btn:hover { background: var(--orange-lt); }
 
-    /* ── Waitlist form container ── */
-    .hero-new-actions {
-      width:100%; max-width:460px;
-      height:60px;
-      position:relative;
-    }
-
-    /* Confetti canvas */
-    .hero-confetti {
-      position:absolute; top:50%; left:50%;
-      transform:translate(-50%,-50%);
-      width:600px; height:600px;
-      pointer-events:none; z-index:50;
-    }
-
-    /* ── Success pill ── */
-    .wl-form-success {
-      position:absolute; inset:0;
-      display:flex; align-items:center; justify-content:center;
-      background:var(--orange);
-      border-radius:2rem;
-      opacity:0; transform:scale(.95);
-      pointer-events:none;
-      transition:opacity .4s cubic-bezier(.23,1,.32,1), transform .4s cubic-bezier(.23,1,.32,1);
-    }
-
-    .wl-form-success.show {
-      opacity:1; transform:scale(1);
-      pointer-events:auto;
-      animation:wl-success-glow 2s ease-in-out infinite;
-    }
-
-    .wl-form-success .ring-anim {
-      position:absolute; top:50%; left:50%;
-      width:100%; height:100%;
-      border-radius:2rem;
-      border:2px solid rgba(194,88,50,.6);
-      animation:wl-ring-out .8s ease-out forwards;
-    }
-
-    .wl-form-success .ring-anim:nth-child(2) { animation-delay:.15s; }
-    .wl-form-success .ring-anim:nth-child(3) { animation-delay:.30s; }
-
-    .wl-success-inner {
-      display:flex; align-items:center; gap:.6rem;
-      color:var(--white);
-      font-family:'Barlow Condensed',sans-serif;
-      font-weight:700; font-size:1.1rem;
-      letter-spacing:.08em; text-transform:uppercase;
-      animation:wl-bounce-in .5s cubic-bezier(.175,.885,.32,1.275) forwards;
-    }
-
-    .wl-success-check {
-      background:rgba(255,255,255,.2);
-      border-radius:50%; padding:4px;
-      display:flex;
-    }
-
-    .wl-success-check svg { width:18px; height:18px; }
-
-    .wl-checkmark-path {
-      stroke-dasharray:24; stroke-dashoffset:24;
-      animation:wl-checkmark .4s ease-out .3s forwards;
-    }
-
-    /* ── Form ── */
-    .wl-form {
-      position:absolute; inset:0;
-      transition:opacity .4s cubic-bezier(.23,1,.32,1), transform .4s cubic-bezier(.23,1,.32,1);
-    }
-
-    .wl-form.hidden { opacity:0; transform:scale(.95); pointer-events:none; }
-
-    .wl-email-input {
-      width:100%; height:60px;
-      padding-left:1.5rem; padding-right:160px;
-      border-radius:2rem;
-      background:rgba(255,255,255,.09);
-      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-      border:1.5px solid rgba(255,255,255,.18);
-      color:var(--white);
-      font-family:'DM Sans',sans-serif; font-size:.95rem;
-      outline:none;
-      transition:border-color .2s;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
-    }
-
-    .wl-email-input::placeholder { color:rgba(255,255,255,.38); }
-    .wl-email-input:focus        { border-color:rgba(242,238,174,.5); }
-    .wl-email-input:disabled     { opacity:.6; cursor:not-allowed; }
-
-    .wl-form-btn {
-      position:absolute; right:6px; top:6px; bottom:6px;
-      min-width:140px; border-radius:2rem;
-      background:var(--orange); color:var(--white);
-      font-family:'Barlow Condensed',sans-serif;
-      font-weight:900; font-size:.88rem;
-      letter-spacing:.18em; text-transform:uppercase;
-      border:none; cursor:pointer;
-      display:flex; align-items:center; justify-content:center; gap:.4rem;
-      transition:background .2s, transform .15s;
-    }
-
-    .wl-form-btn:hover:not(:disabled)  { background:var(--orange-lt); }
-    .wl-form-btn:active:not(:disabled) { transform:scale(.97); }
-    .wl-form-btn:disabled              { cursor:wait; }
-
-    .wl-btn-spinner {
-      width:18px; height:18px;
-      border:2.5px solid rgba(255,255,255,.3);
-      border-top-color:white; border-radius:50%;
-      animation:wl-spin .7s linear infinite;
-    }
-
     /* ── Date badge — centrato sotto il titolo ── */
     .hero-media-badge {
       display:inline-flex; flex-direction:column; align-items:center; gap:0.1rem;
@@ -2413,14 +2299,6 @@
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: 140px;
       }
-      .place-tile.p-1 { grid-column: span 2; grid-row: span 2; }
-      .place-tile.p-2 { grid-column: span 2; grid-row: span 1; }
-      .place-tile.p-3 { grid-column: span 2; grid-row: span 1; }
-      .place-tile.p-4 { grid-column: span 2; grid-row: span 2; }
-      .place-tile.p-5 { grid-column: span 2; grid-row: span 1; }
-      .place-tile.p-6 { grid-column: span 2; grid-row: span 1; }
-      .place-tile.p-7 { grid-column: span 2; grid-row: span 1; }
-      .place-tile.p-8 { grid-column: span 2; grid-row: span 1; }
 
       .organized { padding: 5rem 1.5rem; }
       .organized-partners { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
@@ -2460,13 +2338,6 @@
         grid-auto-rows: 130px;
         gap: 1px;
       }
-      .place-tile.p-1, .place-tile.p-2, .place-tile.p-3, .place-tile.p-4,
-      .place-tile.p-5, .place-tile.p-6, .place-tile.p-7, .place-tile.p-8 {
-        grid-column: span 1;
-        grid-row: span 1;
-      }
-      .place-tile.p-1 { grid-column: span 2; }
-      .place-tile.p-8 { grid-column: span 2; }
 
       .organized { padding: 3.5rem 1rem 2rem; }
       .organized-main { margin-bottom: 0; }
@@ -2763,12 +2634,6 @@
       display: none !important;
     }
     /* Keep overlays above the photo */
-    .place-tile.has-photo .place-name,
-    .place-tile.has-photo .place-tag,
-    .gallery-tile.has-photo .gal-label,
-    .gallery-tile.has-photo .gal-meta,
-    .route-card-photo.has-photo .route-difficulty {
-      z-index: 3;
     }
     .route-card.featured .route-card-photo .bg-photo {
       object-position: center 60%;
@@ -2778,9 +2643,6 @@
       transform-origin: left center;
     }
     /* Gradient overlays for readability on photo */
-    .place-tile.has-photo,
-
-    .place-tile.has-photo::after,
 
     .hero-img-placeholder.has-photo {
       background: var(--ink);
@@ -3752,69 +3614,7 @@
 
     // ━━━━━━━━━━━━ HAMBURGER / MOBILE MENU ━━━━━━━━━━━━
     // ── Waitlist form (hero) ────────────────────────────────────────────────
-  function wlSubmit(e) {
-    e.preventDefault();
-    const input = document.getElementById('wlEmailInput');
-    if (!input || !input.value.trim()) return;
-    const email = input.value.trim();
 
-    // Pre-fill both forms
-    var aEmail = document.getElementById('aEmail');
-    if (aEmail) aEmail.value = email;
-    var wlEmail = document.getElementById('wlEmail');
-    if (wlEmail) wlEmail.value = email;
-
-    // Step 1: blur hero input → keyboard closes on mobile
-    input.blur();
-
-    // Step 2: wait for keyboard to fully close (~400ms on iOS), then scroll
-    setTimeout(function() {
-      var section = document.getElementById('about');
-      if (!section) return;
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Step 3: after scroll settles, focus name field to re-open keyboard in context
-      setTimeout(function() {
-        var nameField = document.getElementById('aName');
-        if (nameField) nameField.focus();
-      }, 700);
-    }, 420);
-  }
-
-  function wlFireConfetti() {
-    var canvas = document.getElementById('heroConfetti');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
-    canvas.width  = canvas.offsetWidth  || 600;
-    canvas.height = canvas.offsetHeight || 600;
-    var cols = ['#C25832','#D46840','#F2EEAE','#2C5E2E','#ffffff','#E8E49A'];
-    var parts = [];
-    for (var i = 0; i < 65; i++) {
-      parts.push({
-        x: canvas.width/2, y: canvas.height/2,
-        vx: (Math.random()-.5)*15,
-        vy: (Math.random()-2.3)*11,
-        life: 100,
-        color: cols[Math.floor(Math.random()*cols.length)],
-        size: Math.random()*5+2
-      });
-    }
-    function tick() {
-      if (!parts.length) { ctx.clearRect(0,0,canvas.width,canvas.height); return; }
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      for (var i=parts.length-1; i>=0; i--) {
-        var p=parts[i];
-        p.x+=p.vx; p.y+=p.vy; p.vy+=0.5; p.life-=2;
-        ctx.fillStyle=p.color;
-        ctx.globalAlpha=Math.max(0,p.life/100);
-        ctx.beginPath(); ctx.arc(p.x,p.y,p.size,0,Math.PI*2); ctx.fill();
-        if (p.life<=0) parts.splice(i,1);
-      }
-      ctx.globalAlpha=1;
-      requestAnimationFrame(tick);
-    }
-    tick();
-  }
 
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -3994,72 +3794,14 @@
         i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Expedition route'; i.loading = 'lazy';
         routeEls[1].insertBefore(i, routeEls[1].firstChild);
       }
-      // Places bento (8 tiles)
-      const placePhotos = [
-        PHOTOS.place1, PHOTOS.place2, PHOTOS.place3, PHOTOS.place4,
-        PHOTOS.place5, PHOTOS.place6, PHOTOS.place7, PHOTOS.place8
-      ];
-      applyPhotoAll('.place-tile', placePhotos, 'Place');
-      // Gallery scroll (8 tiles)
-      const galleryPhotos = [
-        PHOTOS.gallery1, PHOTOS.gallery2, PHOTOS.gallery3, PHOTOS.gallery4,
-        PHOTOS.gallery5, PHOTOS.gallery6, PHOTOS.gallery7, PHOTOS.gallery8
-      ];
       // FAQ decorative
       applyPhoto('.faq-photo', PHOTOS.faq, 'Gravel detail');
       // Waitlist
       applyPhoto('.waitlist-photo', PHOTOS.waitlist, 'Bikepacking action');
-      // IG grid
-      const igPhotos = [PHOTOS.ig1, PHOTOS.ig2, PHOTOS.ig3, PHOTOS.ig4, PHOTOS.ig5, PHOTOS.ig6];
     }
     injectPhotos(); // called again with CMS override from initLang() if content.json loads
 
-    // ━━━━━━━━━━━━ WAITLIST COUNTER + COUNTDOWN ━━━━━━━━━━━━
-    // Placeholder values — wire to real endpoint + real event date later.
-    (function initCounters() {
-      const EVENT_DATE = new Date('2026-09-26T09:00:00+02:00');
-      const now = new Date();
-      const daysEl = document.getElementById('daysToGo');
-      const countEl = document.getElementById('waitlistCount');
-      if (daysEl) {
-        const ms = EVENT_DATE - now;
-        const days = Math.ceil(ms / (1000 * 60 * 60 * 24));
-        // If the event is in the past (placeholder data), show a demo countdown.
-        daysEl.textContent = (days > 0 ? days : 62).toLocaleString('it-IT');
-      }
-      if (countEl) {
-        countEl.textContent = '1.247';
-      }
-    })();
 
-    /* ── Countdown to 26 Sep 2026 ── */
-    (function() {
-      var target = new Date('2026-09-26T07:00:00');
-      var dEl = document.getElementById('cd-days');
-      var hEl = document.getElementById('cd-hours');
-      var mEl = document.getElementById('cd-minutes');
-      var sEl = document.getElementById('cd-seconds');
-      if (!dEl) return;
-      function pad(n) { return String(n).padStart(2, '0'); }
-      function flash(el, val) {
-        var v = pad(val);
-        if (el.textContent !== v) {
-          el.textContent = v;
-          el.classList.add('changed');
-          setTimeout(function() { el.classList.remove('changed'); }, 300);
-        }
-      }
-      function update() {
-        var diff = target - new Date();
-        if (diff <= 0) { dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00'; return; }
-        flash(dEl, Math.floor(diff / 86400000));
-        flash(hEl, Math.floor((diff % 86400000) / 3600000));
-        flash(mEl, Math.floor((diff % 3600000) / 60000));
-        flash(sEl, Math.floor((diff % 60000) / 1000));
-      }
-      update();
-      setInterval(update, 1000);
-    })();
   </script>
 
 
