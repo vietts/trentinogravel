@@ -9,7 +9,7 @@
 
 media:
   input: photos
-  output: photos/
+  output: /photos/
 
 content:
   - name: content
@@ -81,6 +81,9 @@ content:
           - { name: aCaption,      label: "Vette · didascalia",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: bLabel,        label: "Esperienza · kicker",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: bTitle,        label: "Esperienza · titolo",    type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: bBody1,        label: "Esperienza · paragrafo 1", type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: bBody2,        label: "Esperienza · paragrafo 2", type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: bBody3,        label: "Esperienza · paragrafo 3", type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
           - { name: bPhotoAlt,     label: "Esperienza · alt foto",  type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
 
       - name: organized
@@ -96,6 +99,16 @@ content:
         fields:
           - { name: label,         label: "Section kicker",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: title,         label: "Titolo",                type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: q1,            label: "Domanda 1",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a1,            label: "Risposta 1",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q2,            label: "Domanda 2",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a2,            label: "Risposta 2",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q3,            label: "Domanda 3",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a3,            label: "Risposta 3",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q4,            label: "Domanda 4",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a4,            label: "Risposta 4",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
+          - { name: q5,            label: "Domanda 5",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: a5,            label: "Risposta 5",            type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
           - { name: photoAlt,      label: "Foto · alt",            type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
           - { name: photoCaption,  label: "Foto · didascalia",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
 

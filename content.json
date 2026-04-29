@@ -164,6 +164,18 @@
       "it": "Un'esperienza<br><em>completa</em>",
       "en": "A complete<br><em>experience</em>"
     },
+    "bBody1": {
+      "it": "Quando vedi il rifugio ti scappa un sorriso. Finalmente, ci siamo. Appoggi la bici polverosa carica di borse al muro, ti siedi fuori al sole. Dalla cucina arriva l'odore del burro che sfrigola. Stanno rosolando la tosèla, un formaggio che esiste solo qui.",
+      "en": "When you spot the refuge a smile escapes you. Finally, we're here. You lean your dusty bike, loaded with bags, against the wall and sit outside in the sun. From the kitchen comes the scent of sizzling butter. They're searing tosèla, a cheese that exists only here."
+    },
+    "bBody2": {
+      "it": "Ti portano un tagliere di speck, canederli in brodo, polenta tagliata col filo. Davanti a te solo prato, campanacci e le Dolomiti che devi ancora attraversare.",
+      "en": "They bring a board of speck, canederli in broth, polenta sliced with a string. In front of you only meadow, cowbells and the Dolomites still to cross."
+    },
+    "bBody3": {
+      "it": "Riparti su una strada sterrata che scende tra i larici, le gambe riposate. In Trentino le soste non sono semplici pause. Sono parte essenziale dell'esperienza di viaggio.",
+      "en": "You set off again on a gravel road descending through the larches, your legs rested. In Trentino, stops aren't simple breaks. They're an essential part of the journey."
+    },
     "bPhotoAlt": {
       "it": "Rifugio · Foto",
       "en": "Refuge · Photo"
@@ -187,6 +199,46 @@
     "title": {
       "it": "Domande<br>frequenti",
       "en": "Frequently<br>Asked"
+    },
+    "q1": {
+      "it": "Quando è?",
+      "en": "When is it?"
+    },
+    "a1": {
+      "it": "L'evento si svolge il 26 settembre 2026 in Trentino.",
+      "en": "The event takes place on September 26, 2026 in Trentino."
+    },
+    "q2": {
+      "it": "Che bici serve?",
+      "en": "What bike do I need?"
+    },
+    "a2": {
+      "it": "Una gravel bike con gomme di almeno 45 mm. Sono ammesse anche MTB hardtail e bikepacking rig. No bici da corsa: il 70% del percorso è su piste ciclabili e strade sterrate.",
+      "en": "A gravel bike with tires of at least 45 mm. MTB hardtails and bikepacking rigs are also allowed. No road bikes: 70% of the route is on bike paths and unpaved roads."
+    },
+    "q3": {
+      "it": "Come funziona?",
+      "en": "How does it work?"
+    },
+    "a3": {
+      "it": "L'evento è self-supported. Porti quello che ti serve, gestisci il tuo passo, ti fermi dove vuoi. Non è una gara e non c'è un ordine di arrivo. È bikepacking aperto a tutti i livelli, con due percorsi di difficoltà diversa.",
+      "en": "The event is self-supported. You carry what you need, set your own pace, stop wherever you want. It's not a race and there's no finish order. It's bikepacking open to all levels, with two routes of different difficulty."
+    },
+    "q4": {
+      "it": "Ci sono delle tappe prestabilite? Dove dormo e dove mangio?",
+      "en": "Are there fixed stages? Where do I sleep and eat?"
+    },
+    "a4": {
+      "it": "Nessuna tappa obbligatoria. Dormi in tenda, in rifugio o in un hotel lungo il percorso, decidi tu. Ti diamo una lista di strutture bike-friendly vicine al tracciato, ma la logistica è tua. È parte del gioco.",
+      "en": "No mandatory stages. Sleep in a tent, refuge or hotel along the route — you decide. We provide a list of bike-friendly accommodations near the track, but the logistics are yours. It's part of the game."
+    },
+    "q5": {
+      "it": "Le iscrizioni sono già chiuse, c'è la possibilità di iscriversi lo stesso?",
+      "en": "Registration is closed — can I still sign up?"
+    },
+    "a5": {
+      "it": "I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.",
+      "en": "Spots are limited and will open first to people on the waiting list. Sign up to be among the first to access registration and receive all operational information."
     },
     "photoAlt": {
       "it": "Foto decorativa",
@@ -318,34 +370,34 @@
     }
   },
   "photos": {
-    "hero": "photos/hero.jpg",
-    "storyVette": "photos/story-vette.jpg",
-    "storyEsperienza": "photos/story-esperienza.jpg",
-    "routeLong": "photos/route-lungo.jpg",
-    "routeShort": "photos/route-corto.jpg",
-    "place1": "photos/place-1.jpg",
-    "place2": "photos/place-2.jpg",
-    "place3": "photos/place-3.jpg",
-    "place4": "photos/place-4.jpg",
-    "place5": "photos/place-5.jpg",
-    "place6": "photos/place-6.jpg",
-    "place7": "photos/place-7.jpg",
-    "place8": "photos/place-8.jpg",
-    "gallery1": "photos/gallery-1.jpg",
-    "gallery2": "photos/gallery-2.jpg",
-    "gallery3": "photos/gallery-3.jpg",
-    "gallery4": "photos/gallery-4.jpg",
-    "gallery5": "photos/gallery-5.jpg",
-    "gallery6": "photos/gallery-6.jpg",
-    "gallery7": "photos/gallery-7.jpg",
-    "gallery8": "photos/gallery-8.jpg",
-    "faq": "photos/faq.jpg",
-    "waitlist": "photos/waitlist.jpg",
-    "ig1": "photos/ig-1.jpg",
-    "ig2": "photos/ig-2.jpg",
-    "ig3": "photos/ig-3.jpg",
-    "ig4": "photos/ig-4.jpg",
-    "ig5": "photos/ig-5.jpg",
-    "ig6": "photos/ig-6.jpg"
+    "hero": "/photos/hero.jpg",
+    "storyVette": "/photos/story-vette.jpg",
+    "storyEsperienza": "/photos/story-esperienza.jpg",
+    "routeLong": "/photos/route-lungo.jpg",
+    "routeShort": "/photos/route-corto.jpg",
+    "place1": "/photos/place-1.jpg",
+    "place2": "/photos/place-2.jpg",
+    "place3": "/photos/place-3.jpg",
+    "place4": "/photos/place-4.jpg",
+    "place5": "/photos/place-5.jpg",
+    "place6": "/photos/place-6.jpg",
+    "place7": "/photos/place-7.jpg",
+    "place8": "/photos/place-8.jpg",
+    "gallery1": "/photos/gallery-1.jpg",
+    "gallery2": "/photos/gallery-2.jpg",
+    "gallery3": "/photos/gallery-3.jpg",
+    "gallery4": "/photos/gallery-4.jpg",
+    "gallery5": "/photos/gallery-5.jpg",
+    "gallery6": "/photos/gallery-6.jpg",
+    "gallery7": "/photos/gallery-7.jpg",
+    "gallery8": "/photos/gallery-8.jpg",
+    "faq": "/photos/faq.jpg",
+    "waitlist": "/photos/waitlist.jpg",
+    "ig1": "/photos/ig-1.jpg",
+    "ig2": "/photos/ig-2.jpg",
+    "ig3": "/photos/ig-3.jpg",
+    "ig4": "/photos/ig-4.jpg",
+    "ig5": "/photos/ig-5.jpg",
+    "ig6": "/photos/ig-6.jpg"
   }
 }

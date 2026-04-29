@@ -68,8 +68,13 @@ async function handleWaitlist(request, env) {
 
 export default {
   async fetch(request, env) {
-    const { pathname } = new URL(request.url);
+    const url = new URL(request.url);
+    const { pathname } = url;
     if (pathname === '/api/waitlist') return handleWaitlist(request, env);
+    if (pathname === '/en') {
+      url.pathname = '/en/';
+      return Response.redirect(url.toString(), 301);
+    }
     return env.ASSETS.fetch(request);
   },
 };
