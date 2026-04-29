@@ -3706,14 +3706,17 @@
     function scrollToAboutForm(e) {
       if (e) e.preventDefault();
       if (document.activeElement) document.activeElement.blur();
+      var section = document.getElementById('about');
+      if (!section) return;
+      // Calculate absolute Y before any delay (stable value)
+      var navH = 100;
+      var el = section;
+      var absTop = 0;
+      while (el) { absTop += el.offsetTop; el = el.offsetParent; }
+      var targetY = Math.max(0, absTop - navH);
       var isMobile = 'ontouchstart' in window;
       setTimeout(function() {
-        var section = document.getElementById('about');
-        if (!section) return;
-        var nav = document.querySelector('nav');
-        var offset = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
-        var top = section.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
       }, isMobile ? 450 : 0);
     }
 
