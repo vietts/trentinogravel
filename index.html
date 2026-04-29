@@ -3709,8 +3709,12 @@
       var isMobile = 'ontouchstart' in window;
       setTimeout(function() {
         var section = document.getElementById('about');
-        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, isMobile ? 420 : 0);
+        if (!section) return;
+        var nav = document.querySelector('nav');
+        var offset = (nav ? nav.getBoundingClientRect().bottom : 80) + 16;
+        var top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      }, isMobile ? 450 : 0);
     }
 
     // ━━━━━━━━━━━━ SCROLL TO WAITLIST (mobile-optimized) ━━━━━━━━━━━━
