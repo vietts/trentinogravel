@@ -3706,10 +3706,10 @@
     function scrollToAboutForm(e) {
       if (e) e.preventDefault();
       if (document.activeElement) document.activeElement.blur();
-      var section = document.getElementById('about');
+      var section = document.getElementById('aboutWaitlistForm');
       if (!section) return;
       // Calculate absolute Y before any delay (stable value)
-      var navH = 100;
+      var navH = 110;
       var el = section;
       var absTop = 0;
       while (el) { absTop += el.offsetTop; el = el.offsetParent; }
