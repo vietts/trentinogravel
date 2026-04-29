@@ -170,7 +170,7 @@
       align-items: center;
       gap: 0.2rem;
     }
-    .nav-lang-mobile { display: none; }
+    .nav-lang-mobile { display: none !important; }
     .nav-lang-desktop { display: flex; }
 
     .lang-toggle button {
@@ -576,8 +576,8 @@
       .hamburger { display:flex; }
       .nav-links  { display:none; }
       nav { width:calc(100% - 1.5rem); }
-      .nav-lang-mobile { display:flex; margin-left: auto; margin-right: 0.6rem; }
-      .nav-lang-desktop { display:none; }
+      .nav-lang-mobile { display:flex !important; margin-left: auto; margin-right: 0.6rem; }
+      .nav-lang-desktop { display:none !important; }
     }
 
     @media (max-width:600px) {
