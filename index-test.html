@@ -1286,9 +1286,6 @@
       font-size: 0.92rem !important;
       line-height: 1.55 !important;
       margin-top: 0.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
     .about-highlight strong {
       color: var(--white);
@@ -1296,7 +1293,6 @@
       font-size: 1.05rem;
       letter-spacing: 0.005em;
       display: block;
-      white-space: normal;
     }
 
     .standard-badge {
@@ -1810,10 +1806,13 @@
       select, textarea { font-size: 16px !important; }
 
       /* Fix button text scaling */
-      .wf-radio-label { font-size: 0.68rem; letter-spacing: 0.08em; padding: 0.75rem 0.5rem; }
+      .wf-radio-row { flex-direction: column; gap: 0.4rem; }
+      .wf-radio-label { font-size: 0.78rem; letter-spacing: 0.06em; padding: 0.75rem 1rem; text-align: center; }
       .form-btn-full { font-size: 0.72rem; letter-spacing: 0.12em; }
       .form-btn { font-size: 0.72rem; letter-spacing: 0.1em; }
       .about-signup-title { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+      /* Prevent horizontal overflow */
+      .about-highlight { word-break: break-word; }
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
