@@ -171,7 +171,7 @@
       gap: 0.2rem;
     }
     .nav-lang-mobile { display: none !important; }
-    .nav-lang-desktop { display: none !important; }
+    .nav-lang-desktop { display: flex; }
 
     .lang-toggle button {
       font-family: 'DM Mono', monospace;
@@ -3808,6 +3808,11 @@
         <li><a href="#routes"   data-i18n-it="Percorsi" data-i18n-en="Routes">Percorsi</a></li>
         <li><a href="#pioneer"  data-i18n-it="Pioneer"  data-i18n-en="Pioneer">Pioneer</a></li>
         <li><a href="#faq"      data-i18n-it="Info"     data-i18n-en="FAQ">Info</a></li>
+        <li class="lang-toggle nav-lang-desktop" aria-label="Language switch">
+          <button type="button" data-lang-btn="it">IT</button>
+          <span class="lang-sep">·</span>
+          <button type="button" data-lang-btn="en">EN</button>
+        </li>
         <li><a href="#waitlist" onclick="scrollToWaitlist(event)" class="nav-cta"
                data-i18n-it="Riserva" data-i18n-en="Reserve">Riserva</a></li>
       </ul>
