@@ -4282,11 +4282,27 @@
       } catch (e) {
         // Offline or file missing: fall back to hardcoded defaults
       }
+      // Detect language from URL param first, then localStorage, then default
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
       let lang = DEFAULT_LANG;
-      try { lang = localStorage.getItem(I18N_KEY) || DEFAULT_LANG; } catch (e) {}
+      try { lang = urlLang || localStorage.getItem(I18N_KEY) || DEFAULT_LANG; } catch (e) {
+        lang = urlLang || DEFAULT_LANG;
+      }
       applyLang(lang);
+
+      // Language buttons: update URL + apply
       document.querySelectorAll('[data-lang-btn]').forEach(b => {
-        b.addEventListener('click', () => applyLang(b.getAttribute('data-lang-btn')));
+        b.addEventListener('click', () => {
+          const l = b.getAttribute('data-lang-btn');
+          const url = new URL(window.location.href);
+          if (l === DEFAULT_LANG) {
+            url.searchParams.delete('lang');
+          } else {
+            url.searchParams.set('lang', l);
+          }
+          window.history.pushState({}, '', url.toString());
+          applyLang(l);
+        });
       });
     }
     initLang();
