@@ -360,13 +360,32 @@
     }
   },
   "footer": {
-    "followLabel": {
-      "it": "Seguici",
-      "en": "Follow along"
+    "eventBy": {
+      "it": "Un evento",
+      "en": "An event by"
     },
-    "contactsLabel": {
+    "basUrl": "https://www.bikeadventureseries.com",
+    "instagramLabel": {
+      "it": "Instagram",
+      "en": "Instagram"
+    },
+    "instagramUrl": "",
+    "contactLabel": {
       "it": "Contatti",
       "en": "Contact"
+    },
+    "contactUrl": "",
+    "privacyLabel": {
+      "it": "Privacy",
+      "en": "Privacy"
+    },
+    "copyright": {
+      "it": "© 2026 Trentino Gravel",
+      "en": "© 2026 Trentino Gravel"
+    },
+    "legal": {
+      "it": "",
+      "en": ""
     }
   },
   "photos": {

@@ -820,6 +820,19 @@
       align-items: center;
     }
 
+    .footer-legal {
+      max-width: 1160px;
+      margin: 1.5rem auto 0;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(242, 238, 174, 0.12);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: rgba(242, 238, 174, 0.55);
+      line-height: 1.55;
+    }
+    .footer-legal p { margin: 0; }
+    .footer-legal:has(p:empty) { display: none; }
+
     .footer-logo-wrap {
       display: flex;
       align-items: center;
@@ -3462,21 +3475,23 @@
           <div class="footer-wordmark">Trentino Gravel</div>
         </div>
         <div class="footer-bas-block">
-          <span class="footer-bas-by" data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</span>
-          <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" aria-label="Bike Adventure Series">
+          <span class="footer-bas-by" data-i18n-key="footer.eventBy" data-i18n-it="Un evento" data-i18n-en="An event by">Un evento</span>
+          <a href="https://www.bikeadventureseries.com" target="_blank" rel="noopener" aria-label="Bike Adventure Series" data-cms-href="footer.basUrl">
             <img src="extracted/logo-bas.png" alt="Bike Adventure Series" width="160" height="36">
           </a>
         </div>
       </div>
       <div class="footer-mono">
-        <span>© 2026 Trentino Gravel</span>
+        <span data-i18n-key="footer.copyright" data-i18n-it="© 2026 Trentino Gravel" data-i18n-en="© 2026 Trentino Gravel">© 2026 Trentino Gravel</span>
       </div>
       <div class="footer-links">
-        <a href="#">Instagram</a>
-        <a href="#">Strava</a>
-        <a href="#" data-i18n-key="footer.contactsLabel" data-i18n-it="Contatti" data-i18n-en="Contact">Contatti</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="#" data-cms-href="footer.instagramUrl" data-i18n-key="footer.instagramLabel" data-i18n-it="Instagram" data-i18n-en="Instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" data-cms-href="footer.contactUrl" data-i18n-key="footer.contactLabel" data-i18n-it="Contatti" data-i18n-en="Contact">Contatti</a>
+        <a href="privacy.html" data-i18n-key="footer.privacyLabel" data-i18n-it="Privacy" data-i18n-en="Privacy">Privacy</a>
       </div>
+    </div>
+    <div class="footer-legal">
+      <p data-i18n-key="footer.legal" data-i18n-it="" data-i18n-en=""></p>
     </div>
   </footer>
 
@@ -3515,6 +3530,11 @@
               el.setAttribute('data-i18n-it', entry.it);
               el.setAttribute('data-i18n-en', entry.en);
             }
+          });
+          // Apply CMS-managed URLs (single string, not bilingual)
+          document.querySelectorAll('[data-cms-href]').forEach(el => {
+            const url = get(el.getAttribute('data-cms-href'));
+            if (typeof url === 'string' && url) el.setAttribute('href', url);
           });
           // Inject photos from CMS if present
           if (content.photos) injectPhotos(content.photos);
