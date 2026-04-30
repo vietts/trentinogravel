@@ -95,7 +95,8 @@ async function handleWaitlist(request, env) {
   if (!res.ok && res.status !== 204) {
     const err = await res.json().catch(() => ({}));
     if (err.code !== 'duplicate_parameter') {
-      return json(env, { error: err.message || `Errore Brevo ${res.status}` }, 500);
+      console.error('brevo_failed', res.status, err);
+      return json(env, { error: 'Servizio temporaneamente non disponibile' }, 502);
     }
   }
 
