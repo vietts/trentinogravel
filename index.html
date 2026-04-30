@@ -3826,6 +3826,17 @@
         }
         if (successEl) successEl.style.display = 'block';
         form.reset();
+
+        if (window.zaraz && typeof window.zaraz.track === 'function') {
+          const eventId = (crypto.randomUUID && crypto.randomUUID()) || String(Date.now());
+          window.zaraz.track('waitlist_signup', {
+            em: payload.email,
+            route: payload.route || 'none',
+            ex_tt: payload.exTT,
+            lang: payload.lang,
+            event_id: eventId,
+          });
+        }
       } catch (err) {
         if (errorEl) {
           errorEl.textContent = err.message || 'Qualcosa è andato storto. Riprova.';
