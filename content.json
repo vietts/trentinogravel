@@ -233,8 +233,8 @@
       "en": "No mandatory stages. Sleep in a tent, refuge or hotel along the route — you decide. We provide a list of bike-friendly accommodations near the track, but the logistics are yours. It's part of the game."
     },
     "q5": {
-      "it": "Le iscrizioni sono già chiuse, c'è la possibilità di iscriversi lo stesso?",
-      "en": "Registration is closed — can I still sign up?"
+      "it": "Come mi iscrivo?",
+      "en": "How to register?"
     },
     "a5": {
       "it": "I posti sono limitati e verranno aperti in anteprima a chi è in waiting list. Iscriviti per essere tra i primi ad accedere alle iscrizioni e ricevere tutte le informazioni operative.",
@@ -369,12 +369,10 @@
       "it": "Instagram",
       "en": "Instagram"
     },
-    "instagramUrl": "",
     "contactLabel": {
       "it": "Contatti",
       "en": "Contact"
     },
-    "contactUrl": "",
     "privacyLabel": {
       "it": "Privacy",
       "en": "Privacy"
