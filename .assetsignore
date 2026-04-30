@@ -3,3 +3,21 @@ wrangler.jsonc
 .pages.yml
 README.md
 .gitignore
+.deploy-trigger
+.assetsignore
+
+# Concept / archive / dev files — non vanno serviti in prod
+index-test.html
+concept.html
+archive/
+*.pdf
+
+# Brand asset extraction (TIFF + immagini grezze) non referenziate dal sito
+extracted/img-*
+extracted/page*
+extracted/*.tif
+extracted/brand-*.png
+extracted/logo-png-extracted.png
+
+# Trentino brand brief (21 MB)
+Trentino Brand brief presentation.pdf
