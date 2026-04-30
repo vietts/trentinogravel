@@ -45,6 +45,7 @@
       "name": "Tuscany Trail / Bike Adventure Series",
       "url": "https://tuscanytrail.it"
     },
+    "image": ["https://trentinogravel.it/photos/hero.jpg"],
     "url": "https://trentinogravel.it/"
   }
   </script>
@@ -3741,6 +3742,26 @@
       };
       const PHOTOS = override ? { ...DEFAULTS, ...override } : DEFAULTS;
 
+      // Pixel dimensions of the local photos so <img> reserves the correct
+      // aspect-ratio before the file downloads (avoids CLS).
+      const PHOTO_DIMS = {
+        'hero.jpg':              [2560, 1927],
+        'route-corto.jpg':       [2000, 1333],
+        'route-lungo.jpg':       [2000, 1333],
+        'story-vette.jpg':       [2000, 1333],
+        'story-esperienza.jpg':  [1600, 2000],
+        'waitlist.jpg':          [1506, 2000],
+        'faq.jpg':               [900, 600],
+        'gallery-1.jpg':         [900, 600], 'gallery-2.jpg': [900, 600], 'gallery-3.jpg': [900, 600],
+        'gallery-4.jpg':         [600, 900], 'gallery-5.jpg': [900, 600], 'gallery-6.jpg': [600, 900],
+        'gallery-7.jpg':         [900, 600], 'gallery-8.jpg': [600, 900],
+        'place-1.jpg':           [1000, 666], 'place-2.jpg': [1000, 666], 'place-3.jpg': [666, 1000],
+        'place-4.jpg':           [1000, 753], 'place-5.jpg': [666, 1000], 'place-6.jpg': [1000, 666],
+        'place-7.jpg':           [666, 1000], 'place-8.jpg': [1000, 666],
+        'ig-1.jpg':              [400, 600], 'ig-2.jpg': [600, 449], 'ig-3.jpg': [600, 400],
+        'ig-4.jpg':              [600, 400], 'ig-5.jpg': [400, 600], 'ig-6.jpg': [600, 400],
+      };
+
       // Build a <picture> with WebP source + JPG fallback. Idempotent: if the
       // target element already has a .bg-photo, reuse it instead of stacking.
       function buildPicture(url, alt, eager) {
@@ -3757,6 +3778,9 @@
         img.src = url;
         img.alt = alt || '';
         img.decoding = 'async';
+        const filename = url.split('/').pop().split('?')[0];
+        const dims = PHOTO_DIMS[filename];
+        if (dims) { img.width = dims[0]; img.height = dims[1]; }
         if (eager) {
           img.loading = 'eager';
           img.fetchPriority = 'high';
