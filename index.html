@@ -16,6 +16,7 @@
   <meta name="twitter:title" content="Trentino Gravel — Pioneer Edition">
   <meta name="twitter:description" content="Un'avventura gravel di 400km attraverso le Dolomiti. 26 settembre 2026.">
   <link rel="icon" type="image/svg+xml" href="extracted/logo-forest.svg">
+  <link rel="preload" as="image" href="photos/hero.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -3720,48 +3721,61 @@
       };
       const PHOTOS = override ? { ...DEFAULTS, ...override } : DEFAULTS;
 
-      function applyPhoto(selector, url, alt) {
-        const el = document.querySelector(selector);
-        if (!el || !url) return;
-        el.classList.add('has-photo');
+      // Build a <picture> with WebP source + JPG fallback. Idempotent: if the
+      // target element already has a .bg-photo, reuse it instead of stacking.
+      function buildPicture(url, alt, eager) {
+        const picture = document.createElement('picture');
+        const webpSrc = url.replace(/\.jpe?g($|\?)/i, '.webp$1');
+        if (webpSrc !== url) {
+          const source = document.createElement('source');
+          source.type = 'image/webp';
+          source.srcset = webpSrc;
+          picture.appendChild(source);
+        }
         const img = document.createElement('img');
         img.className = 'bg-photo';
         img.src = url;
         img.alt = alt || '';
-        img.loading = 'lazy';
-        el.insertBefore(img, el.firstChild);
+        img.decoding = 'async';
+        if (eager) {
+          img.loading = 'eager';
+          img.fetchPriority = 'high';
+        } else {
+          img.loading = 'lazy';
+        }
+        picture.appendChild(img);
+        return picture;
+      }
+      function applyPhoto(selector, url, alt, eager) {
+        const el = document.querySelector(selector);
+        if (!el || !url) return;
+        if (el.querySelector('img.bg-photo')) return; // already injected
+        el.classList.add('has-photo');
+        el.insertBefore(buildPicture(url, alt, eager), el.firstChild);
       }
       function applyPhotoAll(selector, urls, altBase) {
         document.querySelectorAll(selector).forEach((el, i) => {
           if (!urls[i]) return;
+          if (el.querySelector('img.bg-photo')) return;
           el.classList.add('has-photo');
-          const img = document.createElement('img');
-          img.className = 'bg-photo';
-          img.src = urls[i];
-          img.alt = altBase ? `${altBase} ${i + 1}` : '';
-          img.loading = 'lazy';
-          el.insertBefore(img, el.firstChild);
+          el.insertBefore(buildPicture(urls[i], altBase ? `${altBase} ${i + 1}` : ''), el.firstChild);
         });
       }
 
-      // Hero background
-      applyPhoto('.hero-img-placeholder', PHOTOS.hero, 'Dolomiti landscape');
+      // Hero background — eager + high priority (matches <link rel="preload">)
+      applyPhoto('.hero-img-placeholder', PHOTOS.hero, 'Dolomiti landscape', true);
       // Story blocks (new editorial sections)
       applyPhoto('.story-a .story-photo', PHOTOS.storyVette, 'Dolomite peaks');
       applyPhoto('.story-b .story-photo', PHOTOS.storyEsperienza, 'Mountain refuge table');
       // Routes — Discovery (corto) first, Expedition (lungo) second
       const routeEls = document.querySelectorAll('.route-card-photo');
-      if (routeEls[0]) {
+      if (routeEls[0] && !routeEls[0].querySelector('img.bg-photo')) {
         routeEls[0].classList.add('has-photo');
-        const i = document.createElement('img');
-        i.className = 'bg-photo'; i.src = PHOTOS.routeShort; i.alt = 'Discovery route'; i.loading = 'lazy';
-        routeEls[0].insertBefore(i, routeEls[0].firstChild);
+        routeEls[0].insertBefore(buildPicture(PHOTOS.routeShort, 'Discovery route'), routeEls[0].firstChild);
       }
-      if (routeEls[1]) {
+      if (routeEls[1] && !routeEls[1].querySelector('img.bg-photo')) {
         routeEls[1].classList.add('has-photo');
-        const i = document.createElement('img');
-        i.className = 'bg-photo'; i.src = PHOTOS.routeLong; i.alt = 'Expedition route'; i.loading = 'lazy';
-        routeEls[1].insertBefore(i, routeEls[1].firstChild);
+        routeEls[1].insertBefore(buildPicture(PHOTOS.routeLong, 'Expedition route'), routeEls[1].firstChild);
       }
       // FAQ decorative
       applyPhoto('.faq-photo', PHOTOS.faq, 'Gravel detail');
