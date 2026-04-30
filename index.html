@@ -3802,12 +3802,20 @@
       if (errorEl) { errorEl.textContent = ''; errorEl.style.display = 'none'; }
 
       const data = new FormData(form);
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const docLang = document.documentElement.lang;
+      let lsLang = '';
+      try { lsLang = localStorage.getItem('tg-lang') || ''; } catch (e) {}
+      const lang = ['it','en'].includes(urlLang) ? urlLang
+                 : ['it','en'].includes(docLang) ? docLang
+                 : ['it','en'].includes(lsLang) ? lsLang
+                 : 'it';
       const payload = {
         email: data.get('email'),
-        name: data.get('name') || undefined,
-        route: data.get('route') || undefined,
-        exTT: data.get('exTT') === 'yes' ? 'yes' : 'no',
-        lang: document.documentElement.lang || 'it',
+        name: data.get('name'),
+        route: data.get('route'),
+        exTT: data.get('exTT'),
+        lang,
         website: data.get('website') || '', // honeypot
       };
 

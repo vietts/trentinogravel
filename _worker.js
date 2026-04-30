@@ -50,18 +50,22 @@ async function handleWaitlist(request, env) {
   const email = str(body.email).trim().toLowerCase();
   const name = str(body.name).trim();
   const route = str(body.route).trim();
-  const exTT = body.exTT === true || body.exTT === 'yes';
+  const exTTRaw = str(body.exTT).trim().toLowerCase();
   const lang = str(body.lang).trim().toLowerCase() || 'it';
 
   if (!EMAIL_RE.test(email) || email.length > MAX_FIELD_LEN) {
     return json(env, { error: 'Email non valida' }, 400);
   }
-  if (name && name.length > MAX_FIELD_LEN) {
-    return json(env, { error: 'Nome troppo lungo' }, 400);
+  if (!name || name.length > MAX_FIELD_LEN) {
+    return json(env, { error: 'Nome richiesto' }, 400);
   }
-  if (route && !VALID_ROUTES.has(route)) {
-    return json(env, { error: 'Percorso non valido' }, 400);
+  if (!VALID_ROUTES.has(route)) {
+    return json(env, { error: 'Percorso richiesto' }, 400);
   }
+  if (exTTRaw !== 'yes' && exTTRaw !== 'no') {
+    return json(env, { error: 'Risposta Tuscany Trail richiesta' }, 400);
+  }
+  const exTT = exTTRaw === 'yes';
   if (!VALID_LANGS.has(lang)) {
     return json(env, { error: 'Lingua non valida' }, 400);
   }
@@ -75,9 +79,9 @@ async function handleWaitlist(request, env) {
   const payload = {
     email,
     attributes: {
-      ...(name ? { FIRSTNAME: name } : {}),
+      FIRSTNAME: name,
       TGE_EX_TT: exTT,
-      ...(route ? { TGE_ROUTE: route === 'long' ? 1 : 2 } : {}), // 1=long, 2=short
+      TGE_ROUTE: route === 'long' ? 1 : 2, // 1=long, 2=short
       SIGNUP_SOURCE: 'trentino_gravel_pioneer_2026',
       LINGUA: lang === 'en' ? 2 : 1, // 1=Ita, 2=Eng
     },
