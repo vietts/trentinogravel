@@ -76,11 +76,10 @@ async function handleWaitlist(request, env) {
     email,
     attributes: {
       ...(name ? { FIRSTNAME: name } : {}),
-      EX_TUSCANY_TRAIL: exTT,
-      ...(route ? { ROUTE_PREFERENCE: route } : {}),
-      SOURCE: 'trentino_gravel_pioneer_2026',
-      SIGNUP_LANG: lang,
-      LINGUA: lang === 'en' ? 2 : 1, // 1=Ita, 2=Eng (categoria Brevo esistente)
+      TGE_EX_TT: exTT,
+      ...(route ? { TGE_ROUTE: route === 'long' ? 1 : 2 } : {}), // 1=long, 2=short
+      SIGNUP_SOURCE: 'trentino_gravel_pioneer_2026',
+      LINGUA: lang === 'en' ? 2 : 1, // 1=Ita, 2=Eng
     },
     listIds: [listId],
     updateEnabled: true,

@@ -1650,6 +1650,94 @@
     }
 
     /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NEW: COOKIE BANNER (cosmetic only)
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+      z-index: 950;
+      background: var(--cream);
+      border-left: 4px solid var(--orange);
+      border-radius: 6px;
+      box-shadow: 0 8px 32px rgba(12,14,26,0.18);
+      padding: 1.1rem 1.3rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+    }
+    .cookie-banner[hidden] { display: none; }
+    .cookie-banner-inner {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .cookie-banner-text {
+      flex: 1 1 280px;
+      min-width: 0;
+    }
+    .cookie-banner-text strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.35rem;
+    }
+    .cookie-banner-text p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(12,14,26,0.78);
+      margin: 0 0 0.35rem 0;
+    }
+    .cookie-banner-text a {
+      font-size: 0.78rem;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .cookie-banner-text a:hover { color: var(--orange-lt); }
+    .cookie-banner-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .cookie-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background .15s, color .15s, opacity .15s;
+    }
+    .cookie-btn-primary {
+      background: var(--blue);
+      color: var(--cream);
+    }
+    .cookie-btn-primary:hover { background: var(--blue-deep); }
+    .cookie-btn-ghost {
+      background: transparent;
+      color: rgba(12,14,26,0.55);
+      padding: 0.7rem 0.6rem;
+    }
+    .cookie-btn-ghost:hover { color: var(--ink); }
+    @media (max-width: 640px) {
+      .cookie-banner { padding: 1rem 1.1rem; }
+      .cookie-banner-inner { gap: 0.8rem; }
+      .cookie-banner-actions { width: 100%; justify-content: flex-end; }
+      .cookie-btn { padding: 0.65rem 1rem; font-size: 0.72rem; }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
        NEW: GENERIC PHOTO PLACEHOLDER
        Reuses .hero-img-placeholder visual language
        for every new photo slot across the site.
@@ -3489,12 +3577,34 @@
         <a href="#" data-cms-href="footer.instagramUrl" data-i18n-key="footer.instagramLabel" data-i18n-it="Instagram" data-i18n-en="Instagram" target="_blank" rel="noopener">Instagram</a>
         <a href="#" data-cms-href="footer.contactUrl" data-i18n-key="footer.contactLabel" data-i18n-it="Contatti" data-i18n-en="Contact">Contatti</a>
         <a href="privacy.html" data-i18n-key="footer.privacyLabel" data-i18n-it="Privacy" data-i18n-en="Privacy">Privacy</a>
+        <a href="privacy.html#cookies" data-i18n-it="Cookie" data-i18n-en="Cookies">Cookie</a>
       </div>
     </div>
     <div class="footer-legal">
       <p data-i18n-key="footer.legal" data-i18n-it="" data-i18n-en=""></p>
     </div>
   </footer>
+
+  <!-- Cookie banner (cosmetico, logica consenso da implementare) -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog"
+       aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc"
+       aria-modal="false" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <strong id="cookie-banner-title"
+                data-i18n-it="Cookie e privacy" data-i18n-en="Cookies & privacy">Cookie e privacy</strong>
+        <p id="cookie-banner-desc"
+           data-i18n-it="Questo sito usa cookie tecnici e, se autorizzati, cookie di terze parti per analisi anonime. Continuando a navigare accetti i cookie tecnici."
+           data-i18n-en="This site uses technical cookies and, if authorized, third-party cookies for anonymous analytics. By continuing to browse you accept technical cookies.">Questo sito usa cookie tecnici e, se autorizzati, cookie di terze parti per analisi anonime. Continuando a navigare accetti i cookie tecnici.</p>
+        <a href="privacy.html#cookies"
+           data-i18n-it="Leggi la cookie policy" data-i18n-en="Read the cookie policy">Leggi la cookie policy</a>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-primary"
+                data-i18n-it="Ho capito" data-i18n-en="Got it">Ho capito</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // ━━━━━━━━━━━━ I18N TOGGLE ━━━━━━━━━━━━
@@ -3565,8 +3675,30 @@
           applyLang(l);
         });
       });
+
+      initCookieBanner();
     }
     initLang();
+
+    // ━━━━━━━━━━━━ COOKIE BANNER (cosmetico) ━━━━━━━━━━━━
+    // Nota: banner puramente di notifica. La logica di consenso reale
+    // (storage, integrazione Zaraz, ecc.) verrà implementata a parte.
+    // Per ora: dismiss in sessionStorage per non riaprirlo nella stessa sessione.
+    const COOKIE_DISMISS_KEY = 'tg-cookie-dismissed';
+    function initCookieBanner() {
+      const banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+      let dismissed = false;
+      try { dismissed = sessionStorage.getItem(COOKIE_DISMISS_KEY) === '1'; } catch (e) {}
+      if (dismissed) return;
+      banner.hidden = false;
+      const btn = document.getElementById('cookie-accept');
+      const dismiss = () => {
+        try { sessionStorage.setItem(COOKIE_DISMISS_KEY, '1'); } catch (e) {}
+        banner.remove();
+      };
+      if (btn) btn.addEventListener('click', dismiss);
+    }
 
     // ━━━━━━━━━━━━ SCROLL REVEAL ━━━━━━━━━━━━
     const io = new IntersectionObserver((entries) => {

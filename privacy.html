@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Trentino Gravel</title>
-  <meta name="description" content="Privacy policy di Trentino Gravel — Pioneer Edition.">
+  <meta name="description" content="Informativa sul trattamento dei dati personali — Trentino Gravel, evento organizzato da Bikepacking Adventures ASD.">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="extracted/logo-real.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
       line-height: 1.7;
     }
 
-    /* Nav (simplified clone) */
+    /* Nav */
     nav {
       position: sticky;
       top: 0;
@@ -67,6 +67,11 @@
       color: rgba(242,238,174,0.55);
       margin-top: 1px;
     }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
     .nav-back {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
@@ -78,6 +83,36 @@
       transition: color .2s;
     }
     .nav-back:hover { color: var(--cream); }
+
+    /* Lang toggle */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(242,238,174,0.25);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(242,238,174,0.55);
+      user-select: none;
+      border-radius: 3px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      cursor: pointer;
+      padding: 0 0.15rem;
+      transition: color .2s;
+    }
+    .lang-toggle button.active { color: var(--cream); }
+    .lang-toggle button:hover { color: var(--cream); }
+    .lang-toggle .lang-sep { opacity: 0.35; pointer-events: none; }
 
     /* Header */
     .privacy-header {
@@ -120,26 +155,6 @@
       max-width: 780px;
       margin: 0 auto;
       padding: 4rem 3rem 6rem;
-    }
-    .placeholder-note {
-      background: var(--cream);
-      border-left: 4px solid var(--orange);
-      padding: 1.5rem 1.8rem;
-      margin-bottom: 3rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--ink);
-    }
-    .placeholder-note strong {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 0.75rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--orange);
-      display: block;
-      margin-bottom: 0.5rem;
     }
 
     article h2 {
@@ -188,8 +203,111 @@
       background: rgba(59,80,200,0.15);
       margin: 3rem 0;
     }
+    article .titolare-block {
+      background: var(--cream);
+      border-left: 4px solid var(--orange);
+      padding: 1.2rem 1.6rem;
+      margin: 1rem 0 2rem;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    article .titolare-block p { margin-bottom: 0.3rem; color: var(--ink); }
+    article .titolare-block strong { font-weight: 700; }
+    article table.cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0 2rem;
+      font-size: 0.9rem;
+    }
+    article table.cookie-table th,
+    article table.cookie-table td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid rgba(59,80,200,0.12);
+      vertical-align: top;
+    }
+    article table.cookie-table th {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      color: var(--blue-deep);
+      background: rgba(59,80,200,0.05);
+    }
+    article table.cookie-table code {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      background: rgba(12,14,26,0.06);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
 
-    /* Footer (simplified) */
+    /* Cookie banner (cosmetico) */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+      z-index: 950;
+      background: var(--cream);
+      border-left: 4px solid var(--orange);
+      border-radius: 6px;
+      box-shadow: 0 8px 32px rgba(12,14,26,0.18);
+      padding: 1.1rem 1.3rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+    }
+    .cookie-banner[hidden] { display: none; }
+    .cookie-banner-inner {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .cookie-banner-text { flex: 1 1 280px; min-width: 0; }
+    .cookie-banner-text strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.35rem;
+    }
+    .cookie-banner-text p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(12,14,26,0.78);
+      margin: 0 0 0.35rem 0;
+    }
+    .cookie-banner-text a {
+      font-size: 0.78rem;
+      color: var(--orange);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .cookie-banner-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .cookie-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background: var(--blue);
+      color: var(--cream);
+      transition: background .15s;
+    }
+    .cookie-btn:hover { background: var(--blue-deep); }
+
+    /* Footer */
     footer {
       background: var(--ink);
       padding: 2.5rem 3rem;
@@ -232,10 +350,16 @@
 
     @media (max-width: 640px) {
       nav { padding: 0 1.2rem; height: 56px; }
+      .nav-right { gap: 0.7rem; }
+      .lang-toggle { padding: 0.3rem 0.5rem; }
       .privacy-header { padding: 3.5rem 1.2rem 2.8rem; }
       main { padding: 2.8rem 1.2rem 4rem; }
       footer { padding: 2rem 1.2rem; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      .cookie-banner { padding: 1rem 1.1rem; }
+      .cookie-banner-actions { width: 100%; justify-content: flex-end; }
+      article table.cookie-table { font-size: 0.82rem; }
+      article table.cookie-table th, article table.cookie-table td { padding: 0.55rem 0.6rem; }
     }
   </style>
 </head>
@@ -250,79 +374,233 @@
         <small>Dolomiti · Est. 2024</small>
       </div>
     </a>
-    <a href="index.html" class="nav-back">← Torna al sito</a>
+    <div class="nav-right">
+      <div class="lang-toggle" aria-label="Language switch">
+        <button type="button" data-lang-btn="it" class="active">IT</button>
+        <span class="lang-sep">·</span>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <a href="index.html" class="nav-back" data-i18n-it="← Torna al sito" data-i18n-en="← Back to site">← Torna al sito</a>
+    </div>
   </nav>
 
   <!-- Header -->
   <header class="privacy-header">
     <div class="privacy-header-inner">
-      <div class="privacy-kicker">Informativa</div>
-      <h1 class="privacy-title">Privacy Policy</h1>
-      <div class="privacy-meta">Ultimo aggiornamento: —</div>
+      <div class="privacy-kicker" data-i18n-it="Informativa" data-i18n-en="Notice">Informativa</div>
+      <h1 class="privacy-title" data-i18n-it="Privacy Policy" data-i18n-en="Privacy Policy">Privacy Policy</h1>
+      <div class="privacy-meta" data-i18n-it="Ultimo aggiornamento: 30 aprile 2026" data-i18n-en="Last updated: April 30, 2026">Ultimo aggiornamento: 30 aprile 2026</div>
     </div>
   </header>
 
   <!-- Content -->
   <main>
-
-    <div class="placeholder-note">
-      <strong>Placeholder — da sostituire</strong>
-      Il testo sottostante è un placeholder indicativo per l'impaginazione. Il testo definitivo della privacy policy verrà fornito dal cliente e inserito qui. Rimuovere questo blocco prima della pubblicazione.
-    </div>
-
     <article>
-      <h2>1. Titolare del trattamento</h2>
-      <p><em>[Ragione sociale del titolare del trattamento, P.IVA, sede legale, email di contatto.]</em></p>
 
-      <h2>2. Dati raccolti</h2>
-      <p>Attraverso il form di iscrizione alla waiting list di Trentino Gravel — Pioneer Edition, il titolare raccoglie i seguenti dati:</p>
+      <h2 data-i18n-it="1. Titolare del trattamento" data-i18n-en="1. Data Controller">1. Titolare del trattamento</h2>
+      <p data-i18n-it="Ai sensi del Regolamento (UE) 2016/679 (GDPR), il titolare del trattamento dei dati personali raccolti tramite questo sito e nell'ambito dell'evento &lt;strong&gt;Trentino Gravel — Pioneer Edition&lt;/strong&gt; è:"
+         data-i18n-en="Pursuant to Regulation (EU) 2016/679 (GDPR), the data controller for personal data collected through this website and in the context of the &lt;strong&gt;Trentino Gravel — Pioneer Edition&lt;/strong&gt; event is:">Ai sensi del Regolamento (UE) 2016/679 (GDPR), il titolare del trattamento dei dati personali raccolti tramite questo sito e nell'ambito dell'evento <strong>Trentino Gravel — Pioneer Edition</strong> è:</p>
+      <div class="titolare-block">
+        <p><strong>Bikepacking Adventures ASD</strong></p>
+        <p data-i18n-it="Sede legale: Via Val d'Aupa, 33100 Udine (UD), Italia" data-i18n-en="Registered office: Via Val d'Aupa, 33100 Udine (UD), Italy">Sede legale: Via Val d'Aupa, 33100 Udine (UD), Italia</p>
+        <p data-i18n-it="C.F. / P.IVA: 94158340300" data-i18n-en="Tax ID / VAT: 94158340300">C.F. / P.IVA: 94158340300</p>
+        <p data-i18n-it="Email di contatto: &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;"
+           data-i18n-en="Contact email: &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;">Email di contatto: <a href="mailto:ciao@trentinogravel.com">ciao@trentinogravel.com</a></p>
+      </div>
+
+      <h2 data-i18n-it="2. Tipologie di dati raccolti" data-i18n-en="2. Types of data collected">2. Tipologie di dati raccolti</h2>
+
+      <h3 data-i18n-it="2.1 Dati raccolti tramite il form di waiting list" data-i18n-en="2.1 Data collected through the waiting list form">2.1 Dati raccolti tramite il form di waiting list</h3>
+      <p data-i18n-it="Iscrivendoti alla waiting list di Trentino Gravel — Pioneer Edition raccogliamo:"
+         data-i18n-en="When you sign up for the Trentino Gravel — Pioneer Edition waiting list we collect:">Iscrivendoti alla waiting list di Trentino Gravel — Pioneer Edition raccogliamo:</p>
       <ul>
-        <li><strong>Nome</strong> — per comunicazioni personalizzate;</li>
-        <li><strong>Indirizzo email</strong> — per l'invio delle informazioni relative all'evento e l'apertura delle iscrizioni;</li>
-        <li><strong>Partecipazione pregressa al Tuscany Trail</strong> — dato aggregato utile alla pianificazione dell'evento;</li>
-        <li><strong>Preferenza di percorso (lungo / corto)</strong> — dato aggregato utile a calibrare le edizioni future;</li>
-        <li><strong>Lingua di iscrizione</strong> — per rispondere nella lingua corretta;</li>
-        <li><strong>Data e ora di iscrizione</strong> — registrate automaticamente.</li>
+        <li data-i18n-it="&lt;strong&gt;Nome&lt;/strong&gt; — per comunicazioni personalizzate;"
+            data-i18n-en="&lt;strong&gt;First name&lt;/strong&gt; — for personalised communications;"><strong>Nome</strong> — per comunicazioni personalizzate;</li>
+        <li data-i18n-it="&lt;strong&gt;Indirizzo email&lt;/strong&gt; — per inviarti gli aggiornamenti sull'evento e l'apertura delle iscrizioni;"
+            data-i18n-en="&lt;strong&gt;Email address&lt;/strong&gt; — to send you event updates and registration opening;"><strong>Indirizzo email</strong> — per inviarti gli aggiornamenti sull'evento e l'apertura delle iscrizioni;</li>
+        <li data-i18n-it="&lt;strong&gt;Partecipazione pregressa al Tuscany Trail&lt;/strong&gt; — informazione aggregata utile alla pianificazione dell'evento;"
+            data-i18n-en="&lt;strong&gt;Previous participation in Tuscany Trail&lt;/strong&gt; — aggregate information useful for event planning;"><strong>Partecipazione pregressa al Tuscany Trail</strong> — informazione aggregata utile alla pianificazione dell'evento;</li>
+        <li data-i18n-it="&lt;strong&gt;Preferenza di percorso (lungo / corto)&lt;/strong&gt; — per calibrare l'organizzazione delle edizioni;"
+            data-i18n-en="&lt;strong&gt;Route preference (long / short)&lt;/strong&gt; — to calibrate the organisation of upcoming editions;"><strong>Preferenza di percorso (lungo / corto)</strong> — per calibrare l'organizzazione delle edizioni;</li>
+        <li data-i18n-it="&lt;strong&gt;Lingua di iscrizione&lt;/strong&gt; — per risponderti nella lingua corretta;"
+            data-i18n-en="&lt;strong&gt;Sign-up language&lt;/strong&gt; — to reply in the correct language;"><strong>Lingua di iscrizione</strong> — per risponderti nella lingua corretta;</li>
+        <li data-i18n-it="&lt;strong&gt;Data e ora di iscrizione&lt;/strong&gt; — registrate automaticamente."
+            data-i18n-en="&lt;strong&gt;Sign-up date and time&lt;/strong&gt; — recorded automatically."><strong>Data e ora di iscrizione</strong> — registrate automaticamente.</li>
       </ul>
 
-      <h2>3. Finalità del trattamento</h2>
-      <p>I dati vengono trattati esclusivamente per le seguenti finalità:</p>
+      <h3 data-i18n-it="2.2 Dati raccolti al momento dell'iscrizione all'evento"
+          data-i18n-en="2.2 Data collected when registering for the event">2.2 Dati raccolti al momento dell'iscrizione all'evento</h3>
+      <p data-i18n-it="Quando le iscrizioni saranno aperte, in fase di registrazione potranno essere richiesti dati aggiuntivi, tra cui: dati anagrafici (nome, cognome, data di nascita, codice fiscale), residenza, contatti di emergenza, taglia maglia, dati relativi alla bicicletta. La specifica modulistica e la relativa informativa saranno fornite in quel momento."
+         data-i18n-en="When registrations open, additional data may be requested at sign-up, including: personal details (first name, last name, date of birth, tax ID), residence, emergency contacts, jersey size, bicycle data. The specific forms and notice will be provided at that time.">Quando le iscrizioni saranno aperte, in fase di registrazione potranno essere richiesti dati aggiuntivi, tra cui: dati anagrafici (nome, cognome, data di nascita, codice fiscale), residenza, contatti di emergenza, taglia maglia, dati relativi alla bicicletta. La specifica modulistica e la relativa informativa saranno fornite in quel momento.</p>
+
+      <h3 data-i18n-it="2.3 Dati relativi alla salute (certificato medico)"
+          data-i18n-en="2.3 Health data (medical certificate)">2.3 Dati relativi alla salute (certificato medico)</h3>
+      <p data-i18n-it="Per la partecipazione all'evento, in quanto attività ciclistica di tipo agonistico, è richiesto il &lt;strong&gt;certificato medico di idoneità all'attività sportiva agonistica&lt;/strong&gt; ai sensi del D.M. 18/02/1982 (e ss.mm.ii.). Il certificato costituisce un dato relativo alla salute (categoria particolare di dati ai sensi dell'art. 9 GDPR) e viene trattato:"
+         data-i18n-en="For participation in the event, being a competitive cycling activity, a &lt;strong&gt;medical certificate of fitness for competitive sports&lt;/strong&gt; is required under Italian Ministerial Decree of 18 February 1982 (as amended). The certificate constitutes health data (a special category of data under art. 9 GDPR) and is processed:">Per la partecipazione all'evento, in quanto attività ciclistica di tipo agonistico, è richiesto il <strong>certificato medico di idoneità all'attività sportiva agonistica</strong> ai sensi del D.M. 18/02/1982 (e ss.mm.ii.). Il certificato costituisce un dato relativo alla salute (categoria particolare di dati ai sensi dell'art. 9 GDPR) e viene trattato:</p>
+      <ul>
+        <li data-i18n-it="per l'esecuzione del rapporto associativo/contrattuale e per adempiere agli obblighi normativi sulla tutela sanitaria delle attività sportive (art. 9, par. 2, lett. b) e g) GDPR);"
+            data-i18n-en="to perform the membership/contractual relationship and to comply with regulatory obligations on health protection in sports activities (art. 9(2)(b) and (g) GDPR);">per l'esecuzione del rapporto associativo/contrattuale e per adempiere agli obblighi normativi sulla tutela sanitaria delle attività sportive (art. 9, par. 2, lett. b) e g) GDPR);</li>
+        <li data-i18n-it="conservato in modalità protetta, accessibile esclusivamente al personale autorizzato dell'organizzazione e ai responsabili sanitari dell'evento;"
+            data-i18n-en="stored securely, accessible only to authorised organisation personnel and to event medical officers;">conservato in modalità protetta, accessibile esclusivamente al personale autorizzato dell'organizzazione e ai responsabili sanitari dell'evento;</li>
+        <li data-i18n-it="non comunicato a terzi salvo quanto strettamente necessario in caso di emergenza sanitaria o per assolvere a obblighi di legge."
+            data-i18n-en="not disclosed to third parties except as strictly necessary in case of medical emergency or to fulfil legal obligations.">non comunicato a terzi salvo quanto strettamente necessario in caso di emergenza sanitaria o per assolvere a obblighi di legge.</li>
+      </ul>
+
+      <h3 data-i18n-it="2.4 Immagini durante l'evento"
+          data-i18n-en="2.4 Images taken during the event">2.4 Immagini durante l'evento</h3>
+      <p data-i18n-it="Durante lo svolgimento dell'evento potranno essere effettuate riprese fotografiche e video del percorso, della partenza, dei passaggi tecnici, dei ristori e della premiazione, con possibili immagini dei partecipanti. Tali immagini verranno utilizzate &lt;strong&gt;esclusivamente per la comunicazione dell'evento&lt;/strong&gt; (sito web, gallery, social network ufficiali, materiali promozionali delle edizioni successive). Base giuridica: legittimo interesse del titolare a documentare e comunicare la manifestazione (art. 6, par. 1, lett. f) GDPR), in considerazione del carattere pubblico dell'evento. Su richiesta scritta dell'interessato l'immagine specifica verrà rimossa dai canali del titolare."
+         data-i18n-en="During the event, photographs and videos may be taken of the course, the start line, technical sections, aid stations and the award ceremony, possibly featuring participants. Such images will be used &lt;strong&gt;solely for event communication&lt;/strong&gt; (website, gallery, official social networks, promotional materials for future editions). Legal basis: the controller's legitimate interest in documenting and communicating the event (art. 6(1)(f) GDPR), given the public nature of the event. Upon written request from the data subject, the specific image will be removed from the controller's channels.">Durante lo svolgimento dell'evento potranno essere effettuate riprese fotografiche e video del percorso, della partenza, dei passaggi tecnici, dei ristori e della premiazione, con possibili immagini dei partecipanti. Tali immagini verranno utilizzate <strong>esclusivamente per la comunicazione dell'evento</strong> (sito web, gallery, social network ufficiali, materiali promozionali delle edizioni successive). Base giuridica: legittimo interesse del titolare a documentare e comunicare la manifestazione (art. 6, par. 1, lett. f) GDPR), in considerazione del carattere pubblico dell'evento. Su richiesta scritta dell'interessato l'immagine specifica verrà rimossa dai canali del titolare.</p>
+
+      <h2 data-i18n-it="3. Finalità del trattamento e basi giuridiche"
+          data-i18n-en="3. Purposes of processing and legal bases">3. Finalità del trattamento e basi giuridiche</h2>
       <ol>
-        <li>Gestione della waiting list e comunicazioni operative sull'evento;</li>
-        <li>Invio, al momento dell'apertura delle iscrizioni, del link per accedere in via prioritaria alla registrazione;</li>
-        <li>Analisi aggregata e anonimizzata per migliorare l'organizzazione delle future edizioni.</li>
+        <li data-i18n-it="&lt;strong&gt;Gestione della waiting list&lt;/strong&gt; e invio di comunicazioni operative sull'evento — base giuridica: &lt;em&gt;consenso dell'interessato&lt;/em&gt; al momento dell'iscrizione (art. 6, par. 1, lett. a GDPR)."
+            data-i18n-en="&lt;strong&gt;Waiting list management&lt;/strong&gt; and sending of operational communications about the event — legal basis: &lt;em&gt;data subject's consent&lt;/em&gt; given at sign-up (art. 6(1)(a) GDPR)."><strong>Gestione della waiting list</strong> e invio di comunicazioni operative sull'evento — base giuridica: <em>consenso dell'interessato</em> al momento dell'iscrizione (art. 6, par. 1, lett. a GDPR).</li>
+        <li data-i18n-it="&lt;strong&gt;Apertura prioritaria delle iscrizioni&lt;/strong&gt; ai contatti in waiting list — base giuridica: &lt;em&gt;consenso dell'interessato&lt;/em&gt;."
+            data-i18n-en="&lt;strong&gt;Priority registration access&lt;/strong&gt; for waiting list contacts — legal basis: &lt;em&gt;data subject's consent&lt;/em&gt;."><strong>Apertura prioritaria delle iscrizioni</strong> ai contatti in waiting list — base giuridica: <em>consenso dell'interessato</em>.</li>
+        <li data-i18n-it="&lt;strong&gt;Esecuzione del rapporto associativo&lt;/strong&gt; e gestione delle iscrizioni all'evento (quando attivate) — base giuridica: &lt;em&gt;esecuzione di un contratto&lt;/em&gt; di cui l'interessato è parte (art. 6, par. 1, lett. b GDPR)."
+            data-i18n-en="&lt;strong&gt;Performance of the membership relationship&lt;/strong&gt; and management of event registrations (once activated) — legal basis: &lt;em&gt;performance of a contract&lt;/em&gt; to which the data subject is a party (art. 6(1)(b) GDPR)."><strong>Esecuzione del rapporto associativo</strong> e gestione delle iscrizioni all'evento (quando attivate) — base giuridica: <em>esecuzione di un contratto</em> di cui l'interessato è parte (art. 6, par. 1, lett. b GDPR).</li>
+        <li data-i18n-it="&lt;strong&gt;Adempimento di obblighi di legge&lt;/strong&gt; in materia sportiva, fiscale, assicurativa e sanitaria — base giuridica: &lt;em&gt;obbligo legale&lt;/em&gt; (art. 6, par. 1, lett. c GDPR)."
+            data-i18n-en="&lt;strong&gt;Compliance with legal obligations&lt;/strong&gt; on sports, tax, insurance and health matters — legal basis: &lt;em&gt;legal obligation&lt;/em&gt; (art. 6(1)(c) GDPR)."><strong>Adempimento di obblighi di legge</strong> in materia sportiva, fiscale, assicurativa e sanitaria — base giuridica: <em>obbligo legale</em> (art. 6, par. 1, lett. c GDPR).</li>
+        <li data-i18n-it="&lt;strong&gt;Documentazione e comunicazione dell'evento&lt;/strong&gt; tramite immagini — base giuridica: &lt;em&gt;legittimo interesse&lt;/em&gt; del titolare (art. 6, par. 1, lett. f GDPR)."
+            data-i18n-en="&lt;strong&gt;Documentation and communication of the event&lt;/strong&gt; via images — legal basis: &lt;em&gt;controller's legitimate interest&lt;/em&gt; (art. 6(1)(f) GDPR)."><strong>Documentazione e comunicazione dell'evento</strong> tramite immagini — base giuridica: <em>legittimo interesse</em> del titolare (art. 6, par. 1, lett. f GDPR).</li>
+        <li data-i18n-it="&lt;strong&gt;Analisi aggregata e anonimizzata&lt;/strong&gt; per migliorare l'organizzazione delle edizioni successive."
+            data-i18n-en="&lt;strong&gt;Aggregated and anonymised analysis&lt;/strong&gt; to improve the organisation of future editions."><strong>Analisi aggregata e anonimizzata</strong> per migliorare l'organizzazione delle edizioni successive.</li>
       </ol>
 
-      <h2>4. Base giuridica</h2>
-      <p>Il trattamento si basa sul <strong>consenso esplicito</strong> rilasciato dall'interessato al momento dell'iscrizione (art. 6, par. 1, lett. a GDPR).</p>
-
-      <h2>5. Modalità e strumenti</h2>
-      <p>I dati vengono conservati sulla piattaforma <strong>Brevo</strong> (Sendinblue SAS), con sede nell'Unione Europea, che agisce come responsabile esterno del trattamento.</p>
-      <p>Privacy policy di Brevo: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
-
-      <h2>6. Periodo di conservazione</h2>
-      <p>I dati sono conservati fino alla revoca del consenso da parte dell'interessato o, in assenza di revoca, per un periodo massimo di <em>[numero]</em> mesi dalla conclusione dell'evento.</p>
-
-      <h2>7. Diritti dell'interessato</h2>
-      <p>In ogni momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR:</p>
+      <h2 data-i18n-it="4. Modalità del trattamento e responsabili esterni"
+          data-i18n-en="4. Processing methods and external processors">4. Modalità del trattamento e responsabili esterni</h2>
+      <p data-i18n-it="I dati vengono trattati con strumenti informatici, con misure tecniche e organizzative adeguate a garantirne riservatezza, integrità e disponibilità. I principali responsabili esterni del trattamento (art. 28 GDPR) sono:"
+         data-i18n-en="Data is processed by electronic means, with technical and organisational measures suitable to ensure confidentiality, integrity and availability. The main external data processors (art. 28 GDPR) are:">I dati vengono trattati con strumenti informatici, con misure tecniche e organizzative adeguate a garantirne riservatezza, integrità e disponibilità. I principali responsabili esterni del trattamento (art. 28 GDPR) sono:</p>
       <ul>
-        <li>Accesso ai dati;</li>
-        <li>Rettifica o cancellazione;</li>
-        <li>Limitazione o opposizione al trattamento;</li>
-        <li>Portabilità dei dati;</li>
-        <li>Revoca del consenso (è sufficiente cliccare su "Annulla iscrizione" in fondo a qualsiasi email).</li>
+        <li data-i18n-it="&lt;strong&gt;Brevo (Sendinblue SAS)&lt;/strong&gt;, con sede in Francia — gestisce l'archivio della waiting list e l'invio delle email. Privacy policy: &lt;a href=&quot;https://www.brevo.com/legal/privacypolicy/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;brevo.com/legal/privacypolicy&lt;/a&gt;."
+            data-i18n-en="&lt;strong&gt;Brevo (Sendinblue SAS)&lt;/strong&gt;, based in France — manages the waiting list archive and email delivery. Privacy policy: &lt;a href=&quot;https://www.brevo.com/legal/privacypolicy/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;brevo.com/legal/privacypolicy&lt;/a&gt;."><strong>Brevo (Sendinblue SAS)</strong>, con sede in Francia — gestisce l'archivio della waiting list e l'invio delle email. Privacy policy: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</li>
+        <li data-i18n-it="&lt;strong&gt;Cloudflare, Inc.&lt;/strong&gt; — fornisce l'hosting del sito (Cloudflare Pages), il proxy delle richieste verso Brevo (Cloudflare Workers) ed eventuali servizi di analisi del traffico. Privacy policy: &lt;a href=&quot;https://www.cloudflare.com/privacypolicy/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cloudflare.com/privacypolicy&lt;/a&gt;."
+            data-i18n-en="&lt;strong&gt;Cloudflare, Inc.&lt;/strong&gt; — provides website hosting (Cloudflare Pages), the request proxy to Brevo (Cloudflare Workers) and any traffic analytics services. Privacy policy: &lt;a href=&quot;https://www.cloudflare.com/privacypolicy/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;cloudflare.com/privacypolicy&lt;/a&gt;."><strong>Cloudflare, Inc.</strong> — fornisce l'hosting del sito (Cloudflare Pages), il proxy delle richieste verso Brevo (Cloudflare Workers) ed eventuali servizi di analisi del traffico. Privacy policy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>.</li>
       </ul>
-      <p>Per esercitare questi diritti scrivi a: <em>[email del titolare]</em>.</p>
+      <p data-i18n-it="I dati non sono oggetto di processi decisionali automatizzati, inclusa la profilazione."
+         data-i18n-en="Data is not subject to automated decision-making, including profiling.">I dati non sono oggetto di processi decisionali automatizzati, inclusa la profilazione.</p>
 
-      <h2>8. Reclamo all'autorità di controllo</h2>
-      <p>Se ritieni che il trattamento dei tuoi dati violi il GDPR, hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+      <h2 data-i18n-it="5. Comunicazione e diffusione" data-i18n-en="5. Disclosure and dissemination">5. Comunicazione e diffusione</h2>
+      <p data-i18n-it="I dati personali non vengono ceduti né diffusi a terzi a fini commerciali. Possono essere comunicati a:"
+         data-i18n-en="Personal data is not transferred or disclosed to third parties for commercial purposes. It may be shared with:">I dati personali non vengono ceduti né diffusi a terzi a fini commerciali. Possono essere comunicati a:</p>
+      <ul>
+        <li data-i18n-it="collaboratori autorizzati dell'organizzazione (volontari, staff sanitario, fotografi/videomaker dell'evento), debitamente vincolati alla riservatezza;"
+            data-i18n-en="authorised collaborators of the organisation (volunteers, medical staff, event photographers/videomakers), duly bound by confidentiality;">collaboratori autorizzati dell'organizzazione (volontari, staff sanitario, fotografi/videomaker dell'evento), debitamente vincolati alla riservatezza;</li>
+        <li data-i18n-it="fornitori esterni di servizi tecnici, amministrativi e assicurativi necessari all'evento, designati come responsabili del trattamento;"
+            data-i18n-en="external providers of technical, administrative and insurance services required for the event, designated as data processors;">fornitori esterni di servizi tecnici, amministrativi e assicurativi necessari all'evento, designati come responsabili del trattamento;</li>
+        <li data-i18n-it="enti di promozione sportiva e federazioni ai quali l'associazione è eventualmente affiliata, per gli adempimenti previsti dalle relative normative;"
+            data-i18n-en="sports promotion bodies and federations to which the association may be affiliated, for the requirements set by the relevant regulations;">enti di promozione sportiva e federazioni ai quali l'associazione è eventualmente affiliata, per gli adempimenti previsti dalle relative normative;</li>
+        <li data-i18n-it="autorità pubbliche, qualora richiesto da obblighi di legge o di regolamento."
+            data-i18n-en="public authorities, where required by law or regulation.">autorità pubbliche, qualora richiesto da obblighi di legge o di regolamento.</li>
+      </ul>
 
-      <h2>9. Cookie e strumenti di terze parti</h2>
-      <p>Il sito utilizza font forniti da Google Fonts e immagini ospitate su Unsplash. Non vengono utilizzati cookie di profilazione. Per dettagli: <em>[eventuale cookie policy dedicata].</em></p>
+      <h2 data-i18n-it="6. Periodo di conservazione" data-i18n-en="6. Retention period">6. Periodo di conservazione</h2>
+      <ul>
+        <li data-i18n-it="&lt;strong&gt;Dati waiting list&lt;/strong&gt;: fino alla revoca del consenso o, in mancanza, fino a 24 mesi dalla conclusione dell'evento."
+            data-i18n-en="&lt;strong&gt;Waiting list data&lt;/strong&gt;: until consent is withdrawn or, in the absence of withdrawal, up to 24 months after the end of the event."><strong>Dati waiting list</strong>: fino alla revoca del consenso o, in mancanza, fino a 24 mesi dalla conclusione dell'evento.</li>
+        <li data-i18n-it="&lt;strong&gt;Dati di iscrizione all'evento&lt;/strong&gt;: per la durata del rapporto associativo e per i tempi richiesti da obblighi di legge (in genere fino a 10 anni per esigenze fiscali e assicurative)."
+            data-i18n-en="&lt;strong&gt;Event registration data&lt;/strong&gt;: for the duration of the membership relationship and for the time required by legal obligations (generally up to 10 years for tax and insurance purposes)."><strong>Dati di iscrizione all'evento</strong>: per la durata del rapporto associativo e per i tempi richiesti da obblighi di legge (in genere fino a 10 anni per esigenze fiscali e assicurative).</li>
+        <li data-i18n-it="&lt;strong&gt;Certificato medico&lt;/strong&gt;: per la durata dell'evento e fino a 5 anni successivi, ai fini della tutela in sede assicurativa e di eventuali contestazioni."
+            data-i18n-en="&lt;strong&gt;Medical certificate&lt;/strong&gt;: for the duration of the event and up to 5 years afterwards, for insurance protection and possible disputes."><strong>Certificato medico</strong>: per la durata dell'evento e fino a 5 anni successivi, ai fini della tutela in sede assicurativa e di eventuali contestazioni.</li>
+        <li data-i18n-it="&lt;strong&gt;Immagini dell'evento&lt;/strong&gt;: fino a un massimo di 5 anni dalla data della manifestazione."
+            data-i18n-en="&lt;strong&gt;Event images&lt;/strong&gt;: up to a maximum of 5 years from the date of the event."><strong>Immagini dell'evento</strong>: fino a un massimo di 5 anni dalla data della manifestazione.</li>
+      </ul>
+
+      <h2 data-i18n-it="7. Trasferimento dei dati extra UE" data-i18n-en="7. Data transfers outside the EU">7. Trasferimento dei dati extra UE</h2>
+      <p data-i18n-it="I dati sono prevalentemente trattati e conservati all'interno dell'Unione Europea. Alcuni fornitori (in particolare Cloudflare) potrebbero trasferire dati al di fuori dell'UE; in tal caso il trasferimento avviene sulla base di garanzie adeguate ai sensi degli artt. 44 e seguenti GDPR (decisioni di adeguatezza, Clausole Contrattuali Tipo della Commissione UE)."
+         data-i18n-en="Data is primarily processed and stored within the European Union. Some providers (in particular Cloudflare) may transfer data outside the EU; in such cases the transfer takes place based on adequate safeguards under arts. 44 et seq. GDPR (adequacy decisions, EU Commission's Standard Contractual Clauses).">I dati sono prevalentemente trattati e conservati all'interno dell'Unione Europea. Alcuni fornitori (in particolare Cloudflare) potrebbero trasferire dati al di fuori dell'UE; in tal caso il trasferimento avviene sulla base di garanzie adeguate ai sensi degli artt. 44 e seguenti GDPR (decisioni di adeguatezza, Clausole Contrattuali Tipo della Commissione UE).</p>
+
+      <h2 data-i18n-it="8. Diritti dell'interessato" data-i18n-en="8. Rights of the data subject">8. Diritti dell'interessato</h2>
+      <p data-i18n-it="In qualunque momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR:"
+         data-i18n-en="At any time you may exercise the rights provided under arts. 15–22 GDPR:">In qualunque momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR:</p>
+      <ul>
+        <li data-i18n-it="&lt;strong&gt;accesso&lt;/strong&gt; ai dati personali che ti riguardano;"
+            data-i18n-en="&lt;strong&gt;access&lt;/strong&gt; to your personal data;"><strong>accesso</strong> ai dati personali che ti riguardano;</li>
+        <li data-i18n-it="&lt;strong&gt;rettifica&lt;/strong&gt; dei dati inesatti o aggiornamento di quelli incompleti;"
+            data-i18n-en="&lt;strong&gt;rectification&lt;/strong&gt; of inaccurate data or completion of incomplete data;"><strong>rettifica</strong> dei dati inesatti o aggiornamento di quelli incompleti;</li>
+        <li data-i18n-it="&lt;strong&gt;cancellazione&lt;/strong&gt; dei dati, nei casi previsti dalla normativa;"
+            data-i18n-en="&lt;strong&gt;erasure&lt;/strong&gt; of data, in cases provided by law;"><strong>cancellazione</strong> dei dati, nei casi previsti dalla normativa;</li>
+        <li data-i18n-it="&lt;strong&gt;limitazione&lt;/strong&gt; del trattamento;"
+            data-i18n-en="&lt;strong&gt;restriction&lt;/strong&gt; of processing;"><strong>limitazione</strong> del trattamento;</li>
+        <li data-i18n-it="&lt;strong&gt;portabilità&lt;/strong&gt; dei dati;"
+            data-i18n-en="&lt;strong&gt;data portability&lt;/strong&gt;;"><strong>portabilità</strong> dei dati;</li>
+        <li data-i18n-it="&lt;strong&gt;opposizione&lt;/strong&gt; al trattamento basato su legittimo interesse;"
+            data-i18n-en="&lt;strong&gt;objection&lt;/strong&gt; to processing based on legitimate interest;"><strong>opposizione</strong> al trattamento basato su legittimo interesse;</li>
+        <li data-i18n-it="&lt;strong&gt;revoca del consenso&lt;/strong&gt; in qualsiasi momento, senza pregiudizio della liceità del trattamento effettuato prima della revoca (per la newsletter è sufficiente cliccare su &quot;Annulla iscrizione&quot; in fondo a qualsiasi email)."
+            data-i18n-en="&lt;strong&gt;withdrawal of consent&lt;/strong&gt; at any time, without affecting the lawfulness of processing carried out before withdrawal (for the newsletter, simply click &quot;Unsubscribe&quot; at the bottom of any email)."><strong>revoca del consenso</strong> in qualsiasi momento, senza pregiudizio della liceità del trattamento effettuato prima della revoca (per la newsletter è sufficiente cliccare su "Annulla iscrizione" in fondo a qualsiasi email).</li>
+      </ul>
+      <p data-i18n-it="Per esercitare questi diritti scrivi a &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;."
+         data-i18n-en="To exercise these rights write to &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;.">Per esercitare questi diritti scrivi a <a href="mailto:ciao@trentinogravel.com">ciao@trentinogravel.com</a>.</p>
+
+      <h2 data-i18n-it="9. Reclamo all'Autorità di controllo" data-i18n-en="9. Complaint to the Supervisory Authority">9. Reclamo all'Autorità di controllo</h2>
+      <p data-i18n-it="Se ritieni che il trattamento dei tuoi dati violi il GDPR, hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali — &lt;a href=&quot;https://www.garanteprivacy.it&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;garanteprivacy.it&lt;/a&gt;."
+         data-i18n-en="If you believe that the processing of your data infringes the GDPR, you have the right to lodge a complaint with the Italian Data Protection Authority — &lt;a href=&quot;https://www.garanteprivacy.it&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;garanteprivacy.it&lt;/a&gt;.">Se ritieni che il trattamento dei tuoi dati violi il GDPR, hai il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>.</p>
+
+      <h2 data-i18n-it="10. Modifiche alla presente informativa" data-i18n-en="10. Changes to this notice">10. Modifiche alla presente informativa</h2>
+      <p data-i18n-it="La presente informativa può essere aggiornata in qualsiasi momento per riflettere modifiche normative o organizzative. La versione aggiornata sarà pubblicata su questa pagina con indicazione della data di ultimo aggiornamento."
+         data-i18n-en="This notice may be updated at any time to reflect regulatory or organisational changes. The updated version will be published on this page with the date of the last update.">La presente informativa può essere aggiornata in qualsiasi momento per riflettere modifiche normative o organizzative. La versione aggiornata sarà pubblicata su questa pagina con indicazione della data di ultimo aggiornamento.</p>
 
       <hr>
 
-      <p><em>Questo documento è un placeholder. Il testo definitivo verrà redatto dal cliente e sostituirà integralmente il contenuto di questa pagina.</em></p>
+      <section id="cookies">
+        <h2 data-i18n-it="11. Cookie policy" data-i18n-en="11. Cookie policy">11. Cookie policy</h2>
+        <p data-i18n-it="Questo sito utilizza esclusivamente &lt;strong&gt;cookie e tecnologie strettamente necessari&lt;/strong&gt; al funzionamento e, previo tuo consenso, eventuali cookie/strumenti di terze parti per analisi anonime del traffico."
+           data-i18n-en="This site uses only &lt;strong&gt;strictly necessary cookies and technologies&lt;/strong&gt; for operation and, with your consent, any third-party cookies/tools for anonymous traffic analytics.">Questo sito utilizza esclusivamente <strong>cookie e tecnologie strettamente necessari</strong> al funzionamento e, previo tuo consenso, eventuali cookie/strumenti di terze parti per analisi anonime del traffico.</p>
+
+        <h3 data-i18n-it="Cookie e tecnologie utilizzati" data-i18n-en="Cookies and technologies used">Cookie e tecnologie utilizzati</h3>
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th data-i18n-it="Nome" data-i18n-en="Name">Nome</th>
+              <th data-i18n-it="Tipologia" data-i18n-en="Type">Tipologia</th>
+              <th data-i18n-it="Finalità" data-i18n-en="Purpose">Finalità</th>
+              <th data-i18n-it="Durata" data-i18n-en="Duration">Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>tg-lang</code></td>
+              <td data-i18n-it="Tecnico (localStorage)" data-i18n-en="Technical (localStorage)">Tecnico (localStorage)</td>
+              <td data-i18n-it="Memorizza la lingua selezionata (IT/EN)." data-i18n-en="Stores the selected language (IT/EN).">Memorizza la lingua selezionata (IT/EN).</td>
+              <td data-i18n-it="Persistente" data-i18n-en="Persistent">Persistente</td>
+            </tr>
+            <tr>
+              <td><code>tg-cookie-dismissed</code></td>
+              <td data-i18n-it="Tecnico (sessionStorage)" data-i18n-en="Technical (sessionStorage)">Tecnico (sessionStorage)</td>
+              <td data-i18n-it="Memorizza la chiusura del banner cookie nella sessione corrente." data-i18n-en="Stores cookie banner dismissal for the current session.">Memorizza la chiusura del banner cookie nella sessione corrente.</td>
+              <td data-i18n-it="Sessione" data-i18n-en="Session">Sessione</td>
+            </tr>
+            <tr>
+              <td>Cloudflare</td>
+              <td data-i18n-it="Tecnico" data-i18n-en="Technical">Tecnico</td>
+              <td data-i18n-it="Sicurezza, prestazioni e protezione dagli attacchi del sito (CDN)." data-i18n-en="Site security, performance and attack protection (CDN).">Sicurezza, prestazioni e protezione dagli attacchi del sito (CDN).</td>
+              <td data-i18n-it="Sessione / breve termine" data-i18n-en="Session / short term">Sessione / breve termine</td>
+            </tr>
+            <tr>
+              <td>Google Fonts</td>
+              <td data-i18n-it="Terza parte (no cookie)" data-i18n-en="Third party (no cookies)">Terza parte (no cookie)</td>
+              <td data-i18n-it="Caricamento dei font tipografici dalla rete Google. Non installa cookie ma comporta una richiesta HTTP a server Google."
+                  data-i18n-en="Loads typographic fonts from the Google network. Does not install cookies but involves an HTTP request to Google servers.">Caricamento dei font tipografici dalla rete Google. Non installa cookie ma comporta una richiesta HTTP a server Google.</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 data-i18n-it="Servizi di terze parti" data-i18n-en="Third-party services">Servizi di terze parti</h3>
+        <p data-i18n-it="Le iscrizioni alla waiting list vengono inviate a &lt;strong&gt;Brevo&lt;/strong&gt; tramite un proxy server-side (Cloudflare Worker): nessun cookie di Brevo è installato direttamente sul tuo browser durante la navigazione."
+           data-i18n-en="Waiting list sign-ups are sent to &lt;strong&gt;Brevo&lt;/strong&gt; via a server-side proxy (Cloudflare Worker): no Brevo cookie is installed directly on your browser while browsing.">Le iscrizioni alla waiting list vengono inviate a <strong>Brevo</strong> tramite un proxy server-side (Cloudflare Worker): nessun cookie di Brevo è installato direttamente sul tuo browser durante la navigazione.</p>
+        <p data-i18n-it="Eventuali strumenti di analisi del traffico (es. Cloudflare Zaraz) vengono attivati solo previo consenso esplicito tramite il banner cookie. In caso di rifiuto o assenza di scelta, i tracker non strettamente necessari non vengono caricati."
+           data-i18n-en="Any traffic analytics tools (e.g. Cloudflare Zaraz) are activated only with explicit consent via the cookie banner. If consent is refused or not given, non-strictly-necessary trackers are not loaded.">Eventuali strumenti di analisi del traffico (es. Cloudflare Zaraz) vengono attivati solo previo consenso esplicito tramite il banner cookie. In caso di rifiuto o assenza di scelta, i tracker non strettamente necessari non vengono caricati.</p>
+
+        <h3 data-i18n-it="Gestione delle preferenze" data-i18n-en="Managing preferences">Gestione delle preferenze</h3>
+        <p data-i18n-it="Puoi modificare in qualsiasi momento le tue preferenze sui cookie tramite le impostazioni del browser. Per cancellare i cookie tecnici memorizzati, svuota lo storage del sito dalle impostazioni del browser oppure utilizza la modalità di navigazione in incognito."
+           data-i18n-en="You can change your cookie preferences at any time through your browser settings. To delete the technical cookies stored, clear the site storage from your browser settings or use private browsing mode.">Puoi modificare in qualsiasi momento le tue preferenze sui cookie tramite le impostazioni del browser. Per cancellare i cookie tecnici memorizzati, svuota lo storage del sito dalle impostazioni del browser oppure utilizza la modalità di navigazione in incognito.</p>
+
+        <p data-i18n-it="Per qualsiasi domanda relativa al trattamento dei dati o ai cookie scrivi a &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;."
+           data-i18n-en="For any questions about data processing or cookies write to &lt;a href=&quot;mailto:ciao@trentinogravel.com&quot;&gt;ciao@trentinogravel.com&lt;/a&gt;.">Per qualsiasi domanda relativa al trattamento dei dati o ai cookie scrivi a <a href="mailto:ciao@trentinogravel.com">ciao@trentinogravel.com</a>.</p>
+      </section>
+
     </article>
   </main>
 
@@ -330,14 +608,97 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-wordmark">Trentino Gravel</div>
-      <div class="footer-mono">© 2026 Trentino Gravel</div>
+      <div class="footer-mono">© 2026 Bikepacking Adventures ASD · C.F./P.IVA 94158340300</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#waitlist">Iscriviti</a>
+        <a href="index.html" data-i18n-it="Home" data-i18n-en="Home">Home</a>
+        <a href="index.html#faq" data-i18n-it="FAQ" data-i18n-en="FAQ">FAQ</a>
+        <a href="#cookies" data-i18n-it="Cookie" data-i18n-en="Cookies">Cookie</a>
       </div>
     </div>
   </footer>
+
+  <!-- Cookie banner (cosmetico, logica consenso da implementare) -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog"
+       aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc"
+       aria-modal="false" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <strong id="cookie-banner-title"
+                data-i18n-it="Cookie e privacy" data-i18n-en="Cookies & privacy">Cookie e privacy</strong>
+        <p id="cookie-banner-desc"
+           data-i18n-it="Questo sito usa cookie tecnici e, se autorizzati, cookie di terze parti per analisi anonime. Continuando a navigare accetti i cookie tecnici."
+           data-i18n-en="This site uses technical cookies and, if authorized, third-party cookies for anonymous analytics. By continuing to browse you accept technical cookies.">Questo sito usa cookie tecnici e, se autorizzati, cookie di terze parti per analisi anonime. Continuando a navigare accetti i cookie tecnici.</p>
+        <a href="#cookies"
+           data-i18n-it="Leggi la cookie policy" data-i18n-en="Read the cookie policy">Leggi la cookie policy</a>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" id="cookie-accept" class="cookie-btn"
+                data-i18n-it="Ho capito" data-i18n-en="Got it">Ho capito</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ━━━━━━━━━━━━ I18N TOGGLE ━━━━━━━━━━━━
+    const I18N_KEY = 'tg-lang';
+    const DEFAULT_LANG = 'it';
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang;
+      const attr = 'data-i18n-' + lang;
+      document.querySelectorAll('[data-i18n-it],[data-i18n-en]').forEach(el => {
+        const txt = el.getAttribute(attr);
+        if (txt != null) {
+          if (txt.includes('<')) el.innerHTML = txt;
+          else el.textContent = txt;
+        }
+      });
+      document.querySelectorAll('[data-lang-btn]').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
+      });
+      try { localStorage.setItem(I18N_KEY, lang); } catch (e) {}
+    }
+
+    function initLang() {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      let lang = DEFAULT_LANG;
+      try { lang = urlLang || localStorage.getItem(I18N_KEY) || DEFAULT_LANG; } catch (e) {
+        lang = urlLang || DEFAULT_LANG;
+      }
+      if (lang !== 'it' && lang !== 'en') lang = DEFAULT_LANG;
+      applyLang(lang);
+
+      document.querySelectorAll('[data-lang-btn]').forEach(b => {
+        b.addEventListener('click', () => {
+          const l = b.getAttribute('data-lang-btn');
+          const url = new URL(window.location.href);
+          if (l === DEFAULT_LANG) url.searchParams.delete('lang');
+          else url.searchParams.set('lang', l);
+          window.history.pushState({}, '', url.toString());
+          applyLang(l);
+        });
+      });
+
+      initCookieBanner();
+    }
+
+    // ━━━━━━━━━━━━ COOKIE BANNER (cosmetico) ━━━━━━━━━━━━
+    function initCookieBanner() {
+      const banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+      let dismissed = false;
+      try { dismissed = sessionStorage.getItem('tg-cookie-dismissed') === '1'; } catch (e) {}
+      if (dismissed) return;
+      banner.hidden = false;
+      const btn = document.getElementById('cookie-accept');
+      if (btn) btn.addEventListener('click', () => {
+        try { sessionStorage.setItem('tg-cookie-dismissed', '1'); } catch (e) {}
+        banner.remove();
+      });
+    }
+
+    initLang();
+  </script>
 
 </body>
 </html>

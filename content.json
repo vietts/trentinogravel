@@ -369,11 +369,12 @@
       "it": "Instagram",
       "en": "Instagram"
     },
+    "instagramUrl": "",
     "contactLabel": {
       "it": "Contatti",
       "en": "Contact"
     },
-    "contactUrl": "mailto:ciao@trentinogravel.com",
+    "contactUrl": "",
     "privacyLabel": {
       "it": "Privacy",
       "en": "Privacy"
@@ -383,8 +384,8 @@
       "en": "© 2026 Trentino Gravel"
     },
     "legal": {
-      "it": "Bikepacking Adventures ASD Via Val d'Aupa 2 Udine 33100 UD 94158340300",
-      "en": "Bikepacking Adventures ASD Via Val d'Aupa 2 Udine 33100 UD 94158340300"
+      "it": "Bikepacking Adventures ASD · C.F./P.IVA 94158340300 · Via Val d'Aupa, 33100 Udine",
+      "en": "Bikepacking Adventures ASD · VAT/Tax ID 94158340300 · Via Val d'Aupa, 33100 Udine, Italy"
     }
   },
   "photos": {
