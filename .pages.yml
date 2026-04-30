@@ -148,8 +148,15 @@ content:
         label: Footer
         type: object
         fields:
-          - { name: followLabel,   label: "Seguici",               type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
-          - { name: contactsLabel, label: "Label contatti",        type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: eventBy,        label: "\"Un evento\" / \"An event by\"",     type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: basUrl,         label: "URL Bike Adventure Series",          type: string }
+          - { name: instagramLabel, label: "Link Instagram · testo",             type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: instagramUrl,   label: "Link Instagram · URL (https://...)", type: string }
+          - { name: contactLabel,   label: "Link Contatti · testo",              type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: contactUrl,     label: "Link Contatti · URL (mailto: o https://)", type: string }
+          - { name: privacyLabel,   label: "Link Privacy · testo",               type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: copyright,      label: "Copyright (testo finale)",           type: object, fields: [{name: it, label: IT, type: string}, {name: en, label: EN, type: string}] }
+          - { name: legal,          label: "Info legali (P.IVA, sede, ecc.)",   type: object, fields: [{name: it, label: IT, type: text},   {name: en, label: EN, type: text}] }
 
       - name: photos
         label: Foto
