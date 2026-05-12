@@ -48,6 +48,38 @@
     "image": ["https://trentinogravel.it/photos/hero.jpg"],
     "url": "https://trentinogravel.it/"
   }
+
+    /* ── Countdown to 10 June 2026 (apertura iscrizioni) ── */
+    (function() {
+      var target = new Date('2026-06-10T09:00:00+02:00');
+      var dEl = document.getElementById('cd-days');
+      var hEl = document.getElementById('cd-hours');
+      var mEl = document.getElementById('cd-minutes');
+      var sEl = document.getElementById('cd-seconds');
+      if (!dEl) return;
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function flash(el, val) {
+        var v = pad(val);
+        if (el.textContent !== v) {
+          el.textContent = v;
+          el.classList.add('changed');
+          setTimeout(function() { el.classList.remove('changed'); }, 300);
+        }
+      }
+      function update() {
+        var diff = target - new Date();
+        if (diff <= 0) {
+          dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
+          return;
+        }
+        flash(dEl, Math.floor(diff / 86400000));
+        flash(hEl, Math.floor((diff % 86400000) / 3600000));
+        flash(mEl, Math.floor((diff % 3600000) / 60000));
+        flash(sEl, Math.floor((diff % 60000) / 1000));
+      }
+      update();
+      setInterval(update, 1000);
+    })();
   </script>
   <style>
     /* ━━━━━━━━━━━━ TOKENS ━━━━━━━━━━━━ */
@@ -1193,7 +1225,58 @@
     @media (max-width: 600px) {
       .countdown-section { padding: 4rem 1.2rem; }
       .countdown-sep { padding-bottom: 0.6rem; font-size: clamp(2rem, 8vw, 4rem); }
+      .countdown-cta-row { flex-direction: column; align-items: stretch; }
+      .countdown-cta { justify-content: center; }
     }
+    .countdown-message {
+      margin-top: 2.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+    }
+    .countdown-open-date {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--cream);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+    .countdown-open-date span { color: var(--orange); }
+    .countdown-sub-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: rgba(242,238,174,0.45);
+      max-width: 360px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .countdown-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.4rem;
+    }
+    .countdown-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2rem;
+      transition: background .2s, transform .15s;
+    }
+    .countdown-cta:hover { background: var(--orange-lt); transform: translateY(-2px); }
+    .countdown-cta svg { width: 15px; height: 15px; }
 
     /* ━━━━━━━━━━━━ WAITLIST ━━━━━━━━━━━━ */
     .waitlist {
@@ -3205,6 +3288,59 @@
     <span class="tagline-sep"></span>
     <span class="tagline-word">TRENTINO GRAVEL</span>
   </div>
+
+  <!-- ━━━━━━━━━━━━ COUNTDOWN — Iscrizioni 10 Giugno ━━━━━━━━━━━━ -->
+  <section class="countdown-section">
+    <div class="countdown-inner">
+
+      <div class="countdown-kicker"
+        data-i18n-it="Apertura iscrizioni"
+        data-i18n-en="Registration opens">Apertura iscrizioni</div>
+
+      <div class="countdown-grid">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">--</span>
+          <span class="countdown-sub" data-i18n-it="Giorni" data-i18n-en="Days">Giorni</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">--</span>
+          <span class="countdown-sub" data-i18n-it="Ore" data-i18n-en="Hours">Ore</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-minutes">--</span>
+          <span class="countdown-sub" data-i18n-it="Minuti" data-i18n-en="Minutes">Minuti</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-seconds">--</span>
+          <span class="countdown-sub" data-i18n-it="Secondi" data-i18n-en="Seconds">Secondi</span>
+        </div>
+      </div>
+
+      <div class="countdown-message">
+        <div class="countdown-open-date">
+          Le iscrizioni aprono il&nbsp;<span data-i18n-it="10 Giugno 2026" data-i18n-en="June 10, 2026">10 Giugno 2026</span>
+        </div>
+        <p class="countdown-sub-text"
+          data-i18n-it="Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni."
+          data-i18n-en="In the meantime, join the waiting list to get priority access to registration.">
+          Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni.
+        </p>
+        <div class="countdown-cta-row">
+          <a href="#waitlist" class="countdown-cta"
+            data-i18n-it="Iscriviti alla waiting list"
+            data-i18n-en="Join the waiting list">
+            Iscriviti alla waiting list
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <!-- ━━━━━━━━━━━━ ABOUT (2-col con foto) ━━━━━━━━━━━━ -->
   <section class="about" id="about">
