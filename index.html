@@ -48,38 +48,6 @@
     "image": ["https://trentinogravel.it/photos/hero.jpg"],
     "url": "https://trentinogravel.it/"
   }
-
-    /* ── Countdown to 10 June 2026 (apertura iscrizioni) ── */
-    (function() {
-      var target = new Date('2026-06-10T11:00:00+02:00');
-      var dEl = document.getElementById('cd-days');
-      var hEl = document.getElementById('cd-hours');
-      var mEl = document.getElementById('cd-minutes');
-      var sEl = document.getElementById('cd-seconds');
-      if (!dEl) return;
-      function pad(n) { return String(n).padStart(2, '0'); }
-      function flash(el, val) {
-        var v = pad(val);
-        if (el.textContent !== v) {
-          el.textContent = v;
-          el.classList.add('changed');
-          setTimeout(function() { el.classList.remove('changed'); }, 300);
-        }
-      }
-      function update() {
-        var diff = target - new Date();
-        if (diff <= 0) {
-          dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
-          return;
-        }
-        flash(dEl, Math.floor(diff / 86400000));
-        flash(hEl, Math.floor((diff % 86400000) / 3600000));
-        flash(mEl, Math.floor((diff % 3600000) / 60000));
-        flash(sEl, Math.floor((diff % 60000) / 1000));
-      }
-      update();
-      setInterval(update, 1000);
-    })();
   </script>
   <style>
     /* ━━━━━━━━━━━━ TOKENS ━━━━━━━━━━━━ */
@@ -3289,59 +3257,6 @@
     <span class="tagline-word">TRENTINO GRAVEL</span>
   </div>
 
-  <!-- ━━━━━━━━━━━━ COUNTDOWN — Iscrizioni 10 Giugno ━━━━━━━━━━━━ -->
-  <section class="countdown-section">
-    <div class="countdown-inner">
-
-      <div class="countdown-kicker"
-        data-i18n-it="Apertura iscrizioni"
-        data-i18n-en="Registration opens">Apertura iscrizioni</div>
-
-      <div class="countdown-grid">
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-days">--</span>
-          <span class="countdown-sub" data-i18n-it="Giorni" data-i18n-en="Days">Giorni</span>
-        </div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-hours">--</span>
-          <span class="countdown-sub" data-i18n-it="Ore" data-i18n-en="Hours">Ore</span>
-        </div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-minutes">--</span>
-          <span class="countdown-sub" data-i18n-it="Minuti" data-i18n-en="Minutes">Minuti</span>
-        </div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-seconds">--</span>
-          <span class="countdown-sub" data-i18n-it="Secondi" data-i18n-en="Seconds">Secondi</span>
-        </div>
-      </div>
-
-      <div class="countdown-message">
-        <div class="countdown-open-date"
-          data-i18n-it="Le iscrizioni aprono il 10 Giugno 2026"
-          data-i18n-en="Registration opens on June 10, 2026">
-          Le iscrizioni aprono il 10 Giugno 2026
-        </div>
-        <p class="countdown-sub-text"
-          data-i18n-it="Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni."
-          data-i18n-en="In the meantime, join the waiting list to get priority access to registration.">
-          Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni.
-        </p>
-        <div class="countdown-cta-row">
-          <a href="#waitlist" class="countdown-cta"
-            data-i18n-it="Iscriviti alla waiting list"
-            data-i18n-en="Join the waiting list">
-            Iscriviti alla waiting list
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
 
   <!-- ━━━━━━━━━━━━ ABOUT (2-col con foto) ━━━━━━━━━━━━ -->
@@ -3499,6 +3414,61 @@
       </div>
     </div>
   </section>
+
+  <!-- ━━━━━━━━━━━━ COUNTDOWN — Iscrizioni 10 Giugno ━━━━━━━━━━━━ -->
+  <section class="countdown-section">
+    <div class="countdown-inner">
+
+      <div class="countdown-kicker"
+        data-i18n-it="Apertura iscrizioni"
+        data-i18n-en="Registration opens">Apertura iscrizioni</div>
+
+      <div class="countdown-grid">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">--</span>
+          <span class="countdown-sub" data-i18n-it="Giorni" data-i18n-en="Days">Giorni</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">--</span>
+          <span class="countdown-sub" data-i18n-it="Ore" data-i18n-en="Hours">Ore</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-minutes">--</span>
+          <span class="countdown-sub" data-i18n-it="Minuti" data-i18n-en="Minutes">Minuti</span>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-seconds">--</span>
+          <span class="countdown-sub" data-i18n-it="Secondi" data-i18n-en="Seconds">Secondi</span>
+        </div>
+      </div>
+
+      <div class="countdown-message">
+        <div class="countdown-open-date"
+          data-i18n-it="Le iscrizioni aprono il 10 Giugno 2026"
+          data-i18n-en="Registration opens on June 10, 2026">
+          Le iscrizioni aprono il 10 Giugno 2026
+        </div>
+        <p class="countdown-sub-text"
+          data-i18n-it="Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni."
+          data-i18n-en="In the meantime, join the waiting list to get priority access to registration.">
+          Intanto iscriviti alla waiting list per accedere per primo alle iscrizioni.
+        </p>
+        <div class="countdown-cta-row">
+          <a href="#waitlist" class="countdown-cta"
+            data-i18n-it="Iscriviti alla waiting list"
+            data-i18n-en="Join the waiting list">
+            Iscriviti alla waiting list
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <!-- ━━━━━━━━━━━━ PLACES — BENTO MOSAIC ━━━━━━━━━━━━ -->
   <section class="places" id="places">
@@ -4118,7 +4088,40 @@
     injectPhotos(); // called again with CMS override from initLang() if content.json loads
 
 
-  </script>
+  
+  // ── Countdown to 10 June 2026 ────────────────────────────────────────────
+  (function() {
+    var target = new Date('2026-06-10T11:00:00+02:00');
+    var dEl = document.getElementById('cd-days');
+    var hEl = document.getElementById('cd-hours');
+    var mEl = document.getElementById('cd-minutes');
+    var sEl = document.getElementById('cd-seconds');
+    if (!dEl) return;
+    function pad(n) { return String(n).padStart(2,'0'); }
+    function flash(el, val) {
+      var v = pad(val);
+      if (el.textContent !== v) {
+        el.textContent = v;
+        el.classList.add('changed');
+        setTimeout(function(){ el.classList.remove('changed'); }, 300);
+      }
+    }
+    function tick() {
+      var diff = target - new Date();
+      if (diff <= 0) {
+        dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = '00';
+        return;
+      }
+      flash(dEl, Math.floor(diff / 86400000));
+      flash(hEl, Math.floor((diff % 86400000) / 3600000));
+      flash(mEl, Math.floor((diff % 3600000) / 60000));
+      flash(sEl, Math.floor((diff % 60000) / 1000));
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+</script>
 
 
 </body>
